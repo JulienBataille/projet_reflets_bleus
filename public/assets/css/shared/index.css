@@ -1,0 +1,77 @@
+#image_header{
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* - - - - - - - - - - - - - - SECTION COMMENTAIRES - - - - - - - - - - - - - - */
+.title-comment {
+    font-family: "Bebas Neue", sans-serif;
+    color: #0E3F78;
+    font-size: 19px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.comment {
+    font-family: "Darker Grotesque", sans-serif;
+    color: #0E3F78;
+    font-size: 14px;
+    text-align: center;
+}
+
+.icon-title {
+    height: 20px;
+    width: 20px;
+}
+
+.comment-top {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.containt-comment-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* - - - - - - - - - - - - - - SECTION COMMENTAIRES FIN - - - - - - - - - - - - - - */
+
+@media (min-width: 600px) and (max-width: 1399px) {
+    #image_header{
+        height: 100%;
+        content: url(/assets/images/images/index/aaa.jpg);
+    }
+    
+
+}
+
+@media (min-width: 1400px){
+    #image_header{
+        height: 680px;
+        content: url(/assets/images/images/index/bbb.jpg);
+    }
+
+    .comment {
+        font-family: "Darker Grotesque", sans-serif;
+        color: #0E3F78;
+        font-size: 20px;
+    }
+
+    .icon-title {
+        width: 40px;
+        height: 40px;
+    }
+
+    .title-comment {
+        font-size: 35px;
+        padding: 10px;
+        margin-top: 7px;
+    }
+
+    .comment-top {
+        padding: 30px;
+    }
+
+}

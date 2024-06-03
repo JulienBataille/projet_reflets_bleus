@@ -1,0 +1,19 @@
+@import'shared/header.css';
+@import'shared/index.css';
+@import'shared/variable.css';
+
+
+
+.wrapper {
+    background-color: rgb(175, 88, 88);
+}
+*{
+    font-family: "Darker Grotesque", sans-serif;
+
+}
+
+.container {
+    padding: 0;
+    margin: 50px;
+
+}

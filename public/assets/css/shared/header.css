@@ -1,0 +1,89 @@
+/* ---------------HEADER START ---------*/
+
+.navbar {
+    background-color: white;
+    justify-content: center;
+    height: 70px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 25px;
+    color: #0E3F78;
+    font-weight: lighter;
+}
+.logo-header {
+    width: 180px;
+}
+/* ---------------HEADER END ---------*/
+
+
+/* ---------------ICONS START ---------*/
+.content-icons{
+    align-items: center;
+    justify-content: center;
+}
+.content-icon-phone {
+    height: 50px;
+    width: 60px;
+    background-color: var(--icon-light);
+    justify-content: center;
+    align-items: center;
+}
+.content-icon-location{
+    height: 50px;
+    width: 60px;
+    background-color: var(--icon-dark);
+    justify-content: center;
+    align-items: center;
+}
+.fa-phone, .fa-location-dot {
+    color: white;
+    font-size: 15px;
+}
+.content-icon-mail{
+    position: absolute;
+    margin-top: -50px;
+}
+.icon-mail {
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 60px;
+    background-color: var(--icon-dark);
+}
+.fa-envelope {
+    color: white;
+    font-size: 20px;
+}
+
+.content-icon-facebook-top{
+    justify-content: end;
+    text-align: end;
+    margin-left: auto;
+    margin-right: 10px;
+}
+.fa-square-facebook{
+    font-size: 40px;
+    color: #0E3F78;
+}
+
+/* ---------------ICONS END ---------*/
+
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 1399px) {
+    .icon-size {
+        height: 50px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    /* --------------------------------------------- DYNAMICS ICONS HOME------------------------------------- */
+.content-icons{
+    
+}
+}
