@@ -1,77 +1,620 @@
-#image_header{
+/* PICTURE */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER - - - */
+#image_header {
     height: 100%;
     object-fit: cover;
     display: block;
 }
+@media (min-width: 600px) and (max-width: 1399px) {
 
-/* - - - - - - - - - - - - - - SECTION COMMENTAIRES - - - - - - - - - - - - - - */
+    #image_header {
+        height: 100%;
+        content: url(/assets/images/images/index/aaa.jpg);
+    }
+}
+@media (min-width: 1400px) {
+
+    #image_header {
+        height: 680px;
+        content: url(/assets/images/images/index/bbb.jpg);
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER END - - - */
+
+
+
+/* COMMENT */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES - - - */
 .title-comment {
     font-family: "Bebas Neue", sans-serif;
     color: #0E3F78;
-    font-size: 19px;
+    font-size: 25px;
     margin-top: 10px;
     padding: 5px;
 }
-
 .comment {
     font-family: "Darker Grotesque", sans-serif;
     color: #0E3F78;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
 }
-
 .icon-title {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
 }
-
 .comment-top {
-    margin-top: 200px;
     text-align: center;
 }
-
+#logo-pro-piscine {
+    width: 100%;
+}
 .containt-comment-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* - - - - - - - - - - - - - - SECTION COMMENTAIRES FIN - - - - - - - - - - - - - - */
-
 @media (min-width: 600px) and (max-width: 1399px) {
-    #image_header{
-        height: 100%;
-        content: url(/assets/images/images/index/aaa.jpg);
+    .title-comment {
+        font-family: "Bebas Neue", sans-serif;
+        color: #0E3F78;
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 5px;
     }
-    
-
+    .comment {
+        font-family: "Darker Grotesque", sans-serif;
+        color: #0E3F78;
+        font-size: 14px;
+        text-align: center;
+    }
+    .icon-title {
+        height: 20px;
+        width: 20px;
+    }
+    .comment-top {
+        margin-top: 200px;
+        text-align: center;
+    }
+    #logo-pro-piscine {
+        width: 100%;
+    }
+    .containt-comment-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-@media (min-width: 1400px){
-    #image_header{
-        height: 680px;
-        content: url(/assets/images/images/index/bbb.jpg);
-    }
-
+@media (min-width: 1400px) {
     .comment {
         font-family: "Darker Grotesque", sans-serif;
         color: #0E3F78;
         font-size: 20px;
     }
-
     .icon-title {
         width: 40px;
         height: 40px;
     }
-
     .title-comment {
         font-size: 35px;
         padding: 10px;
         margin-top: 7px;
     }
-
     .comment-top {
         padding: 30px;
     }
+    .section-comment {
+        justify-content: center;
+        display: flex;
+    }
+    #logo-pro-piscine {
+        width: 100%;
 
+    }
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES END - - - */
+
+
+
+/* BLUE */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION BLUE - - - */
+.section-blue {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.image-section-blue {
+    width: 1640px;
+}
+.article-blue {
+    text-align: center;
+}
+.tittle-blue {
+    font-size: 19px;
+    font-family: "Bebas Neue", light;
+    color: #0E3F78;
+    margin-top: 10px;
+}
+.tittle-article-blue {
+    align-items: center;
+    justify-content: center;
+}
+.text-blue {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #0E3F78;
+}
+.icon-light-star-blue {
+    background-color: #419ed4;
+    height: 25px;
+    min-width: 25px;
+    color: white;
+    
+}
+.star-blue {
+    font-size: 15px;
+}
+.button-plus-blue {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.button-blue {
+    width: 150px;
+    height: 60px;
+    margin: 10px;
+    background-color: transparent;
+    border-color: #0E3F78;
+    border: 1.5px solid;
+    font-size: 15px;
+    font-family: "Darker Grotesque";
+    color: #0E3F78;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden;
+}
+.icon-light-button-blue {
+    background-color: #419ed4;
+    height: 25px;
+    width: 25px;
+    color: white;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.fa-plus {
+    font-size: 18px;
+}
+@media (min-width: 600px) and (max-width: 1399px) {
+    .section-blue {
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .image-section-blue {
+        width: 1640px;
+    }
+    .article-blue {
+        position: absolute;
+        text-align: center;
+    }
+    .overlay-blue {
+        position: absolute;
+        background-color: rgba(255, 255, 255);
+        opacity: 0.8;
+        height: 350px;
+    }
+    .tittle-blue {
+        font-size: 25px;
+        font-family: "Bebas Neue", light;
+        color: #0E3F78;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-blue {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #0E3F78;
+    }
+    .icon-light-star-blue {
+        background-color: #419ed4;
+        height: 30px;
+        min-width: 30px;
+        color: white;
+        
+    }
+    .star-blue {
+        font-size: 15px;
+        margin-top: 7px;
+    }
+    .button-plus-blue {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .button-blue {
+        width: 180px;
+        height: 50px;
+        margin: 10px;
+        background-color: transparent;
+        border-color: #0E3F78;
+        border: 1.5px solid;
+        font-size: 19px;
+        font-family: "Darker Grotesque";
+        color: #0E3F78;
+        align-items: center;
+        justify-content: center;
+        position: relative; 
+        overflow: hidden;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+    .icon-light-button-blue {
+        background-color: #419ed4;
+        height: 18px;
+        width: 18px;
+        color: white;
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        transition: transform 0.3s;
+    }
+    .fa-plus {
+        font-size: 12px;
+    }
+}
+@media (min-width: 1400px) {
+.section-blue {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.image-section-blue {
+    width: 1640px;
+}
+.article-blue {
+    position: absolute;
+    text-align: center;
+}
+.overlay-blue {
+    position: absolute;
+    background-color: rgba(255, 255, 255);
+    opacity: 0.7;
+    height: 500px;
+}
+.tittle-blue {
+    font-size: 35px;
+    font-family: "Bebas Neue", light;
+    color: #0E3F78;
+    margin-top: 10px;
+}
+.tittle-blue {
+    align-items: center;
+    justify-content: center;
+}
+.text-blue {
+    font-size: 21px;
+    margin-top: 5px;
+    color: #0E3F78;
+}
+.icon-light-star-blue {
+    background-color: #419ed4;
+    height: 40px;
+    min-width: 40px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.star-blue {
+    font-size: 20px;
+}
+.button-plus-blue {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.button-blue {
+    width: 200px;
+    height: 60px;
+    margin: 10px;
+    background-color: transparent;
+    border-color: #0E3F78;
+    border: 1.5px solid;
+    font-size: 24px;
+    font-family: "Darker Grotesque";
+    color: #0E3F78;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.icon-light-button-blue {
+    background-color: #419ed4;
+    height: 25px;
+    width: 25px;
+    color: white;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    transition: transform 0.3s;
+}
+.button-blue:hover .icon-light-button-blue {
+    transform: rotate(180deg);
+    background-color: #0E3F78;
+}
+.fa-plus {
+    font-size: 18px;
+}
+.section-blue:hover .icon-light-star-blue {
+    transform: rotateY(360deg);
+    transition: transform 2s ease;
+}
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION BLUE END - - - */
+
+
+
+/* GREEN */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION GREEN - - - */
+.section-green {
+    justify-content: center;
+    align-items: center;
+}
+.tittle-article-green{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+.article-green {
+    text-align: center;
+}
+.image-green {
+    width: 100%;
+    height: 100%;
+}
+.tittle-green {
+    font-size: 19px;
+    font-family: "Bebas Neue", light;
+    color: #0E3F78;
+    margin-top: 10px;
+}
+.text-green{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #0E3F78;
+}
+.icon-light-star-green {
+    background-color: #88C29F;
+    height: 25px;
+    min-width: 25px;
+    color: white;
+}
+.star-green {
+    font-size: 15px;
+}
+.button-plus-green {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.button-green {
+    width: 150px;
+    height: 60px;
+    margin: 10px;
+    background-color: transparent;
+    border-color: #0E3F78;
+    border: 1.5px solid;
+    font-size: 15px;
+    font-family: "Darker Grotesque";
+    color: #0E3F78;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden;
+}
+.icon-light-button-green {
+    background-color: #88C29F;
+    height: 25px;
+    width: 25px;
+    color: white;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.button-green:hover .icon-light-button-green {
+    transform: rotate(180deg);
+    background-color: #41614D;
+}
+.fa-plus {
+    font-size: 18px;
+}
+@media (min-width: 600px) and (max-width: 1399px) {
+    .section-green {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .overlay-green {
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.7;
+        height: 430px;
+        min-width: 50%;
+    }
+    .article-green {
+        position: absolute;
+    }
+    .image-green {
+        height: 100%;
+    }
+    .tittle-green {
+        font-size: 25px;
+        font-family: "Bebas Neue", light;
+        color: #0E3F78;
+        margin-left: 10px;
+    }
+    .text-green{
+        align-items: start;
+        justify-content: start;
+        text-align: start;
+        font-size: 18px;
+        margin-top: 10px;
+        color: #0E3F78;
+    }
+    .tittle-article-green {
+        font-size: 22px;
+        text-align: start;
+        justify-content: start;
+    }
+    .icon-light-star-green {
+        background-color:#88C29F;
+        height: 30px;
+        min-width: 30px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .star-green {
+        font-size: 15px;
+    }
+    .button-plus-green {
+        align-items: start;
+        justify-content: start;
+        display: flex;
+    }
+    .button-green {
+        width: 180px;
+        height: 50px;
+        background-color: transparent;
+        border-color: #0E3F78;
+        border: 1.5px solid;
+        font-size: 19px;
+        font-family: "Darker Grotesque";
+        color: #0E3F78;
+        align-items: center;
+        justify-content: center;
+        position: relative; 
+        overflow: hidden;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+    .icon-light-button-green {
+        background-color: #88C29F;
+        height: 18px;
+        width: 18px;
+        color: white;
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        transition: transform 0.3s;
+    }
+    .button-green:hover .icon-light-button-green {
+        transform: rotate(180deg);
+        background-color: #41614D;
+    }
+    .fa-plus {
+        font-size: 12px;
+    }
+}
+@media (min-width: 1400px) {
+    .section-green {
+        margin-left: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .article-green {
+        position: absolute;
+    }
+    .overlay-green {
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.7;
+        height: 430px;
+        min-width: 50%;
+    }
+    .image-green {
+        width: 1640px;
+    }
+    .tittle-green {
+        font-size: 35px;
+        font-family: "Bebas Neue", light;
+        color: #0E3F78;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .text-green{
+        text-align: start;
+        font-size: 21px;
+        margin-top: 5px;
+        color: #0E3F78;
+    }
+    .tittle-article-green {
+        font-size: 22px;
+        text-align: start;
+        justify-content: start;
+    }
+    .icon-light-star-green {
+        background-color:#88C29F;
+        height: 40px;
+        min-width: 40px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .star-green {
+        font-size: 20px;
+    }
+    .button-plus-green {
+        align-items: start;
+        justify-content: start;
+        display: flex;
+    }
+    .button-green {
+        width: 200px;
+        height: 60px;
+        background-color: transparent;
+        border-color: #0E3F78;
+        border: 1.5px solid;
+        font-size: 24px;
+        font-family: "Darker Grotesque";
+        color: #0E3F78;
+        align-items: center;
+        justify-content: center;
+        position: relative; 
+        overflow: hidden;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+    .icon-light-button-green {
+        background-color: #88C29F;
+        height: 25px;
+        width: 25px;
+        color: white;
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        transition: transform 0.3s;
+    }
+    .button-green:hover .icon-light-button-green {
+        transform: rotate(180deg);
+        background-color: #41614D;
+    }
+    .fa-plus {
+        font-size: 18px;
+    }
+    .section-green:hover .icon-light-star-green {
+        transform: rotateY(360deg);
+        transition: transform 2s ease;
+    }
+}   
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION GREEN END - - - */
+
+
+
+/* YELLOW */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION YELLOW - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION YELLOW END - - - */
