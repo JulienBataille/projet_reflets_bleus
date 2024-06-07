@@ -114,507 +114,864 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES END - - - */
 
 
-
-/* BLUE */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION BLUE - - - */
-.section-blue {
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-.image-section-blue {
-    width: 1640px;
-}
-.article-blue {
-    text-align: center;
-}
-.tittle-blue {
-    font-size: 19px;
-    font-family: "Bebas Neue", light;
-    color: #0E3F78;
-    margin-top: 10px;
-}
-.tittle-article-blue {
-    align-items: center;
-    justify-content: center;
-}
-.text-blue {
-    font-size: 15px;
-    margin-top: 10px;
-    color: #0E3F78;
-}
-.icon-light-star-blue {
-    background-color: #419ed4;
-    height: 25px;
-    min-width: 25px;
-    color: white;
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E E N - - */
+@media (min-width: 768px) {    
+    h2 {
+        font-size: 2.5vw;
+        font-family: "Bebas Neue", light;
+        color: #0E3F78;
+        margin-top: 10px; 
+        margin-left: 10px;
+    }
+    p {
+        font-size: 1.4vw;
+        text-align: start;
+        color: #0E3F78;
+        font-family: "Darker Grotesque";
+        margin-left: 10px;
+    }
+    .title-container {
+        display: flex;
+        margin-left: 10px;
+        align-items: center;
+    }
+    .overlay-green {
+        position: absolute;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction:row;
+        padding: 10px;
+    }
+    .icon-container-green {
+        width: 3vw; 
+        height: 3vw; 
+        background-color: #88C29F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
-}
-.star-blue {
-    font-size: 15px;
-}
-.button-plus-blue {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.button-blue {
-    width: 150px;
-    height: 60px;
-    margin: 10px;
-    background-color: transparent;
-    border-color: #0E3F78;
-    border: 1.5px solid;
-    font-size: 15px;
-    font-family: "Darker Grotesque";
-    color: #0E3F78;
-    align-items: center;
-    justify-content: center;
-    position: relative; 
-    overflow: hidden;
-}
-.icon-light-button-blue {
-    background-color: #419ed4;
-    height: 25px;
-    width: 25px;
-    color: white;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-}
-.fa-plus {
-    font-size: 18px;
-}
-@media (min-width: 600px) and (max-width: 1399px) {
-    .section-blue {
+    }
+    .icon-container-green i {
+        color: white;
+        font-size: 1.5vw;
+    }
+    .btn-green {
+        width: 13vw;
+        height: 3.8vw;
+        border: solid 1px #0E3F78;
+        border-radius: 0;
+        font-size: 1.3vw;
+        font-family: "Darker Grotesque";
+        color: #0E3F78;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .btn-green:hover {
+        width: 13vw;
+        height: 3.8vw;
+        border: solid 1px #0E3F78;
+        border-radius: 0;
+        font-size: 1.3vw;
+        font-family: "Darker Grotesque";
+        color: #0E3F78;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .btn-green:hover .icon-green {
+        background-color: #41614D;
+    }
+    .icon-green {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        background-color: #88C29F;
+        width: 1.4vw;
+        height: 1.4vw;
+    }
+    .fa-plus {
+        color: rgb(255, 255, 255);
+        font-size: 0.7vw;
+    }
+    .text-btn {
+        margin-bottom: 5px;
+    }
+    .overlay-green:hover .icon-container-green i {
+        animation: rotate3d 4s infinite;
+    }
+    .btn-green:hover .icon-green {
+        animation: rotate3d 2s infinite;
+    }
+    @keyframes rotate3d {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+    }
+@media (max-width: 768px) {
+            h2 {
+                font-size: 5vw; 
+                font-family: "Bebas Neue", light;
+                color: #0E3F78;
+                margin-top: 10px; 
+                margin-left: 10px;
+            }
+            p {
+                font-size: 2.8vw; 
+                text-align: start;
+                color: #0E3F78;
+                font-family: "Darker Grotesque";
+                margin-left: 10px;
+                padding: 0px;
+                text-align: center;
+            }
+            .btn-green {
+                font-size: 4vw; 
+            }
+            .icon-container-green i, .fa-plus {
+                font-size: 3vw; 
+            }
+            .icon-container-green {
+                width: 5vw; 
+                height: 5vw; 
+                background-color: #88C29F;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+            }
+            .icon-container-green i {
+                color: white;
+                font-size: 2.5vw;
+            }
+            .title-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .icon-green {
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                background-color: #88C29F;
+                width: 4vw;
+                height: 4vw;
+            }
+            .fa-plus {
+                color: rgb(255, 255, 255);
+                font-size: 1.5vw;
+            }
+            .btn-green {
+                width: 28vw;
+                height: 10vw;
+                border: solid 1px #0E3F78;
+                border-radius: 0;
+                font-size: 3vw;
+                font-family: "Darker Grotesque";
+                color: #0E3F78;
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(255, 255, 255, 0);
+            }
+            .container-btn {
+                align-items: center;
+                justify-content: center;
+            }
+    }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E E N - E N D - - */
+    
+    
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - Y E L L O W - - */
+@media (min-width: 768px) {    
+        .title-container {
+            display: flex;
+            margin-left: 10px;
+            align-items: center;
+        }
+        .overlay-yellow {
+            position: absolute;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+        .icon-container-yellow {
+            width: 3vw; 
+            height: 3vw; 
+            background-color: #ECD27E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        .icon-container-yellow i {
+            color: white;
+            font-size: 1.5vw;
+        }
+        .btn-yellow {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .btn-yellow:hover {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+        }
+        .btn-yellow:hover .icon-yellow {
+            background-color: #877744;
+        }
+        .icon-yellow {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: #ECD27E;
+            width: 1.4vw;
+            height: 1.4vw;
+        }
+        .fa-plus {
+            color: rgb(255, 255, 255);
+            font-size: 0.7vw;
+        }
+        .text-btn {
+            margin-bottom: 5px;
+        }
+        .overlay-yellow:hover .icon-container-yellow i {
+            animation: rotate3d 4s infinite;
+        }
+        .btn-yellow:hover .icon-yellow {
+            animation: rotate3d 2s infinite;
+        }
+        @keyframes rotate3d {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+@media (max-width: 768px) {
+                .btn-yellow {
+                    font-size: 4vw; 
+                }
+                .icon-container-yellow i, .fa-plus {
+                    font-size: 3vw; 
+                }
+                .icon-container-yellow {
+                    width: 5vw; 
+                    height: 5vw; 
+                    background-color: #ECD27E;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                
+                }
+                .icon-container-yellow i {
+                    color: white;
+                    font-size: 2.5vw;
+                }
+                .title-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .icon-yellow {
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #ECD27E;
+                    width: 4vw;
+                    height: 4vw;
+                }
+                .fa-plus {
+                    color: rgb(255, 255, 255);
+                    font-size: 1.5vw;
+                }
+                .btn-yellow {
+                    width: 28vw;
+                    height: 10vw;
+                    border: solid 1px #0E3F78;
+                    border-radius: 0;
+                    font-size: 3vw;
+                    font-family: "Darker Grotesque";
+                    color: #0E3F78;
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(255, 255, 255, 0);
+                }
+                .container-btn {
+                    align-items: center;
+                    justify-content: center;
+                }
+    }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - Y E L L O W - E N D - - */
+    
+    
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - - */
+@media (min-width: 768px) {    
+        .title-container {
+            display: flex;
+            margin-left: 10px;
+            align-items: center;
+        }
+        .overlay-red {
+            position: absolute;
+            justify-content: center;
+            top: 0;
+            right: 0;
+            width: 70%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+        .icon-container-red {
+            width: 3vw; 
+            height: 3vw; 
+            background-color: #D56C99;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        .icon-container-red i {
+            color: white;
+            font-size: 1.5vw;
+        }
+        .btn-red {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .btn-red:hover {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+        }
+        .btn-red:hover .icon-red {
+            background-color: #7D294D;
+        }
+        .icon-red {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: #D56C99;
+            width: 1.4vw;
+            height: 1.4vw;
+        }
+        .fa-plus {
+            color: rgb(255, 255, 255);
+            font-size: 0.7vw;
+        }
+        .text-btn {
+            margin-bottom: 5px;
+        }
+        .overlay-red:hover .icon-container-red i {
+            animation: rotate3d 4s infinite;
+        }
+        .btn-red:hover .icon-red {
+            animation: rotate3d 2s infinite;
+        }
+        @keyframes rotate3d {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+@media (max-width: 768px) {
+                .btn-red {
+                    font-size: 4vw; 
+                }
+                .icon-container-red i, .fa-plus {
+                    font-size: 3vw; 
+                }
+                .icon-container-red {
+                    width: 5vw; 
+                    height: 5vw; 
+                    background-color: #D56C99;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                
+                }
+                .icon-container-red i {
+                    color: white;
+                    font-size: 2.5vw;
+                }
+                .title-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .icon-red {
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #D56C99;
+                    width: 4vw;
+                    height: 4vw;
+                }
+                .fa-plus {
+                    color: rgb(255, 255, 255);
+                    font-size: 1.5vw;
+                }
+                .btn-red {
+                    width: 28vw;
+                    height: 10vw;
+                    border: solid 1px #0E3F78;
+                    border-radius: 0;
+                    font-size: 3vw;
+                    font-family: "Darker Grotesque";
+                    color: #0E3F78;
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(255, 255, 255, 0);
+                }
+                .container-btn {
+                    align-items: center;
+                    justify-content: center;
+                }
+    }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - E N D - - */
+    
+    
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - - */
+@media (min-width: 768px) {    
+        .title-container {
+            display: flex;
+            margin-left: 10px;
+            align-items: center;
+        }
+        .overlay-blue {
+            position: absolute;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+        .icon-container-blue {
+            width: 3vw; 
+            height: 3vw; 
+            background-color: #41AED1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        .icon-container-blue i {
+            color: white;
+            font-size: 1.5vw;
+        }
+        .btn-blue {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .btn-blue:hover {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+        }
+        .btn-blue:hover .icon-blue {
+            background-color: #0E3F78;
+        }
+        .icon-blue {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: #41AED1;
+            width: 1.4vw;
+            height: 1.4vw;
+        }
+        .fa-plus {
+            color: rgb(255, 255, 255);
+            font-size: 0.7vw;
+        }
+        .text-btn {
+            margin-bottom: 5px;
+        }
+        .overlay-blue:hover .icon-container-blue i {
+            animation: rotate3d 4s infinite;
+        }
+        .btn-blue:hover .icon-blue {
+            animation: rotate3d 2s infinite;
+        }
+        @keyframes rotate3d {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+@media (max-width: 768px) {
+                .btn-blue {
+                    font-size: 4vw; 
+                }
+                .icon-container-blue i, .fa-plus {
+                    font-size: 3vw; 
+                }
+                .icon-container-blue {
+                    width: 5vw; 
+                    height: 5vw; 
+                    background-color: #41AED1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                
+                }
+                .icon-container-blue i {
+                    color: white;
+                    font-size: 2.5vw;
+                }
+                .title-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .icon-blue {
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #41AED1;
+                    width: 4vw;
+                    height: 4vw;
+                }
+                .fa-plus {
+                    color: rgb(255, 255, 255);
+                    font-size: 1.5vw;
+                }
+                .btn-blue {
+                    width: 28vw;
+                    height: 10vw;
+                    border: solid 1px #0E3F78;
+                    border-radius: 0;
+                    font-size: 3vw;
+                    font-family: "Darker Grotesque";
+                    color: #0E3F78;
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(255, 255, 255, 0);
+                }
+                .container-btn {
+                    align-items: center;
+                    justify-content: center;
+                }
+    }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - E N D - - */
+    
+     
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E Y - - */
+@media (min-width: 768px) {    
+        .title-container {
+            display: flex;
+            margin-left: 10px;
+            align-items: center;
+        }
+        .overlay-grey {
+            position: absolute;
+            justify-content: center;
+            top: 0;
+            right: 0;
+            width: 70%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+        .icon-container-grey {
+            width: 3vw; 
+            height: 3vw; 
+            background-color: #AFAFAF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        .icon-container-grey i {
+            color: white;
+            font-size: 1.5vw;
+        }
+        .btn-grey {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .btn-grey:hover {
+            width: 13vw;
+            height: 3.8vw;
+            border: solid 1px #0E3F78;
+            border-radius: 0;
+            font-size: 1.3vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+        }
+        .btn-grey:hover .icon-grey {
+            background-color: #464646;
+        }
+        .icon-grey {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: #AFAFAF;
+            width: 1.4vw;
+            height: 1.4vw;
+        }
+        .fa-plus {
+            color: rgb(255, 255, 255);
+            font-size: 0.7vw;
+        }
+        .text-btn {
+            margin-bottom: 5px;
+        }
+        .overlay-grey:hover .icon-container-grey i {
+            animation: rotate3d 4s infinite;
+        }
+        .btn-grey:hover .icon-grey {
+            animation: rotate3d 2s infinite;
+        }
+        @keyframes rotate3d {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+@media (max-width: 768px) {
+                .btn-grey {
+                    font-size: 4vw; 
+                }
+                .icon-container-grey i, .fa-plus {
+                    font-size: 3vw; 
+                }
+                .icon-container-grey {
+                    width: 5vw; 
+                    height: 5vw; 
+                    background-color: #AFAFAF;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                
+                }
+                .icon-container-grey i {
+                    color: white;
+                    font-size: 2.5vw;
+                }
+                .title-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .icon-grey {
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #AFAFAF;
+                    width: 4vw;
+                    height: 4vw;
+                }
+                .fa-plus {
+                    color: rgb(255, 255, 255);
+                    font-size: 1.5vw;
+                }
+                .btn-grey {
+                    width: 28vw;
+                    height: 10vw;
+                    border: solid 1px #0E3F78;
+                    border-radius: 0;
+                    font-size: 3vw;
+                    font-family: "Darker Grotesque";
+                    color: #0E3F78;
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(255, 255, 255, 0);
+                }
+                .container-btn {
+                    align-items: center;
+                    justify-content: center;
+                }
+    }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E Y - E N D - - */
+    
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - C A R D S - - */
+@media (min-width: 768px) { 
+    .overlay-cards {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
-    }
-    .image-section-blue {
-        width: 1640px;
-    }
-    .article-blue {
-        position: absolute;
+        color: white;
         text-align: center;
     }
-    .overlay-blue {
-        position: absolute;
-        background-color: rgba(255, 255, 255);
-        opacity: 0.8;
-        height: 350px;
+    .overlay-cards:hover {
+        background-color: rgba(0, 0, 0, 0); /* Overlay semi-transparent */
     }
-    .tittle-blue {
-        font-size: 25px;
-        font-family: "Bebas Neue", light;
-        color: #0E3F78;
-        margin-top: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-    .text-blue {
-        font-size: 18px;
-        margin-top: 10px;
-        color: #0E3F78;
-    }
-    .icon-light-star-blue {
-        background-color: #419ed4;
-        height: 30px;
-        min-width: 30px;
-        color: white;
-        
-    }
-    .star-blue {
-        font-size: 15px;
-        margin-top: 7px;
-    }
-    .button-plus-blue {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-    .button-blue {
-        width: 180px;
-        height: 50px;
-        margin: 10px;
-        background-color: transparent;
-        border-color: #0E3F78;
-        border: 1.5px solid;
-        font-size: 19px;
+    .btn-cards {
+        width: 12vw;
+        height: 3.8vw;
+        border-radius: 0;
+        border: white;
+        font-size: 1.3vw;
         font-family: "Darker Grotesque";
         color: #0E3F78;
-        align-items: center;
-        justify-content: center;
-        position: relative; 
-        overflow: hidden;
-        transition: background-color 0.3s, border-color 0.3s;
-    }
-    .icon-light-button-blue {
-        background-color: #419ed4;
-        height: 18px;
-        width: 18px;
-        color: white;
         display: flex; 
         align-items: center;
-        justify-content: center; 
-        transition: transform 0.3s;
-    }
-    .fa-plus {
-        font-size: 12px;
-    }
-}
-@media (min-width: 1400px) {
-.section-blue {
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-.image-section-blue {
-    width: 1640px;
-}
-.article-blue {
-    position: absolute;
-    text-align: center;
-}
-.overlay-blue {
-    position: absolute;
-    background-color: rgba(255, 255, 255);
-    opacity: 0.7;
-    height: 500px;
-}
-.tittle-blue {
-    font-size: 35px;
-    font-family: "Bebas Neue", light;
-    color: #0E3F78;
-    margin-top: 10px;
-}
-.tittle-blue {
-    align-items: center;
-    justify-content: center;
-}
-.text-blue {
-    font-size: 21px;
-    margin-top: 5px;
-    color: #0E3F78;
-}
-.icon-light-star-blue {
-    background-color: #419ed4;
-    height: 40px;
-    min-width: 40px;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.star-blue {
-    font-size: 20px;
-}
-.button-plus-blue {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.button-blue {
-    width: 200px;
-    height: 60px;
-    margin: 10px;
-    background-color: transparent;
-    border-color: #0E3F78;
-    border: 1.5px solid;
-    font-size: 24px;
-    font-family: "Darker Grotesque";
-    color: #0E3F78;
-    align-items: center;
-    justify-content: center;
-    position: relative; 
-    overflow: hidden;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-.icon-light-button-blue {
-    background-color: #419ed4;
-    height: 25px;
-    width: 25px;
-    color: white;
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
-    transition: transform 0.3s;
-}
-.button-blue:hover .icon-light-button-blue {
-    transform: rotate(180deg);
-    background-color: #0E3F78;
-}
-.fa-plus {
-    font-size: 18px;
-}
-.section-blue:hover .icon-light-star-blue {
-    transform: rotateY(360deg);
-    transition: transform 2s ease;
-}
-}
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION BLUE END - - - */
-
-
-
-/* GREEN */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION GREEN - - - */
-.section-green {
-    justify-content: center;
-    align-items: center;
-}
-.tittle-article-green{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 10px;
-}
-.article-green {
-    text-align: center;
-}
-.image-green {
-    width: 100%;
-    height: 100%;
-}
-.tittle-green {
-    font-size: 19px;
-    font-family: "Bebas Neue", light;
-    color: #0E3F78;
-    margin-top: 10px;
-}
-.text-green{
-    font-size: 15px;
-    margin-top: 10px;
-    color: #0E3F78;
-}
-.icon-light-star-green {
-    background-color: #88C29F;
-    height: 25px;
-    min-width: 25px;
-    color: white;
-}
-.star-green {
-    font-size: 15px;
-}
-.button-plus-green {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.button-green {
-    width: 150px;
-    height: 60px;
-    margin: 10px;
-    background-color: transparent;
-    border-color: #0E3F78;
-    border: 1.5px solid;
-    font-size: 15px;
-    font-family: "Darker Grotesque";
-    color: #0E3F78;
-    align-items: center;
-    justify-content: center;
-    position: relative; 
-    overflow: hidden;
-}
-.icon-light-button-green {
-    background-color: #88C29F;
-    height: 25px;
-    width: 25px;
-    color: white;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-}
-.button-green:hover .icon-light-button-green {
-    transform: rotate(180deg);
-    background-color: #41614D;
-}
-.fa-plus {
-    font-size: 18px;
-}
-@media (min-width: 600px) and (max-width: 1399px) {
-    .section-green {
-        display: flex;
         justify-content: center;
-        align-items: center;
+        background-color: rgba(255, 255, 255, 0.486);
     }
-    .overlay-green {
-        position: absolute;
-        background-color: rgb(255, 255, 255);
-        opacity: 0.7;
-        height: 430px;
-        min-width: 50%;
+    .btn-cards:hover .icon-green {
+        animation: rotate3d 2s infinite;
     }
-    .article-green {
-        position: absolute;
+    .btn-cards:hover .icon-red {
+        animation: rotate3d 2s infinite;
     }
-    .image-green {
-        height: 100%;
+    .btn-cards:hover .icon-yellow {
+        animation: rotate3d 2s infinite;
     }
-    .tittle-green {
-        font-size: 25px;
-        font-family: "Bebas Neue", light;
-        color: #0E3F78;
-        margin-left: 10px;
+    .btn-cards:hover .icon-blue {
+        animation: rotate3d 2s infinite;
     }
-    .text-green{
-        align-items: start;
-        justify-content: start;
-        text-align: start;
-        font-size: 18px;
-        margin-top: 10px;
-        color: #0E3F78;
-    }
-    .tittle-article-green {
-        font-size: 22px;
-        text-align: start;
-        justify-content: start;
-    }
-    .icon-light-star-green {
-        background-color:#88C29F;
-        height: 30px;
-        min-width: 30px;
-        color: white;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-    .star-green {
-        font-size: 15px;
-    }
-    .button-plus-green {
-        align-items: start;
-        justify-content: start;
-        display: flex;
-    }
-    .button-green {
-        width: 180px;
-        height: 50px;
-        background-color: transparent;
-        border-color: #0E3F78;
-        border: 1.5px solid;
-        font-size: 19px;
-        font-family: "Darker Grotesque";
-        color: #0E3F78;
-        align-items: center;
-        justify-content: center;
-        position: relative; 
-        overflow: hidden;
-        transition: background-color 0.3s, border-color 0.3s;
-    }
-    .icon-light-button-green {
-        background-color: #88C29F;
-        height: 18px;
-        width: 18px;
-        color: white;
-        display: flex; 
-        align-items: center;
-        justify-content: center; 
-        transition: transform 0.3s;
-    }
-    .button-green:hover .icon-light-button-green {
-        transform: rotate(180deg);
-        background-color: #41614D;
-    }
-    .fa-plus {
-        font-size: 12px;
+    @keyframes rotate3d {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
     }
 }
-@media (min-width: 1400px) {
-    .section-green {
-        margin-left: 10px;
-        align-items: center;
-        justify-content: center;
+@media (max-width: 768px) { 
+        .overlay-cards {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .btn-cards {
+            width: 40vw;
+            height: 15vw;
+            border-radius: 0;
+            border: white;
+            font-size: 5vw;
+            font-family: "Darker Grotesque";
+            color: #0E3F78;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.486);
+        }
     }
-    .article-green {
-        position: absolute;
-    }
-    .overlay-green {
-        position: absolute;
-        background-color: rgb(255, 255, 255);
-        opacity: 0.7;
-        height: 430px;
-        min-width: 50%;
-    }
-    .image-green {
-        width: 1640px;
-    }
-    .tittle-green {
-        font-size: 35px;
-        font-family: "Bebas Neue", light;
-        color: #0E3F78;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    .text-green{
-        text-align: start;
-        font-size: 21px;
-        margin-top: 5px;
-        color: #0E3F78;
-    }
-    .tittle-article-green {
-        font-size: 22px;
-        text-align: start;
-        justify-content: start;
-    }
-    .icon-light-star-green {
-        background-color:#88C29F;
-        height: 40px;
-        min-width: 40px;
-        color: white;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-    .star-green {
-        font-size: 20px;
-    }
-    .button-plus-green {
-        align-items: start;
-        justify-content: start;
-        display: flex;
-    }
-    .button-green {
-        width: 200px;
-        height: 60px;
-        background-color: transparent;
-        border-color: #0E3F78;
-        border: 1.5px solid;
-        font-size: 24px;
-        font-family: "Darker Grotesque";
-        color: #0E3F78;
-        align-items: center;
-        justify-content: center;
-        position: relative; 
-        overflow: hidden;
-        transition: background-color 0.3s, border-color 0.3s;
-    }
-    .icon-light-button-green {
-        background-color: #88C29F;
-        height: 25px;
-        width: 25px;
-        color: white;
-        display: flex; 
-        align-items: center;
-        justify-content: center; 
-        transition: transform 0.3s;
-    }
-    .button-green:hover .icon-light-button-green {
-        transform: rotate(180deg);
-        background-color: #41614D;
-    }
-    .fa-plus {
-        font-size: 18px;
-    }
-    .section-green:hover .icon-light-star-green {
-        transform: rotateY(360deg);
-        transition: transform 2s ease;
-    }
-}   
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION GREEN END - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - C A R D S - E N D - - */
 
 
 
-/* YELLOW */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION YELLOW - - - */
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION YELLOW END - - - */
