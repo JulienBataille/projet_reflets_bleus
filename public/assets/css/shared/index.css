@@ -116,7 +116,7 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E E N - - */
 @media (min-width: 768px) {    
-    h2 {
+    .titreh2 {
         font-size: 2.5vw;
         font-family: "Bebas Neue", light;
         color: #0E3F78;
@@ -220,7 +220,7 @@
     }
     }
 @media (max-width: 768px) {
-            h2 {
+            .titreh2 {
                 font-size: 5vw; 
                 font-family: "Bebas Neue", light;
                 color: #0E3F78;
