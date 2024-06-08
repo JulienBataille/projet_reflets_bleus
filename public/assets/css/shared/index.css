@@ -5,6 +5,7 @@
     object-fit: cover;
     display: block;
 }
+
 @media (min-width: 600px) and (max-width: 1399px) {
 
     #image_header {
@@ -12,6 +13,7 @@
         content: url(/assets/images/images/index/aaa.jpg);
     }
 }
+
 @media (min-width: 1400px) {
 
     #image_header {
@@ -19,6 +21,7 @@
         content: url(/assets/images/images/index/bbb.jpg);
     }
 }
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER END - - - */
 
 
@@ -32,27 +35,33 @@
     margin-top: 10px;
     padding: 5px;
 }
+
 .comment {
     font-family: "Darker Grotesque", sans-serif;
     color: #0E3F78;
     font-size: 15px;
     text-align: center;
 }
+
 .icon-title {
     height: 25px;
     width: 25px;
 }
+
 .comment-top {
     text-align: center;
 }
+
 #logo-pro-piscine {
     width: 100%;
 }
+
 .containt-comment-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 @media (min-width: 600px) and (max-width: 1399px) {
     .title-comment {
         font-family: "Bebas Neue", sans-serif;
@@ -61,843 +70,215 @@
         margin-top: 10px;
         padding: 5px;
     }
+
     .comment {
         font-family: "Darker Grotesque", sans-serif;
         color: #0E3F78;
         font-size: 14px;
         text-align: center;
     }
+
     .icon-title {
         height: 20px;
         width: 20px;
     }
+
     .comment-top {
         margin-top: 200px;
         text-align: center;
     }
+
     #logo-pro-piscine {
         width: 100%;
     }
+
     .containt-comment-title {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
+
 @media (min-width: 1400px) {
     .comment {
         font-family: "Darker Grotesque", sans-serif;
         color: #0E3F78;
         font-size: 20px;
     }
+
     .icon-title {
         width: 40px;
         height: 40px;
     }
+
     .title-comment {
         font-size: 35px;
         padding: 10px;
         margin-top: 7px;
     }
+
     .comment-top {
         padding: 30px;
     }
+
     .section-comment {
         justify-content: center;
         display: flex;
     }
+
     #logo-pro-piscine {
         width: 100%;
 
     }
 }
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES END - - - */
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E E N - - */
-@media (min-width: 768px) {    
+
+
+.titreh2 {
+    font-size: 5vw;
+    font-family: "Bebas Neue", light;
+    color: #0E3F78;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 2.8vw;
+    text-align: start;
+    color: #0E3F78;
+    font-family: "Darker Grotesque";
+    margin-left: 10px;
+    padding: 0px;
+    text-align: center;
+}
+
+
+.icon-container {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+}
+
+.fa-plus {
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+}
+
+.fa-star {
+    color: white;
+    font-size: 3vw;
+}
+
+.container-btn {
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
     .titreh2 {
         font-size: 2.5vw;
-        font-family: "Bebas Neue", light;
-        color: #0E3F78;
-        margin-top: 10px; 
-        margin-left: 10px;
     }
+
     p {
         font-size: 1.4vw;
-        text-align: start;
-        color: #0E3F78;
-        font-family: "Darker Grotesque";
-        margin-left: 10px;
     }
+
     .title-container {
-        display: flex;
         margin-left: 10px;
-        align-items: center;
     }
-    .overlay-green {
-        position: absolute;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        width: 70%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.5);
-        display: flex;
-        flex-direction:row;
-        padding: 10px;
+
+    .icon-container {
+        width: 3vw;
+        height: 3vw;
     }
-    .icon-container-green {
-        width: 3vw; 
-        height: 3vw; 
-        background-color: #88C29F;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    .icon-container-green i {
-        color: white;
+
+    .fa-star {
         font-size: 1.5vw;
     }
-    .btn-green {
-        width: 13vw;
-        height: 3.8vw;
-        border: solid 1px #0E3F78;
-        border-radius: 0;
-        font-size: 1.3vw;
-        font-family: "Darker Grotesque";
-        color: #0E3F78;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0);
-    }
-    .btn-green:hover {
-        width: 13vw;
-        height: 3.8vw;
-        border: solid 1px #0E3F78;
-        border-radius: 0;
-        font-size: 1.3vw;
-        font-family: "Darker Grotesque";
-        color: #0E3F78;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(255, 255, 255);
-    }
-    .btn-green:hover .icon-green {
-        background-color: #41614D;
-    }
-    .icon-green {
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        background-color: #88C29F;
+
+    .icon {
         width: 1.4vw;
         height: 1.4vw;
     }
+
     .fa-plus {
-        color: rgb(255, 255, 255);
         font-size: 0.7vw;
     }
+
     .text-btn {
         margin-bottom: 5px;
     }
-    .overlay-green:hover .icon-container-green i {
+
+    .overlay:hover .fa-star {
         animation: rotate3d 4s infinite;
     }
-    .btn-green:hover .icon-green {
-        animation: rotate3d 2s infinite;
-    }
-    @keyframes rotate3d {
-        from {
-            transform: rotateY(0deg);
-        }
-        to {
-            transform: rotateY(360deg);
-        }
-    }
-    }
-@media (max-width: 768px) {
-            .titreh2 {
-                font-size: 5vw; 
-                font-family: "Bebas Neue", light;
-                color: #0E3F78;
-                margin-top: 10px; 
-                margin-left: 10px;
-            }
-            p {
-                font-size: 2.8vw; 
-                text-align: start;
-                color: #0E3F78;
-                font-family: "Darker Grotesque";
-                margin-left: 10px;
-                padding: 0px;
-                text-align: center;
-            }
-            .btn-green {
-                font-size: 4vw; 
-            }
-            .icon-container-green i, .fa-plus {
-                font-size: 3vw; 
-            }
-            .icon-container-green {
-                width: 5vw; 
-                height: 5vw; 
-                background-color: #88C29F;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            
-            }
-            .icon-container-green i {
-                color: white;
-                font-size: 2.5vw;
-            }
-            .title-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .icon-green {
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                background-color: #88C29F;
-                width: 4vw;
-                height: 4vw;
-            }
-            .fa-plus {
-                color: rgb(255, 255, 255);
-                font-size: 1.5vw;
-            }
-            .btn-green {
-                width: 28vw;
-                height: 10vw;
-                border: solid 1px #0E3F78;
-                border-radius: 0;
-                font-size: 3vw;
-                font-family: "Darker Grotesque";
-                color: #0E3F78;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                background-color: rgba(255, 255, 255, 0);
-            }
-            .container-btn {
-                align-items: center;
-                justify-content: center;
-            }
-    }
+
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E E N - E N D - - */
-    
-    
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - Y E L L O W - - */
-@media (min-width: 768px) {    
-        .title-container {
-            display: flex;
-            margin-left: 10px;
-            align-items: center;
-        }
-        .overlay-yellow {
-            position: absolute;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            width: 70%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
-        }
-        .icon-container-yellow {
-            width: 3vw; 
-            height: 3vw; 
-            background-color: #ECD27E;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-        }
-        .icon-container-yellow i {
-            color: white;
-            font-size: 1.5vw;
-        }
-        .btn-yellow {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0);
-        }
-        .btn-yellow:hover {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-        }
-        .btn-yellow:hover .icon-yellow {
-            background-color: #877744;
-        }
-        .icon-yellow {
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: #ECD27E;
-            width: 1.4vw;
-            height: 1.4vw;
-        }
-        .fa-plus {
-            color: rgb(255, 255, 255);
-            font-size: 0.7vw;
-        }
-        .text-btn {
-            margin-bottom: 5px;
-        }
-        .overlay-yellow:hover .icon-container-yellow i {
-            animation: rotate3d 4s infinite;
-        }
-        .btn-yellow:hover .icon-yellow {
-            animation: rotate3d 2s infinite;
-        }
-        @keyframes rotate3d {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(360deg);
-            }
-        }
-    }
-@media (max-width: 768px) {
-                .btn-yellow {
-                    font-size: 4vw; 
-                }
-                .icon-container-yellow i, .fa-plus {
-                    font-size: 3vw; 
-                }
-                .icon-container-yellow {
-                    width: 5vw; 
-                    height: 5vw; 
-                    background-color: #ECD27E;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                
-                }
-                .icon-container-yellow i {
-                    color: white;
-                    font-size: 2.5vw;
-                }
-                .title-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .icon-yellow {
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #ECD27E;
-                    width: 4vw;
-                    height: 4vw;
-                }
-                .fa-plus {
-                    color: rgb(255, 255, 255);
-                    font-size: 1.5vw;
-                }
-                .btn-yellow {
-                    width: 28vw;
-                    height: 10vw;
-                    border: solid 1px #0E3F78;
-                    border-radius: 0;
-                    font-size: 3vw;
-                    font-family: "Darker Grotesque";
-                    color: #0E3F78;
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: rgba(255, 255, 255, 0);
-                }
-                .container-btn {
-                    align-items: center;
-                    justify-content: center;
-                }
-    }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - Y E L L O W - E N D - - */
-    
-    
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - - */
-@media (min-width: 768px) {    
-        .title-container {
-            display: flex;
-            margin-left: 10px;
-            align-items: center;
-        }
-        .overlay-red {
-            position: absolute;
-            justify-content: center;
-            top: 0;
-            right: 0;
-            width: 70%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
-        }
-        .icon-container-red {
-            width: 3vw; 
-            height: 3vw; 
-            background-color: #D56C99;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-        }
-        .icon-container-red i {
-            color: white;
-            font-size: 1.5vw;
-        }
-        .btn-red {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0);
-        }
-        .btn-red:hover {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-        }
-        .btn-red:hover .icon-red {
-            background-color: #7D294D;
-        }
-        .icon-red {
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: #D56C99;
-            width: 1.4vw;
-            height: 1.4vw;
-        }
-        .fa-plus {
-            color: rgb(255, 255, 255);
-            font-size: 0.7vw;
-        }
-        .text-btn {
-            margin-bottom: 5px;
-        }
-        .overlay-red:hover .icon-container-red i {
-            animation: rotate3d 4s infinite;
-        }
-        .btn-red:hover .icon-red {
-            animation: rotate3d 2s infinite;
-        }
-        @keyframes rotate3d {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(360deg);
-            }
-        }
-    }
-@media (max-width: 768px) {
-                .btn-red {
-                    font-size: 4vw; 
-                }
-                .icon-container-red i, .fa-plus {
-                    font-size: 3vw; 
-                }
-                .icon-container-red {
-                    width: 5vw; 
-                    height: 5vw; 
-                    background-color: #D56C99;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                
-                }
-                .icon-container-red i {
-                    color: white;
-                    font-size: 2.5vw;
-                }
-                .title-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .icon-red {
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #D56C99;
-                    width: 4vw;
-                    height: 4vw;
-                }
-                .fa-plus {
-                    color: rgb(255, 255, 255);
-                    font-size: 1.5vw;
-                }
-                .btn-red {
-                    width: 28vw;
-                    height: 10vw;
-                    border: solid 1px #0E3F78;
-                    border-radius: 0;
-                    font-size: 3vw;
-                    font-family: "Darker Grotesque";
-                    color: #0E3F78;
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: rgba(255, 255, 255, 0);
-                }
-                .container-btn {
-                    align-items: center;
-                    justify-content: center;
-                }
-    }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - E N D - - */
-    
-    
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - - */
-@media (min-width: 768px) {    
-        .title-container {
-            display: flex;
-            margin-left: 10px;
-            align-items: center;
-        }
-        .overlay-blue {
-            position: absolute;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            width: 70%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
-        }
-        .icon-container-blue {
-            width: 3vw; 
-            height: 3vw; 
-            background-color: #41AED1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-        }
-        .icon-container-blue i {
-            color: white;
-            font-size: 1.5vw;
-        }
-        .btn-blue {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0);
-        }
-        .btn-blue:hover {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-        }
-        .btn-blue:hover .icon-blue {
-            background-color: #0E3F78;
-        }
-        .icon-blue {
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: #41AED1;
-            width: 1.4vw;
-            height: 1.4vw;
-        }
-        .fa-plus {
-            color: rgb(255, 255, 255);
-            font-size: 0.7vw;
-        }
-        .text-btn {
-            margin-bottom: 5px;
-        }
-        .overlay-blue:hover .icon-container-blue i {
-            animation: rotate3d 4s infinite;
-        }
-        .btn-blue:hover .icon-blue {
-            animation: rotate3d 2s infinite;
-        }
-        @keyframes rotate3d {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(360deg);
-            }
-        }
-    }
-@media (max-width: 768px) {
-                .btn-blue {
-                    font-size: 4vw; 
-                }
-                .icon-container-blue i, .fa-plus {
-                    font-size: 3vw; 
-                }
-                .icon-container-blue {
-                    width: 5vw; 
-                    height: 5vw; 
-                    background-color: #41AED1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                
-                }
-                .icon-container-blue i {
-                    color: white;
-                    font-size: 2.5vw;
-                }
-                .title-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .icon-blue {
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #41AED1;
-                    width: 4vw;
-                    height: 4vw;
-                }
-                .fa-plus {
-                    color: rgb(255, 255, 255);
-                    font-size: 1.5vw;
-                }
-                .btn-blue {
-                    width: 28vw;
-                    height: 10vw;
-                    border: solid 1px #0E3F78;
-                    border-radius: 0;
-                    font-size: 3vw;
-                    font-family: "Darker Grotesque";
-                    color: #0E3F78;
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: rgba(255, 255, 255, 0);
-                }
-                .container-btn {
-                    align-items: center;
-                    justify-content: center;
-                }
-    }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - R E D - E N D - - */
-    
-     
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E Y - - */
-@media (min-width: 768px) {    
-        .title-container {
-            display: flex;
-            margin-left: 10px;
-            align-items: center;
-        }
-        .overlay-grey {
-            position: absolute;
-            justify-content: center;
-            top: 0;
-            right: 0;
-            width: 70%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
-        }
-        .icon-container-grey {
-            width: 3vw; 
-            height: 3vw; 
-            background-color: #AFAFAF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-        }
-        .icon-container-grey i {
-            color: white;
-            font-size: 1.5vw;
-        }
-        .btn-grey {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0);
-        }
-        .btn-grey:hover {
-            width: 13vw;
-            height: 3.8vw;
-            border: solid 1px #0E3F78;
-            border-radius: 0;
-            font-size: 1.3vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-        }
-        .btn-grey:hover .icon-grey {
-            background-color: #464646;
-        }
-        .icon-grey {
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: #AFAFAF;
-            width: 1.4vw;
-            height: 1.4vw;
-        }
-        .fa-plus {
-            color: rgb(255, 255, 255);
-            font-size: 0.7vw;
-        }
-        .text-btn {
-            margin-bottom: 5px;
-        }
-        .overlay-grey:hover .icon-container-grey i {
-            animation: rotate3d 4s infinite;
-        }
-        .btn-grey:hover .icon-grey {
-            animation: rotate3d 2s infinite;
-        }
-        @keyframes rotate3d {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(360deg);
-            }
-        }
-    }
-@media (max-width: 768px) {
-                .btn-grey {
-                    font-size: 4vw; 
-                }
-                .icon-container-grey i, .fa-plus {
-                    font-size: 3vw; 
-                }
-                .icon-container-grey {
-                    width: 5vw; 
-                    height: 5vw; 
-                    background-color: #AFAFAF;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                
-                }
-                .icon-container-grey i {
-                    color: white;
-                    font-size: 2.5vw;
-                }
-                .title-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .icon-grey {
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #AFAFAF;
-                    width: 4vw;
-                    height: 4vw;
-                }
-                .fa-plus {
-                    color: rgb(255, 255, 255);
-                    font-size: 1.5vw;
-                }
-                .btn-grey {
-                    width: 28vw;
-                    height: 10vw;
-                    border: solid 1px #0E3F78;
-                    border-radius: 0;
-                    font-size: 3vw;
-                    font-family: "Darker Grotesque";
-                    color: #0E3F78;
-                    display: flex; 
-                    align-items: center;
-                    justify-content: center;
-                    background-color: rgba(255, 255, 255, 0);
-                }
-                .container-btn {
-                    align-items: center;
-                    justify-content: center;
-                }
-    }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E Y - E N D - - */
-    
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - C A R D S - - */
-@media (min-width: 768px) { 
+.overlay-cards {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay semi-transparent */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.btn-cards {
+    width: 40vw;
+    height: 15vw;
+    border-radius: 0;
+    border: white;
+    font-size: 5vw;
+    font-family: "Darker Grotesque";
+    color: #0E3F78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.486);
+}
+
+@media (min-width: 768px) {
     .overlay-cards {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Overlay semi-transparent */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -905,73 +286,23 @@
         color: white;
         text-align: center;
     }
+
     .overlay-cards:hover {
-        background-color: rgba(0, 0, 0, 0); /* Overlay semi-transparent */
+        background-color: rgba(0, 0, 0, 0);
+        /* Overlay semi-transparent */
     }
+
     .btn-cards {
         width: 12vw;
         height: 3.8vw;
-        border-radius: 0;
-        border: white;
         font-size: 1.3vw;
-        font-family: "Darker Grotesque";
-        color: #0E3F78;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.486);
     }
-    .btn-cards:hover .icon-green {
+
+    .btn-cards:hover .icon{
         animation: rotate3d 2s infinite;
     }
-    .btn-cards:hover .icon-red {
-        animation: rotate3d 2s infinite;
-    }
-    .btn-cards:hover .icon-yellow {
-        animation: rotate3d 2s infinite;
-    }
-    .btn-cards:hover .icon-blue {
-        animation: rotate3d 2s infinite;
-    }
-    @keyframes rotate3d {
-        from {
-            transform: rotateY(0deg);
-        }
-        to {
-            transform: rotateY(360deg);
-        }
-    }
+
+
 }
-@media (max-width: 768px) { 
-        .overlay-cards {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-        .btn-cards {
-            width: 40vw;
-            height: 15vw;
-            border-radius: 0;
-            border: white;
-            font-size: 5vw;
-            font-family: "Darker Grotesque";
-            color: #0E3F78;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.486);
-        }
-    }
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - C A R D S - E N D - - */
-
-
-

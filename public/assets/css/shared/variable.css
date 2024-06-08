@@ -8,3 +8,22 @@
     --icon-light: #88C29F;
     --icon-dark: #41614D;
 }
+
+.green{
+    background-color: #88C29F;
+}
+.yellow{
+    background-color: #ECD27E;
+}
+.red{
+    background-color: #D56C99;
+
+}
+.blue{
+    background-color: #41AED1;
+
+}
+.grey{
+    background-color: #AFAFAF;
+
+}
