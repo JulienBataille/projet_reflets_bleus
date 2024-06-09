@@ -31,15 +31,12 @@
 .title-comment {
     font-family: "Bebas Neue", sans-serif;
     color: #0E3F78;
-    font-size: 25px;
-    margin-top: 10px;
-    padding: 5px;
+
 }
 
 .comment {
     font-family: "Darker Grotesque", sans-serif;
     color: #0E3F78;
-    font-size: 15px;
     text-align: center;
 }
 
@@ -47,89 +44,29 @@
     height: 25px;
     width: 25px;
 }
-
-.comment-top {
-    text-align: center;
-}
-
-#logo-pro-piscine {
-    width: 100%;
-}
-
 .containt-comment-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media (min-width: 600px) and (max-width: 1399px) {
-    .title-comment {
-        font-family: "Bebas Neue", sans-serif;
+@media (min-width: 768px) {
+    .p-comment {
+        font-family: "Darker Grotesque", sans-serif;
         color: #0E3F78;
-        font-size: 20px;
+        font-size: 1vw;
+    }
+
+    .icon-title {
+        width: 30px;
+        height: 30px;
+    }
+
+    .title-comment {
+        font-size: 2vw;
         margin-top: 10px;
-        padding: 5px;
     }
 
-    .comment {
-        font-family: "Darker Grotesque", sans-serif;
-        color: #0E3F78;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .icon-title {
-        height: 20px;
-        width: 20px;
-    }
-
-    .comment-top {
-        margin-top: 200px;
-        text-align: center;
-    }
-
-    #logo-pro-piscine {
-        width: 100%;
-    }
-
-    .containt-comment-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media (min-width: 1400px) {
-    .comment {
-        font-family: "Darker Grotesque", sans-serif;
-        color: #0E3F78;
-        font-size: 20px;
-    }
-
-    .icon-title {
-        width: 40px;
-        height: 40px;
-    }
-
-    .title-comment {
-        font-size: 35px;
-        padding: 10px;
-        margin-top: 7px;
-    }
-
-    .comment-top {
-        padding: 30px;
-    }
-
-    .section-comment {
-        justify-content: center;
-        display: flex;
-    }
-
-    #logo-pro-piscine {
-        width: 100%;
-
-    }
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES END - - - */
