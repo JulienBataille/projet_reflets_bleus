@@ -1,125 +1,136 @@
-/* NAVBAR */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - NAVBAR - - - */
-.navbar {
+header .navbar {
     background-color: white;
     justify-content: center;
     height: 70px;
 }
-.navbar-nav .nav-link {
+
+header .navbar-nav .nav-link {
     font-size: 25px;
-    color: #0E3F78;
+    color: var(--icon-dark);
     font-weight: lighter;
 }
-.logo-header {
+
+header .logo-header {
     width: 180px;
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - NAVBAR END - - - */
 
-
-
-/* ICON */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ICON - - - */
-.fa-square-facebook {
+header .fa-square-facebook {
     color: #0E3F78;
     font-size: 40px;
 }
-.content-icon-facebook-top {
+
+header .content-icon-facebook-top {
     position: absolute;
     right: 0;
     margin-right: 80px;
 }
-.icon-dark {
-    background-color: #0E3F78;
+
+header .icon-dark {
+    background-color: var(--icon-dark);
     height: 50px;
     justify-content: center;
 }
-.icon-light {
-    background-color: #419ed4;
+
+header .icon-light {
+    background-color: var(--icon-light);
     height: 50px;
     justify-content: center;
 }
-.fa-location-dot {
+
+header .fa-location-dot {
     color: white;
     font-size: 20px;
     margin-top: 15px;
 }
-.fa-phone {
+
+header .fa-phone {
     color: white;
     font-size: 20px;
     margin-top: 15px;
 }
-.content-icon-mail {
+
+header .content-icon-mail {
     position: absolute;
 }
-.icon-mail {
-    background-color: #419ed4;
+
+header .icon-mail {
+    background-color: var(--icon-light);
     height: 50px;
-    width: 50px;
     text-align: center;
 }
-.fa-envelope {
+
+header .fa-envelope {
     color: white;
     font-size: 20px;
     margin-top: 15px;
 }
+
 @media (min-width: 600px) and (max-width: 1399px) {
-    .icon-size {
+    header .icon-size {
         height: 50px;
     }
 }
+
 @media (min-width: 1400px) and (max-width: 1940px) {
-    .navbar-nav {
+    header .navbar-nav {
         margin-left: 400px;
     }
-    .icon-dark {
+
+    header .icon-dark {
         position: absolute;
-        background-color: #0E3F78;
+        background-color: var(--icon-dark);
         height: 70px;
         min-width: 70px;
         right: 0;
         top: 0;
     }
-    .icon-light {
+
+    header .icon-light {
         position: absolute;
-        background-color: #419ed4;
+        background-color: var(--icon-light);
         height: 70px;
         min-width: 70px;
         right: 70px;
         top: 0;
     }
-    .fa-location-dot {
+
+    header .fa-location-dot {
         color: white;
         font-size: 30px;
         margin-top: 20px;
         align-items: center;
         justify-content: center;
     }
-    .fa-phone {
+
+    header .fa-phone {
         color: white;
         font-size: 30px;
         margin-top: 20px;
     }
-    .fa-square-facebook {
+
+    header .fa-square-facebook {
         color: #0E3F78;
         font-size: 40px;
     }
-    .content-icon-facebook-top {
+
+    header .content-icon-facebook-top {
         position: absolute;
         right: 75px;
         margin-right: 80px;
     }
-    .icon-mail {
+
+    header .icon-mail {
         position: absolute;
-        background-color: #0E3F78;
+        background-color: var(--icon-dark);
         height: 70px;
         min-width: 70px;
         margin-top: 540px;
     }
-    .fa-envelope {
+
+    header .fa-envelope {
         color: white;
         font-size: 30px;
         margin-top: 20px;
         align-items: center;
     }
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ICON END - - - */

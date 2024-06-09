@@ -30,26 +30,26 @@
         animation: rotate3d 2s infinite;
     }
 
-    .button.green:hover {
+    .button:hover .icon.green {
         background-color: #41614D;
     }
 
-    .button.yellow:hover {
+    .button:hover .icon.yellow {
         background-color: #877744;
 
     }
 
-    .button.red:hover {
+    .button:hover .icon.red {
         background-color: #7D294D;
 
     }
 
-    .button.blue:hover {
+    .button:hover .icon.blue {
         background-color: #0E3F78;
 
     }
 
-    .button.grey:hover {
+    .button:hover .icon.grey {
         background-color: #464646;
 
     }

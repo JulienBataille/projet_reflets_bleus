@@ -4,9 +4,24 @@
 
 }
 
+
+
 .services{
     --icon-light: #88C29F;
     --icon-dark: #41614D;
+}
+
+.batiment{
+    --icon-light: #ECD27E;
+    --icon-dark: #877744;
+}
+.renovation{
+    --icon-light: #D56C99;
+    --icon-dark: #7D294D;
+}
+.bien-etre{
+    --icon-light: #AFAFAF;
+    --icon-dark: #464646;
 }
 
 .green{

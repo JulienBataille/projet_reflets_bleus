@@ -40,9 +40,22 @@
     text-align: center;
 }
 
+.icon-comment {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .icon-title {
     height: 25px;
     width: 25px;
+}
+
+#comment .fa-location-dot {
+    color: white;
+    font-size: 3vw;
 }
 .containt-comment-title {
     display: flex;
@@ -66,8 +79,23 @@
         font-size: 2vw;
         margin-top: 10px;
     }
+    
+    .icon-comment {
+        width: 2vw;
+        height: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--icon-light);
+    
+    }
+    #comment i {
+        color: white;
+        font-size: 1.2vw;
+    }
 
 }
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES END - - - */
 
@@ -126,6 +154,7 @@ p {
     color: white;
     font-size: 3vw;
 }
+
 
 .container-btn {
     align-items: center;
@@ -193,6 +222,7 @@ p {
     .overlay:hover .fa-star {
         animation: rotate3d 4s infinite;
     }
+
 
 }
 
