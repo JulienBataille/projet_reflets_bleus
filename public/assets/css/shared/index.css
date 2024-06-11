@@ -2,11 +2,35 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER - - - */
 #image_header {
     height: 650px;
+    position: relative;
+    width: 100%;
+}
+#overlay_image {
+    width: 440px;
+    height: 220px;
+    position: absolute;
+    top: 47%;
 }
 @media (min-width: 768px) {
     #image_header {
         height: 680px;
-        content: url(/assets/images/images/index/bbb.jpg);
+        content: url(/assets/images/images/index/aaa.jpg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    #overlay_image {
+        width: 440px;
+        height: 220px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 1s ease-in-out;
+    }
+    .image_header:hover #overlay_image {
+        transform: translate(-50%, -50%) scale(1.5);
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER END - - - */
@@ -81,7 +105,6 @@
     font-size: 5vw;
     font-family: "Bebas Neue", light;
     color: #0E3F78;
-    margin-top: 10px;
     margin-left: 10px;
 }
 p {
@@ -89,7 +112,6 @@ p {
     text-align: start;
     color: #0E3F78;
     font-family: "Darker Grotesque";
-    margin-left: 10px;
     padding: 0px;
     text-align: center;
 }
@@ -141,7 +163,8 @@ p {
     }
     .container-btn {
         align-items: center;
-        justify-content: start;
+        justify-content: center;
+
     }
     .overlay-left {
         left: 0;
@@ -155,9 +178,10 @@ p {
     p {
         font-size: 1.4vw;
         text-align: start;
+        margin-left: 40px;
     }
     .title-container {
-        margin-left: 10px;
+        margin-left: 40px;
         display: flex;
         align-items: center;
         justify-content: start;
@@ -218,7 +242,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.250);
+    background-color: rgba(255, 255, 255, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,7 +261,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.486);
+    background-color: rgba(255, 255, 255, 0.836);
 }
 @media (min-width: 768px) {
     .overlay-cards {

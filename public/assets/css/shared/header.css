@@ -59,8 +59,10 @@ header .fa-envelope {
     header .icon-size {
         height: 50px;
     }
-    header .navbar-nav {
-        font-size: 0.5vw;
+    header .navbar-nav .nav-link {
+        font-size: 1.1vw;
+        color: var(--icon-dark);
+        font-weight: lighter;
     }
     header .icon-dark {
         position: absolute;

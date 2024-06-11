@@ -1,5 +1,62 @@
-footer{
-    background-color: var(--color-background-blue-dark);
-    color: var(--color-text-light);
-
+/* FOOTER */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION FOOTER - - - */
+footer .navbar {
+    height: 70px;
+    background-color: #0E3F78;
+    justify-content: center;
 }
+footer .navbar-nav .nav-link {
+    font-size: 1vw;
+    color: white;
+    font-weight: lighter;
+}
+footer .logo-footer {
+    width: 180px;
+}
+footer .fa-square-facebook {
+    color: #ffffff;
+    font-size: 40px;
+}
+footer .content-icon-facebook-top {
+    position: absolute;
+    right: 80px;
+}
+@media (min-width: 768px) {
+    footer .navbar {
+        height: 70px;
+        width: 100%;
+        justify-content: center;
+        background-color: #0E3F78;
+    }
+    footer .icon-size {
+        height: 50px;
+    }
+    footer .logo-footer {
+        width: 180px;
+    }
+    footer .navbar-nav {
+        font-size: 0.5vw;
+        color: #ffffff;
+    }
+    footer .icon-dark {
+        position: absolute;
+        background-color: var(--icon-dark);
+        height: 70px;
+        min-width: 70px;
+        right: 0;
+        top: 0;
+    }
+    footer .fa-square-facebook {
+        color: #ffffff;
+        font-size: 40px;
+    }
+    footer .content-icon-facebook-top {
+        position: absolute;
+        right: 20px;
+    }
+    footer .collapse {
+        margin-left: 50px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION FOOTER END - - - */
+

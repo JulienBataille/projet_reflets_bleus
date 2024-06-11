@@ -3,17 +3,15 @@
 @import'shared/variable.css';
 @import'shared/button.css';
 @import'shared/animation.css';
-
+@import'shared/footer.css';
 
 
 
 :root {
     font-family: "Darker Grotesque", sans-serif;
-
 }
 
 .container {
     padding: 0;
     margin: 50px;
-
 }
