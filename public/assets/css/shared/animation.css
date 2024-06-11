@@ -1,3 +1,5 @@
+/* ANIMATION */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION ANIMATION - - - */
 @keyframes rotate3d {
     from {
         transform: rotateY(0deg);
@@ -6,3 +8,4 @@
         transform: rotateY(360deg);
     }
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION ANIMATION END - - - */

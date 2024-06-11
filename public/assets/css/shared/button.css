@@ -1,3 +1,5 @@
+/* BUTTON */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION BUTTON - - - */
 .button {
     width: 28vw;
     height: 10vw;
@@ -11,46 +13,32 @@
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
 }
-
 .button:hover {
     background-color: rgb(255, 255, 255);
 }
-
-
 @media (min-width: 768px) {
-
     .button {
         width: 13vw;
         height: 3.8vw;
         font-size: 1.3vw;
-
     }
-
     .button:hover .icon {
         animation: rotate3d 2s infinite;
     }
-
     .button:hover .icon.green {
         background-color: #41614D;
     }
-
     .button:hover .icon.yellow {
         background-color: #877744;
-
     }
-
     .button:hover .icon.red {
         background-color: #7D294D;
-
     }
-
     .button:hover .icon.blue {
         background-color: #0E3F78;
-
     }
-
     .button:hover .icon.grey {
         background-color: #464646;
-
     }
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION BUTTON END - - - */

@@ -1,81 +1,67 @@
+/* HEADER */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION HEADER - - - */
 header .navbar {
     background-color: white;
     justify-content: center;
     height: 70px;
 }
-
 header .navbar-nav .nav-link {
-    font-size: 25px;
+    font-size: 1vw;
     color: var(--icon-dark);
     font-weight: lighter;
 }
-
 header .logo-header {
     width: 180px;
 }
-
 header .fa-square-facebook {
     color: #0E3F78;
     font-size: 40px;
 }
-
 header .content-icon-facebook-top {
     position: absolute;
     right: 0;
     margin-right: 80px;
 }
-
 header .icon-dark {
     background-color: var(--icon-dark);
     height: 50px;
     justify-content: center;
 }
-
 header .icon-light {
     background-color: var(--icon-light);
     height: 50px;
     justify-content: center;
 }
-
 header .fa-location-dot {
     color: white;
     font-size: 20px;
     margin-top: 15px;
 }
-
 header .fa-phone {
     color: white;
     font-size: 20px;
     margin-top: 15px;
 }
-
 header .content-icon-mail {
     position: absolute;
 }
-
 header .icon-mail {
     background-color: var(--icon-light);
     height: 50px;
     text-align: center;
 }
-
 header .fa-envelope {
     color: white;
     font-size: 20px;
     margin-top: 15px;
 }
-
-@media (min-width: 600px) and (max-width: 1399px) {
+@media (min-width: 768px) {
     header .icon-size {
         height: 50px;
     }
-}
-
-@media (min-width: 1400px) and (max-width: 1940px) {
     header .navbar-nav {
-        margin-left: 400px;
+        font-size: 0.5vw;
     }
-
     header .icon-dark {
         position: absolute;
         background-color: var(--icon-dark);
@@ -84,7 +70,6 @@ header .fa-envelope {
         right: 0;
         top: 0;
     }
-
     header .icon-light {
         position: absolute;
         background-color: var(--icon-light);
@@ -93,7 +78,6 @@ header .fa-envelope {
         right: 70px;
         top: 0;
     }
-
     header .fa-location-dot {
         color: white;
         font-size: 30px;
@@ -101,24 +85,20 @@ header .fa-envelope {
         align-items: center;
         justify-content: center;
     }
-
     header .fa-phone {
         color: white;
         font-size: 30px;
         margin-top: 20px;
     }
-
     header .fa-square-facebook {
         color: #0E3F78;
         font-size: 40px;
     }
-
     header .content-icon-facebook-top {
         position: absolute;
         right: 75px;
         margin-right: 80px;
     }
-
     header .icon-mail {
         position: absolute;
         background-color: var(--icon-dark);
@@ -126,7 +106,6 @@ header .fa-envelope {
         min-width: 70px;
         margin-top: 540px;
     }
-
     header .fa-envelope {
         color: white;
         font-size: 30px;
@@ -134,3 +113,4 @@ header .fa-envelope {
         align-items: center;
     }
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION HEADER END - - - */

@@ -1,16 +1,13 @@
+/* COLOR CATEGORY */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR CATEGORY - - - */
 .home {
     --icon-light: #41AED1;
     --icon-dark: #0E3F78;
-
 }
-
-
-
 .services{
     --icon-light: #88C29F;
     --icon-dark: #41614D;
 }
-
 .batiment{
     --icon-light: #ECD27E;
     --icon-dark: #877744;
@@ -23,7 +20,11 @@
     --icon-light: #AFAFAF;
     --icon-dark: #464646;
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR CATEGORY END - - - */
 
+
+/* COLOR */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR - - - */
 .green{
     background-color: #88C29F;
 }
@@ -32,13 +33,11 @@
 }
 .red{
     background-color: #D56C99;
-
 }
 .blue{
     background-color: #41AED1;
-
 }
 .grey{
     background-color: #AFAFAF;
-
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR END - - - */

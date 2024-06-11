@@ -1,85 +1,64 @@
 /* PICTURE */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER - - - */
 #image_header {
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    height: 650px;
 }
-
-@media (min-width: 600px) and (max-width: 1399px) {
-
-    #image_header {
-        height: 100%;
-        content: url(/assets/images/images/index/aaa.jpg);
-    }
-}
-
-@media (min-width: 1400px) {
-
+@media (min-width: 768px) {
     #image_header {
         height: 680px;
         content: url(/assets/images/images/index/bbb.jpg);
     }
 }
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER END - - - */
 
 
-
 /* COMMENT */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENT - - - */
 .title-comment {
     font-family: "Bebas Neue", sans-serif;
     color: #0E3F78;
-
+    margin-top: 10px;
 }
-
 .comment {
     font-family: "Darker Grotesque", sans-serif;
     color: #0E3F78;
     text-align: center;
 }
-
 .icon-comment {
     width: 5vw;
     height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 .icon-title {
     height: 25px;
     width: 25px;
 }
-
-#comment .fa-location-dot {
+#comment i {
     color: white;
-    font-size: 3vw;
+    font-size: 2.2vw;
 }
 .containt-comment-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 @media (min-width: 768px) {
     .p-comment {
         font-family: "Darker Grotesque", sans-serif;
         color: #0E3F78;
-        font-size: 1vw;
+        font-size: 1vw; 
+        text-align: center;
     }
-
     .icon-title {
         width: 30px;
         height: 30px;
     }
-
     .title-comment {
         font-size: 2vw;
         margin-top: 10px;
     }
-    
     .icon-comment {
         width: 2vw;
         height: 2vw;
@@ -87,22 +66,17 @@
         align-items: center;
         justify-content: center;
         background: var(--icon-light);
-    
     }
     #comment i {
         color: white;
         font-size: 1.2vw;
     }
-
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENT END - - - */
 
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENTAIRES END - - - */
-
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E E N - - */
-
-
+/* CATEGORY */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION CATEGORY - - - */
 .titreh2 {
     font-size: 5vw;
     font-family: "Bebas Neue", light;
@@ -110,7 +84,6 @@
     margin-top: 10px;
     margin-left: 10px;
 }
-
 p {
     font-size: 2.8vw;
     text-align: start;
@@ -120,23 +93,18 @@ p {
     padding: 0px;
     text-align: center;
 }
-
-
 .icon-container {
     width: 5vw;
     height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-
 .title-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .icon {
     display: flex;
     align-items: center;
@@ -144,23 +112,18 @@ p {
     width: 4vw;
     height: 4vw;
 }
-
 .fa-plus {
     color: rgb(255, 255, 255);
     font-size: 3vw;
 }
-
 .fa-star {
     color: white;
     font-size: 3vw;
 }
-
-
 .container-btn {
     align-items: center;
     justify-content: center;
 }
-
 @media (min-width: 768px) {
     .overlay {
         position: absolute;
@@ -168,76 +131,94 @@ p {
         top: 0;
         width: 70%;
         height: 100%;
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.712);
         display: flex;
         flex-direction: row;
         padding: 10px;
     }
-
     .overlay-right {
         right: 0;
     }
-
+    .container-btn {
+        align-items: center;
+        justify-content: start;
+    }
     .overlay-left {
         left: 0;
     }
-
     .overlay:hover .fa-star {
         animation: rotate3d 4s infinite;
     }
     .titreh2 {
         font-size: 2.5vw;
     }
-
     p {
         font-size: 1.4vw;
+        text-align: start;
     }
-
     .title-container {
         margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
     }
-
     .icon-container {
         width: 3vw;
         height: 3vw;
     }
-
     .fa-star {
         font-size: 1.5vw;
     }
-
     .icon {
         width: 1.4vw;
         height: 1.4vw;
     }
-
     .fa-plus {
         font-size: 0.7vw;
     }
-
     .text-btn {
         margin-bottom: 5px;
     }
-
     .overlay:hover .fa-star {
         animation: rotate3d 4s infinite;
     }
-
-
+    .overlay-text {
+        font-size: 1.4vw;
+    }
+    #top p {
+        text-align: center;
+    }
+    .overlay-blue {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 70%;
+        height: 80%;
+        background: rgba(255, 255, 255, 0.712);
+    }
+    .overlay-blue:hover .fa-star {
+        animation: rotate3d 4s infinite;
+    }
+    .overlay-text {
+        font-size: 2.8vw;
+        text-align: center;
+        color: #0E3F78;
+        font-family: "Darker Grotesque";
+    }
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION CATEGORY END - - - */
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - G R E E N - E N D - - */
 
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - C A R D S - - */
+/* CARDS */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION CARDS - - - */
 .overlay-cards {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Overlay semi-transparent */
+    background-color: rgba(0, 0, 0, 0.250);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,7 +226,6 @@ p {
     color: white;
     text-align: center;
 }
-
 .btn-cards {
     width: 40vw;
     height: 15vw;
@@ -259,7 +239,6 @@ p {
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.486);
 }
-
 @media (min-width: 768px) {
     .overlay-cards {
         position: absolute;
@@ -267,8 +246,7 @@ p {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Overlay semi-transparent */
+        background-color: rgba(255, 255, 255, 0.700);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -276,23 +254,16 @@ p {
         color: white;
         text-align: center;
     }
-
     .overlay-cards:hover {
-        background-color: rgba(0, 0, 0, 0);
-        /* Overlay semi-transparent */
+        background-color: rgba(255, 255, 255, 0.100);
     }
-
     .btn-cards {
         width: 12vw;
         height: 3.8vw;
         font-size: 1.3vw;
     }
-
     .btn-cards:hover .icon{
         animation: rotate3d 2s infinite;
     }
-
-
 }
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S E C T I O N - C A R D S - E N D - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION CARDS END - - - */
