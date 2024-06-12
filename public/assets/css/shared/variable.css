@@ -4,19 +4,24 @@
     --icon-light: #41AED1;
     --icon-dark: #0E3F78;
 }
+
+.piscines {
+    --icon-light: #41AED1;
+    --icon-dark: #0E3F78;
+}
 .services{
     --icon-light: #88C29F;
     --icon-dark: #41614D;
 }
-.batiment{
+.renovation{
     --icon-light: #ECD27E;
     --icon-dark: #877744;
 }
-.renovation{
+.bien-etre{
     --icon-light: #D56C99;
     --icon-dark: #7D294D;
 }
-.bien-etre{
+.batiment{
     --icon-light: #AFAFAF;
     --icon-dark: #464646;
 }

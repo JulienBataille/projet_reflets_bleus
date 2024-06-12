@@ -1,62 +1,55 @@
 /* FOOTER */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION FOOTER - - - */
-footer .navbar {
-    height: 70px;
-    background-color: #0E3F78;
-    justify-content: center;
+footer {
+    width: 100%;
+    background-color: var(--icon-dark);
+    padding: 10px;
+    align-items: start;
+    text-align: center;
 }
-footer .navbar-nav .nav-link {
-    font-size: 1vw;
-    color: white;
-    font-weight: lighter;
-}
-footer .logo-footer {
-    width: 180px;
-}
+
 footer .fa-square-facebook {
     color: #ffffff;
     font-size: 40px;
 }
-footer .content-icon-facebook-top {
-    position: absolute;
-    right: 80px;
+footer .fa-square-facebook {
+    font-size: 40px;
 }
+footer .logo-footer {
+    width: 180px;
+}
+footer .link-pages a{
+    font-size: 3vw;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer .link-pages {
+    margin: 5px;
+}
+
 @media (min-width: 768px) {
-    footer .navbar {
-        height: 70px;
-        width: 100%;
-        justify-content: center;
-        background-color: #0E3F78;
+
+    footer {
+        height: 100px;
+        width: 100%;    
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
     }
-    footer .icon-size {
-        height: 50px;
+
+    footer .link-pages{
+        position: static;
     }
-    footer .logo-footer {
-        width: 180px;
+    footer .link-pages a{
+        font-size: 1vw;
+        margin:20px;
     }
-    footer .navbar-nav {
-        font-size: 0.5vw;
-        color: #ffffff;
+    footer .link-pages a:hover{
+        text-decoration:underline;
     }
-    footer .icon-dark {
-        position: absolute;
-        background-color: var(--icon-dark);
-        height: 70px;
-        min-width: 70px;
-        right: 0;
-        top: 0;
-    }
-    footer .fa-square-facebook {
-        color: #ffffff;
-        font-size: 40px;
-    }
-    footer .content-icon-facebook-top {
-        position: absolute;
-        right: 20px;
-    }
-    footer .collapse {
-        margin-left: 50px;
-    }
+
+
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION FOOTER END - - - */
 
