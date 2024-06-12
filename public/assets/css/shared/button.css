@@ -23,7 +23,7 @@
         font-size: 1.3vw;
     }
     .button:hover .icon {
-        animation: rotate3d 2s infinite;
+        animation: rotate3d 2s;
     }
     .button:hover .icon.green {
         background-color: #41614D;

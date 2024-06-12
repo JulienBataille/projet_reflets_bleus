@@ -105,7 +105,8 @@
     font-size: 5vw;
     font-family: "Bebas Neue", light;
     color: #0E3F78;
-    margin-left: 10px;
+    margin-left: 1vw;
+    letter-spacing: 0.1vw;
 }
 p {
     font-size: 2.8vw;
@@ -163,7 +164,7 @@ p {
     }
     .container-btn {
         align-items: center;
-        justify-content: center;
+        justify-content: end;
 
     }
     .overlay-left {
@@ -204,7 +205,7 @@ p {
         margin-bottom: 5px;
     }
     .overlay:hover .fa-star {
-        animation: rotate3d 4s infinite;
+        animation: rotate3d 4s;
     }
     .overlay-text {
         font-size: 1.4vw;
@@ -222,7 +223,7 @@ p {
         background: rgba(255, 255, 255, 0.712);
     }
     .overlay-blue:hover .fa-star {
-        animation: rotate3d 4s infinite;
+        animation: rotate3d 4s;
     }
     .overlay-text {
         font-size: 2.8vw;
@@ -286,7 +287,7 @@ p {
         height: 3.8vw;
         font-size: 1.3vw;
     }
-    .btn-cards:hover .icon{
+    .overlay-cards:hover .icon{
         animation: rotate3d 2s infinite;
     }
 }
