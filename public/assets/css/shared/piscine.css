@@ -1,26 +1,26 @@
 /* PICTURE */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER - - - */
-.home #image_header {
+.piscines #image_header {
     height: 650px;
     position: relative;
     width: 100%;
 }
-.home #overlay_image {
+.piscines #overlay_image {
     width: 440px;
     height: 220px;
     position: absolute;
     top: 47%;
 }
 @media (min-width: 768px) {
-    .home #image_header {
+    .piscines #image_header {
         height: 680px;
-        content: url(/assets/images/images/index/aaa.jpg);
+        content: url(/assets/images/images/piscine/image-header-piscine.jpg);
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
     }
-    .home #overlay_image {
+    .piscines #overlay_image {
         width: 440px;
         height: 220px;
         position: absolute;
@@ -29,7 +29,7 @@
         transform: translate(-50%, -50%) scale(1);
         transition: transform 1s ease-in-out;
     }
-    .home .image_header:hover #overlay_image {
+    .piscines .image_header:hover #overlay_image {
         transform: translate(-50%, -50%) scale(1.5);
     }
 }
@@ -37,52 +37,53 @@
 
 /* COMMENT */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENT - - - */
-.home .title-comment {
+.piscines .title-comment {
     font-family: "Bebas Neue", sans-serif;
     color: #0E3F78;
     margin-top: 10px;
+    font-size: 5vw;
 }
-.home .comment {
+.piscines .comment {
     font-family: "Darker Grotesque", sans-serif;
     color: #0E3F78;
     text-align: center;
 }
-.home .icon-comment {
+.piscines .icon-comment {
     width: 5vw;
     height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.home .icon-title {
+.piscines .icon-title {
     height: 25px;
     width: 25px;
 }
-.home #comment i {
+.piscines #comment i {
     color: white;
     font-size: 2.2vw;
 }
-.home .containt-comment-title {
+.piscines .containt-comment-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 @media (min-width: 768px) {
-    .home .p-comment {
+    .piscines .p-comment {
         font-family: "Darker Grotesque", sans-serif;
         color: #0E3F78;
         font-size: 1vw; 
         text-align: center;
     }
-    .home .icon-title {
+    .piscines .icon-title {
         width: 30px;
         height: 30px;
     }
-    .home .title-comment {
+    .piscines .title-comment {
         font-size: 2vw;
         margin-top: 10px;
     }
-    .home .icon-comment {
+    .piscines .icon-comment {
         width: 2vw;
         height: 2vw;
         display: flex;
@@ -90,7 +91,71 @@
         justify-content: center;
         background: var(--icon-light);
     }
-    .home #comment i {
+    .piscines #comment i {
+        color: white;
+        font-size: 1.2vw;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENT END - - - */
+
+/* COMMENT */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENT - - - */
+.piscines .title-paragraphe {
+    font-family: "Bebas Neue", sans-serif;
+    color: #0E3F78;
+    margin-top: 10px;
+    font-size: 5vw;
+}
+.piscines .paragraphe {
+    font-family: "Darker Grotesque", sans-serif;
+    color: #0E3F78;
+    text-align: center;
+}
+.piscines .icon-paragraphe {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.piscines .icon-title {
+    height: 25px;
+    width: 25px;
+}
+.piscines #paragraphe i {
+    color: white;
+    font-size: 2.2vw;
+}
+.piscines .containt-paragraphe-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    
+    .piscines #paragraphe p {
+        font-family: "Darker Grotesque", sans-serif;
+        color: #0E3F78;
+        font-size: 1vw; 
+        text-align: start;
+    }
+    .piscines .icon-title {
+        width: 30px;
+        height: 30px;
+    }
+    .piscines .title-paragraphe {
+        font-size: 2vw;
+        margin-top: 10px;
+    }
+    .piscines .icon-paragraphe {
+        width: 2vw;
+        height: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--icon-light);
+    }
+    .piscines #paragraphe i {
         color: white;
         font-size: 1.2vw;
     }
@@ -99,14 +164,14 @@
 
 /* CATEGORY */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION CATEGORY - - - */
-.home .titreh2 {
+.piscines .titreh2 {
     font-size: 5vw;
     font-family: "Bebas Neue", light;
     color: #0E3F78;
     margin-left: 1vw;
     letter-spacing: 0.1vw;
 }
-.home p {
+.piscines p {
     font-size: 2.8vw;
     text-align: start;
     color: #0E3F78;
@@ -114,105 +179,104 @@
     padding: 0px;
     text-align: center;
 }
-.home .icon-container {
+.piscines .icon-container {
     width: 5vw;
     height: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.home .title-container {
+.piscines .title-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.home .icon {
+.piscines .icon {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 4vw;
     height: 4vw;
 }
-.home .fa-plus {
+.piscines .fa-plus {
     color: rgb(255, 255, 255);
     font-size: 3vw;
 }
-.home .fa-star {
+.piscines .fa-star {
     color: white;
     font-size: 3vw;
 }
-.home .container-btn {
+.piscines .container-btn {
     align-items: center;
     justify-content: center;
 }
 @media (min-width: 768px) {
-    .home .overlay {
+    .piscines .overlay {
         position: absolute;
         justify-content: center;
         top: 0;
         width: 70%;
         height: 100%;
         background: rgba(255, 255, 255, 0.712);
-        backdrop-filter: blur(10px);
         display: flex;
         flex-direction: row;
         padding: 10px;
     }
-    .home .overlay-right {
+    .piscines .overlay-right {
         right: 0;
     }
-    .home .container-btn {
+    .piscines .container-btn {
         align-items: center;
         justify-content: end;
 
     }
-    .home .overlay-left {
+    .piscines .overlay-left {
         left: 0;
     }
-    .home .overlay:hover .fa-star {
+    .piscines .overlay:hover .fa-star {
         animation: rotate3d 4s infinite;
     }
-    .home .titreh2 {
+    .piscines .titreh2 {
         font-size: 2.5vw;
     }
-    .home p {
+    .piscines p {
         font-size: 1.4vw;
         text-align: start;
         margin-left: 40px;
     }
-    .home .title-container {
+    .piscines .title-container {
         margin-left: 40px;
         display: flex;
         align-items: center;
         justify-content: start;
     }
-    .home .icon-container {
+    .piscines .icon-container {
         width: 2.5vw;
         height: 2.5vw;
     }
-    .home .fa-star {
+    .piscines .fa-star {
         font-size: 1.5vw;
     }
-    .home .icon {
+    .piscines .icon {
         width: 1.4vw;
         height: 1.4vw;
     }
-    .home .fa-plus {
+    .piscines .fa-plus {
         font-size: 0.7vw;
     }
-    .home .text-btn {
+    .piscines .text-btn {
         margin-bottom: 5px;
     }
-    .home .overlay:hover .fa-star {
+    .piscines .overlay:hover .fa-star {
         animation: rotate3d 4s;
     }
-    .home .overlay-text {
+    .piscines .overlay-text {
         font-size: 1.4vw;
     }
-    .home #top p {
+    .piscines #top p {
         text-align: center;
     }
-    .home .overlay-blue {
+    .piscines .overlay-blue {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -220,12 +284,11 @@
         width: 70%;
         height: 80%;
         background: rgba(255, 255, 255, 0.712);
-        backdrop-filter: blur(10px);
     }
-    .home .overlay-blue:hover .fa-star {
+    .piscines .overlay-blue:hover .fa-star {
         animation: rotate3d 4s;
     }
-    .home .overlay-text {
+    .piscines .overlay-text {
         font-size: 2.8vw;
         text-align: center;
         color: #0E3F78;
@@ -236,7 +299,7 @@
 
 /* CARDS */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION CARDS - - - */
-.home .overlay-cards {
+.piscines .overlay-cards {
     position: absolute;
     top: 0;
     left: 0;
@@ -251,14 +314,13 @@
     text-align: center;
 }
 @media (min-width: 768px) {
-    .home .overlay-cards {
+    .piscines .overlay-cards {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.700);
-        backdrop-filter: blur(3px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -266,16 +328,15 @@
         color: white;
         text-align: center;
     }
-    .home .overlay-cards:hover {
+    .piscines .overlay-cards:hover {
         background-color: rgba(255, 255, 255, 0.100);
-        backdrop-filter: blur(0px);
     }
-    .home .btn-cards {
+    .piscines .btn-cards {
         width: 12vw;
         height: 3.8vw;
         font-size: 1.3vw;
     }
-    .home .overlay-cards:hover .icon{
+    .piscines .overlay-cards:hover .icon{
         animation: rotate3d 2s infinite;
     }
 }
