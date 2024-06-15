@@ -3,7 +3,7 @@
 	{% include('_partials/head.html.twig') %}
 
     <body class="{% block body_class %}{% endblock %}">
-		{% include('_partials/header.html.twig') %}
+		{{ render(controller('App\\Controller\\Menu\\MenuController::index')) }}
         {% block body %}{% endblock %}
 		{% include('_partials/footer.html.twig') %}
 

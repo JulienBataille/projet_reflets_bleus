@@ -6,14 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class PiscinesController extends AbstractController
+class ServicesController extends AbstractController
 {
-    #[Route('/piscines', name: 'app_piscines')]
+    #[Route('/services', name: 'app_services')]
     public function index(): Response
     {
-        return $this->render('piscines/index.html.twig', [
-            'controller_name' => 'PiscinesController',
-            'title' => 'piscines'
+        return $this->render('services/index.html.twig', [
+            'controller_name' => 'ServicesController',
+            'title' => 'services',
         ]);
     }
 }
