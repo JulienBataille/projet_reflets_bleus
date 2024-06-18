@@ -14,7 +14,7 @@
 @media (min-width: 768px) {
     .home #image_header {
         height: 680px;
-        content: url(/assets/images/images/index/aaa.jpg);
+        content: url(/assets/images/images/index/image-header-index.jpg);
         display: flex;
         align-items: center;
         justify-content: center;
