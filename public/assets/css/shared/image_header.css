@@ -1,0 +1,60 @@
+/* PICTURE */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER - - - */
+#image_header {
+    height: 650px;
+    position: relative;
+    width: 100%;
+}
+#overlay_image {
+    width: 440px;
+    height: 220px;
+    position: absolute;
+    top: 47%;
+}
+@media (min-width: 768px) {
+    #image_header {
+        height: 680px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    #overlay_image {
+        width: 440px;
+        height: 220px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 1s ease-in-out;
+    }
+    .image_header:hover #overlay_image {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+    .home #image_header{
+        content: url(/assets/images/images/index/image-header-index.jpg);
+    }
+    .piscines #image_header {
+        content: url(/assets/images/images/piscine/image-header-piscine.jpg);
+    }
+    .services #image_header {
+        content: url(/assets/images/images/services/image-header-services.jpg);
+    }
+    .renovation #image_header {
+        content: url(/assets/images/images/renovation/image-header-renovation.jpg);
+    }
+    .bien-etre #image_header{
+        content: url(/assets/images/images/services/image-header-services.jpg);
+    }
+    .batiment #image_header {
+        content: url(/assets/images/images/renovation/image-header-renovation.jpg);
+    }
+
+}
+
+
+
+
+
+
+

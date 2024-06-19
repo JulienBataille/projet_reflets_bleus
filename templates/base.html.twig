@@ -4,6 +4,7 @@
 
     <body class="{% block body_class %}{% endblock %}">
 		{{ render(controller('App\\Controller\\Menu\\MenuController::index')) }}
+		
         {% block body %}{% endblock %}
 		{% include('_partials/footer.html.twig') %}
 

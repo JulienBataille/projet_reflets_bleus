@@ -1,0 +1,31 @@
+@media (min-width: 768px) {
+.overlay {
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.712);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    
+}
+.overlay:hover .fa-star {
+    animation: rotate3d 4s;
+}
+.overlay-left{
+    left: 0;
+}
+.overlay-right{
+    right: 0;
+}
+.overlay-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+}
+
+}

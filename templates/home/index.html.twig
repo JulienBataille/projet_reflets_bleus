@@ -19,74 +19,31 @@
 
 {# COMMENT #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
-<section id="comment">
-    <div class="row my-4 col-10 mx-auto">
-        <div class="col-md-4">
-            <div class="containt-comment-title col-md-12">
-                <div class="icon-comment blue"><i class="fa-solid fa-medal"></i></div>
-                    <h1 class="title-comment mx-2">UN SAVOIR FAIRE</h1>
-                </div>
-                <p class="p-comment col-md-10">
-                Faites confiance à l'expertise de
-                Reflets Bleus, cumulant 33 ans
-                de savoir-faire dans la construction de piscines, spas et saunas.
-                Notre équipe expérimentée vous guide à chaque étape pour
-                concrétiser vos projets avec professionnalisme.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <div class="containt-comment-title col-md-12">
-                    <div class="icon-comment blue"><i class="fa-solid fa-handshake"></i></div>
-                        <h1 class="title-comment mx-2">UN AVIS D'EXPERT</h1>
-                    </div>
-                    <p class="p-comment col-md-10">
-                    Faites confiance à l'expertise de
-                    Reflets Bleus, cumulant 33 ans
-                    de savoir-faire dans la construction de piscines, spas et saunas.
-                    Notre équipe expérimentée vous guide à chaque étape pour
-                    concrétiser vos projets avec professionnalisme.
-                    </p>
-                </div>
-            <div class="col-md-4 ">
-                <div class="containt-comment-title col-md-12">
-                    <div class="icon-comment blue"><i class="fa-solid fa-truck"></i></div>
-                        <h1 class="title-comment mx-2">ZONE INTERVENTION</h1>
-                    </div>
-                    <p class="p-comment col-md-10">
-                    Faites confiance à l'expertise de
-                    Reflets Bleus, cumulant 33 ans
-                    de savoir-faire dans la construction de piscines, spas et saunas.
-                    Notre équipe expérimentée vous guide à chaque étape pour
-                    concrétiser vos projets avec professionnalisme.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+	{% include('_partials/comment.html.twig') %}    
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
 
 
 {# BLUE #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION BLUE ---  #}
-<section id="top">
+<section id="resume">
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-md-10 col-10">
                 <div class="position-relative">
-                    <img src="{{ asset('assets/images/images/index/image-body-index-1.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
-                    <div class="overlay-blue overlay-center d-flex flex-column align-items-center justify-content-center">
+                    <img src="{{ asset('assets/images/images/services/image-services-1.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
+                    <div class="overlay overlay-center d-flex flex-column align-items-center justify-content-center">
                         <div class="title-container my-2">
                             <div class="icon-container blue"><i class="fas fa-star"></i></div>
                             <span class="titreh2">TITLE SECTION PISCINE BLUE</span>
                         </div>
-                        <p class="col-md-10">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
+                        <p class="col-md-10 paragraph text-center">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
                             piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons
                             de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage
                             soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des
                             solutions personnalisées adaptées à vos besoins spécifiques pour maintenir votre espace
-                            aquatique dans un état optimal.</p>
-                        <div class="container-btn d-flex mx-2 my-2">
+                            aquatique dans un état optimal.</p>                 
+
+                    <div class="container-btn d-flex mx-2 my-2">
                             <button type="button" class="button d-flex align-items-center mx-2">
                                 <div class="icon blue mx-2">
                                     <i class="fa-solid fa-plus"></i>
@@ -99,19 +56,20 @@
                                 </div>
                                 <span class="text-btn">Nos Piscines</span>
                             </button> 
-                        </div>                   
-                    </div>
+                        </div>   
+                    </div>                
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION BLUE END ---  #}
 
 
 {# GREEN #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION GREEN ---  #}
-<section id="green">
+<section id="services">
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
@@ -122,7 +80,7 @@
                             <div class="icon-container green"><i class="fas fa-star"></i></div>
                             <span class="titreh2">TITLE SECTION SERVICE GREEN</span>
                         </div>
-                        <p class="col-md-10">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
+                        <p class="col-md-10 paragraph">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
                             piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons
                             de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage
                             soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des
@@ -153,7 +111,7 @@
 
 {# YELLOW #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION YELLOW ---  #}
-<section id="yellow">
+<section id="renovation">
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
@@ -164,7 +122,7 @@
                             <div class="icon-container yellow"><i class="fas fa-star"></i></div>
                             <span class="titreh2">TITLE SECTION RENOVATION YELLOW</span>
                         </div>
-                        <p class="col-md-10">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
+                        <p class="col-md-10 paragraph">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
                             piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons
                             de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage
                             soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des
@@ -195,7 +153,7 @@
 
 {# RED #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION RED ---  #}
-<section id="red">
+<section id="bien-etre">
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
@@ -206,7 +164,7 @@
                             <div class="icon-container red"><i class="fas fa-star"></i></div>
                             <span class="titreh2">TITLE SECTION SPAS RED</span>
                         </div>
-                        <p class="col-md-10">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
+                        <p class="col-md-10 paragraph">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
                             piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons
                             de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage
                             soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des
@@ -235,62 +193,23 @@
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION RED END ---  #}
 
 
-{# BLUE #}
-{# ----------------------------------------------------------------------------------------------------------------------- SECTION BLUE ---  #}
-<section id="blue">
-    <div class="container-fluid my-5">
-        <div class="row justify-content-center">
-            <div class="col-xxl-10 col-md-10">
-                <div class="position-relative">
-                    <img src="{{ asset('assets/images/images/index/image-body-index-5.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
-                    <div class="overlay overlay-left d-flex flex-column">
-                        <div class="title-container my-2">
-                            <div class="icon-container blue"><i class="fas fa-star"></i></div>
-                            <span class="titreh2">TITLE SECTION STORE BLUE</span>
-                        </div>
-                        <p class="col-md-10">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
-                            piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons
-                            de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage
-                            soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des
-                            solutions personnalisées adaptées à vos besoins spécifiques pour maintenir votre espace
-                            aquatique dans un état optimal.</p>
-                        <div class="container-btn d-flex mx-2 my-2">
-                            <button type="button" class="button d-flex align-items-center mx-2">
-                                <div class="icon blue mx-2">
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                                <span class="text-btn">Nos Piscines</span>
-                            </button>
-                            <button type="button" class="button d-flex align-items-center mx-2">
-                                <div class="icon blue mx-2">
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                                <span class="text-btn">Nos Piscines</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-{# ----------------------------------------------------------------------------------------------------------------------- SECTION BLUE END ---  #}
+
 
 
 {# GREY #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION GREY ---  #}
-<section id="grey">
+<section id="batiment">
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
                 <div class="position-relative">
                     <img src="{{ asset('assets/images/images/index/image-body-index-6.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
-                    <div class="overlay overlay-right d-flex flex-column">
+                    <div class="overlay overlay-left d-flex flex-column">
                         <div class="title-container my-2">
                             <div class="icon-container grey"><i class="fas fa-star"></i></div>
                             <span class="titreh2">TITLE SECTION BATIMENT GREY</span>
                         </div>
-                        <p class="col-md-10">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
+                        <p class="col-md-10 paragraph">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
                             piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons
                             de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage
                             soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des
@@ -318,120 +237,38 @@
 </section>
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION GREY END ---  #}
 
-
-{# COMMENT #}
-{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
-<section id="comment">
-        <div class="row my-4 col-10 mx-auto">
-            <div class="col-md-4">
-                <div class="containt-comment-title col-md-12">
-                    <div class="icon-comment blue"><i class="fa-solid fa-medal"></i></div>
-                        <h1 class="title-comment mx-2">TITLE COMMENT 1</h1>
-                    </div>
-                    <p class="p-comment col-md-10">
-                    Faites confiance à l'expertise de
-                    Reflets Bleus, cumulant 33 ans
-                    de savoir-faire dans la construction de piscines, spas et saunas.
-                    Notre équipe expérimentée vous guide à chaque étape pour
-                    concrétiser vos projets avec professionnalisme.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <div class="containt-comment-title col-md-12">
-                        <div class="icon-comment blue"><i class="fa-solid fa-handshake"></i></div>
-                            <h1 class="title-comment mx-2">TITLE COMMENT 2</h1>
+{# BLUE #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION BLUE ---  #}
+<section id="magasins">
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="col-xxl-10 col-md-10">
+                <div class="position-relative">
+                    <img src="{{ asset('assets/images/images/index/image-body-index-5.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
+                    <div class="overlay overlay-right d-flex flex-column">
+                        <div class="title-container my-2">
+                            <div class="icon-container blue"><i class="fas fa-star"></i></div>
+                            <span class="titreh2">TITLE SECTION STORE BLUE</span>
                         </div>
-                        <p class="p-comment col-md-10">
-                        Faites confiance à l'expertise de
-                        Reflets Bleus, cumulant 33 ans
-                        de savoir-faire dans la construction de piscines, spas et saunas.
-                        Notre équipe expérimentée vous guide à chaque étape pour
-                        concrétiser vos projets avec professionnalisme.
-                        </p>
-                    </div>
-                <div class="col-md-4 ">
-                    <div class="containt-comment-title col-md-12">
-                        <div class="icon-comment blue"><i class="fa-solid fa-truck"></i></div>
-                            <h1 class="title-comment mx-2">TITLE COMMENT 3</h1>
-                        </div>
-                        <p class="p-comment col-md-10">
-                        Faites confiance à l'expertise de
-                        Reflets Bleus, cumulant 33 ans
-                        de savoir-faire dans la construction de piscines, spas et saunas.
-                        Notre équipe expérimentée vous guide à chaque étape pour
-                        concrétiser vos projets avec professionnalisme.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
-
-
-{# CARDS #}
-{# ----------------------------------------------------------------------------------------------------------------------- SECTION CARDS ---  #}
-<section id="cards">
-    <div class="col-md-10 my-5 mx-auto">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-10 my-3 my-md-0 col-md-3">
-                    <div class="position-relative">
-                        <img src="{{ asset('assets/images/images/index/cards/image-card-piscine.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
-                        <div class="overlay-cards d-flex flex-column">
-                            <div class="container-btn d-flex my-2">
-                                <button type="button" class="btn-cards d-flex align-items-center mx-2">
-                                    <div class="icon blue mx-2">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
-                                    <span class="text-btn">Nos Piscines</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 my-3 my-md-0 col-md-3">
-                    <div class="position-relative">
-                        <img src="{{ asset('assets/images/images/index/cards/image-card-service.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
-                        <div class="overlay-cards d-flex flex-column">
-                            <div class="container-btn d-flex my-2">
-                                <button type="button" class="btn-cards d-flex align-items-center mx-2">
-                                    <div class="icon green mx-2">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
-                                    <span class="text-btn">Nos Services</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 my-3 my-md-0 col-md-3">
-                    <div class="position-relative">
-                        <img src="{{ asset('assets/images/images/index/cards/image-card-renovation.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
-                        <div class="overlay-cards d-flex flex-column">
-                            <div class="container-btn d-flex my-2">
-                                <button type="button" class="btn-cards d-flex align-items-center mx-2">
-                                    <div class="icon yellow mx-2">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
-                                    <span class="text-btn">Nos Rénovations</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 my-3 my-md-0 col-md-3">
-                    <div class="position-relative">
-                        <img src="{{ asset('assets/images/images/index/cards/image-card-spas.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
-                        <div class="overlay-cards d-flex flex-column">
-                            <div class="container-btn d-flex mx-2 my-2">
-                                <button type="button" class="btn-cards d-flex align-items-center mx-2">
-                                    <div class="icon red mx-2">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
-                                    <span class="text-btn">Nos spas</span>
-                                </button>
-                            </div>
+                        <p class="col-md-10 paragraph">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour
+                            piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons
+                            de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage
+                            soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des
+                            solutions personnalisées adaptées à vos besoins spécifiques pour maintenir votre espace
+                            aquatique dans un état optimal.</p>
+                        <div class="container-btn d-flex mx-2 my-2">
+                            <button type="button" class="button d-flex align-items-center mx-2">
+                                <div class="icon blue mx-2">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                                <span class="text-btn">Nos Piscines</span>
+                            </button>
+                            <button type="button" class="button d-flex align-items-center mx-2">
+                                <div class="icon blue mx-2">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                                <span class="text-btn">Nos Piscines</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -439,6 +276,17 @@
         </div>
     </div>
 </section>
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION BLUE END ---  #}
+
+{# COMMENT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
+	{% include('_partials/comment.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
+
+
+{# CARDS #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CARDS ---  #}
+	{% include('_partials/card.html.twig') %}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION CARDS END ---  #}
 
 

@@ -16,6 +16,22 @@
 .button:hover {
     background-color: rgb(255, 255, 255);
 }
+
+.container-btn {
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+}
+.fa-plus {
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+}
 @media (min-width: 768px) {
     .button {
         width: 13vw;
@@ -39,6 +55,17 @@
     }
     .button:hover .icon.grey {
         background-color: #464646;
+    }
+    .fa-plus {
+        font-size: 0.7vw;
+    }
+    
+    .text-btn {
+        margin-bottom: 5px;
+    }
+    .icon {
+        width: 1.4vw;
+        height: 1.4vw;
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION BUTTON END - - - */

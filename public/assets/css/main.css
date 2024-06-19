@@ -1,5 +1,5 @@
 @import'shared/header.css';
-@import'shared/index.css';
+@import'shared/image_header.css';
 @import'shared/variable.css';
 @import'shared/button.css';
 @import'shared/animation.css';
@@ -7,6 +7,13 @@
 @import'shared/piscine.css';
 @import'shared/services.css';
 @import'shared/renovation.css';
+@import'shared/bien_etre.css';
+@import'shared/comment.css';
+@import'shared/overlay.css';
+@import'shared/card.css';
+
+
+
 
 
 
@@ -15,7 +22,74 @@
     font-family: "Darker Grotesque", sans-serif;
 }
 
+.titreh2 {
+    font-size: 5vw;
+    font-family: "Bebas Neue", light;
+    color: #0E3F78;
+    margin-left: 1vw;
+    letter-spacing: 0.1vw;
+}
+
 .container {
     padding: 0;
     margin: 50px;
+}
+.titreh2 {
+    font-size: 5vw;
+    font-family: "Bebas Neue", light;
+    color: #0E3F78;
+    margin-left: 1vw;
+    letter-spacing: 0.1vw;
+}
+
+.paragraph {
+    font-size: 2.8vw;
+    text-align: start;
+    color: #0E3F78;
+    font-family: "Darker Grotesque";
+    padding: 0px;
+    text-align: start;
+}
+.icon-container {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-star {
+    color: white;
+    font-size: 3vw;
+}
+
+@media (min-width: 768px) {
+    .titreh2 {
+        font-size: 2.5vw;
+    }
+    .paragraph {
+        font-size: 1.4vw;
+        margin-left: 40px;
+    }
+    .title-container {
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .icon-container {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+    .fa-star {
+        font-size: 1.5vw;
+    }
+
+
+
 }

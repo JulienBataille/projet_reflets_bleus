@@ -13,30 +13,26 @@ class CategoriesFixtures extends Fixture
 
         $category = [
             1 => [
-                'name' => 'Accueil',
-                'slug'=>'/'
-            ],
-            2 => [
                 'name' => 'Piscines',
                 'slug'=>'piscines'
             ],
-            3 => [
+            2 => [
                 'name' => 'Services',
                 'slug'=>'services'
             ],
-            4 => [
+            3 => [
                 'name' => 'Rénovation',
                 'slug'=>'renovation'
             ],
-            5 => [
+            4 => [
                 'name' => 'Bien-être',
                 'slug'=>'bien-etre'
             ],
-            6 => [
+            5 => [
                 'name' => 'Bâtiment',
                 'slug'=>'batiment'
             ],
-            7 => [
+            6 => [
                 'name' => 'Catalogues',
                 'slug'=>'catalogues'
             ],
@@ -45,9 +41,7 @@ class CategoriesFixtures extends Fixture
             $category = new Categories();
             $category->setName($value['name']);
             $category->setSlug($value['slug']);
-
             $manager->persist($category);
-     
         }
 
         $manager->flush();

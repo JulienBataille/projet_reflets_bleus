@@ -32,7 +32,6 @@ footer .link-pages {
 
     footer {
         height: 100px;
-        width: 100%;    
         justify-content: space-between;
         align-items: center;
         display: flex;

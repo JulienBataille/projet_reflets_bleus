@@ -3,4 +3,27 @@
 {% block body_class %}{{title}}{% endblock %}
 {% block body %}
 
+
+{# PICTURE #}
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER ---  #}
+<section id="img">
+    <div class="row col-12 g-0 image_header">
+        <div class="image_header">
+        <img src="{{ asset('assets/images/images/services/image-header-services-phone.jpg') }}" alt="" id="image_header">
+        </div>
+        <img src="{{ asset('assets/images/logos/logo-oppacity.png') }}" alt="" id="overlay_image">
+    </div>
+</section>
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER END ---  #}
+
+{# COMMENT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
+	{% include('_partials/comment.html.twig') %}
+
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
+
+{# CARDS #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CARDS ---  #}
+	{% include('_partials/card.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CARDS END ---  #}
 {% endblock %}
