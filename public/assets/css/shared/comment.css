@@ -4,6 +4,7 @@
     font-family: "Bebas Neue", sans-serif;
     color: #0E3F78;
     margin-top: 10px;
+    font-size: 5vw;
 }
 
 .icon-comment {
@@ -29,7 +30,6 @@
 
 @media (min-width: 768px) {
     .p-comment {
-
         font-size: 1vw; 
     }
 
