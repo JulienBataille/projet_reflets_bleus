@@ -1,12 +1,9 @@
-/* COMMENT */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENT - - - */
 .title-comment {
     font-family: "Bebas Neue", sans-serif;
     color: #0E3F78;
     margin-top: 10px;
     font-size: 5vw;
 }
-
 .icon-comment {
     width: 5vw;
     height: 5vw;
@@ -27,12 +24,10 @@
     color: #0E3F78;
     font-size: 2.8vw; 
 }
-
 @media (min-width: 768px) {
     .p-comment {
         font-size: 1vw; 
     }
-
      .icon-title {
         width: 30px;
         height: 30px;
@@ -54,4 +49,3 @@
         font-size: 1.2vw;
     }
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COMMENT END - - - */

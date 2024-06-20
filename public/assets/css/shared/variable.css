@@ -1,10 +1,7 @@
-/* COLOR CATEGORY */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR CATEGORY - - - */
 .home {
     --icon-light: #41AED1;
     --icon-dark: #0E3F78;
 }
-
 .piscines {
     --icon-light: #41AED1;
     --icon-dark: #0E3F78;
@@ -25,11 +22,6 @@
     --icon-light: #AFAFAF;
     --icon-dark: #464646;
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR CATEGORY END - - - */
-
-
-/* COLOR */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR - - - */
 .green{
     background-color: #88C29F;
 }
@@ -45,4 +37,3 @@
 .grey{
     background-color: #AFAFAF;
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION COLOR END - - - */

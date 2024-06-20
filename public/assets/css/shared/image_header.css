@@ -1,5 +1,3 @@
-/* PICTURE */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION PICTURE HEADER - - - */
 #image_header {
     height: 650px;
     position: relative;
@@ -30,7 +28,6 @@
     .image_header:hover #overlay_image {
         transform: translate(-50%, -50%) scale(1.5);
     }
-
     .home #image_header{
         content: url(/assets/images/images/index/image-header-index.jpg);
     }
@@ -49,7 +46,6 @@
     .batiment #image_header {
         content: url(/assets/images/images/renovation/image-header-renovation.jpg);
     }
-
 }
 
 

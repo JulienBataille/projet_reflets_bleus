@@ -12,16 +12,9 @@
 @import'shared/overlay.css';
 @import'shared/card.css';
 
-
-
-
-
-
-
 :root {
     font-family: "Darker Grotesque", sans-serif;
 }
-
 .titreh2 {
     font-size: 5vw;
     font-family: "Bebas Neue", light;
@@ -29,7 +22,6 @@
     margin-left: 1vw;
     letter-spacing: 0.1vw;
 }
-
 .container {
     padding: 0;
     margin: 50px;
@@ -41,7 +33,6 @@
     margin-left: 1vw;
     letter-spacing: 0.1vw;
 }
-
 .paragraph {
     font-size: 2.8vw;
     text-align: start;
@@ -62,15 +53,13 @@
     align-items: center;
     justify-content: center;
 }
-
 .fa-star {
     color: white;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
-
 @media (min-width: 768px) {
     .titreh2 {
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     .paragraph {
         font-size: 1.4vw;
@@ -83,13 +72,10 @@
         justify-content: start;
     }
     .icon-container {
-        width: 2.5vw;
-        height: 2.5vw;
+        width: 2.1vw;
+        height: 2.1vw;
     }
     .fa-star {
-        font-size: 1.5vw;
+        font-size: 1vw;
     }
-
-
-
 }
