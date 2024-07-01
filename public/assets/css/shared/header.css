@@ -1,15 +1,12 @@
-header .navbar {
-    background-color: rgba(255, 255, 255, 0.700);
+header nav {
+    background-color: rgba(255, 255, 255);
     justify-content: center;
     height: 70px;
-    backdrop-filter: blur(10px);
 }
-header .navbar:hover {
-    background-color: rgb(255, 255, 255);
-    transition: 0.5s;
-}
+
+
 header .navbar-nav .nav-link {
-    font-size: 1vw;
+    font-size: 4vw;
     color: var(--icon-dark);
     font-weight: lighter;
 }
@@ -24,6 +21,7 @@ header .content-icon-facebook-top {
     position: absolute;
     right: 0;
     margin-right: 80px;
+    z-index: 1051;
 }
 header .icon-dark {
     background-color: var(--icon-dark);
@@ -45,9 +43,7 @@ header .fa-phone {
     font-size: 20px;
     margin-top: 15px;
 }
-header .content-icon-mail {
-    position: absolute;
-}
+
 header .icon-mail {
     background-color: var(--icon-light);
     height: 50px;
@@ -58,7 +54,43 @@ header .fa-envelope {
     font-size: 20px;
     margin-top: 15px;
 }
+
+header /* Styles pour le menu burger en plein écran */
+.navbar-collapse.show {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.700);/* Remplacez cette couleur par celle que vous souhaitez */
+    z-index: 1050;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    margin-top:68px;
+
+    
+}
+header /* Styles pour le menu burger en plein écran */
+.navbar-collapse {
+    transition: none !important;
+}
+
+.navbar-collapse.show .nav-link {
+    color: var(--icon-dark); /* Couleur du texte des liens du menu */
+    font-size: 1.5rem; /* Taille du texte des liens du menu */
+    margin: 10px 0; /* Espacement entre les liens du menu */
+}
+
+
 @media (min-width: 768px) {
+    header .navbar:hover {
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+    }
+    header nav {
+        background-color: rgba(255, 255, 255, 0.700);
+        backdrop-filter: blur(10px);
+    }
     header .icon-size {
         height: 50px;
     }
@@ -67,8 +99,13 @@ header .fa-envelope {
         color: var(--icon-dark);
         font-weight: lighter;
     }
+
     header .navbar-nav .nav-link:hover {
         text-decoration: underline;
+    }
+
+    header .navbar-nav .nav-link.active {
+        font-weight: bold;
     }
     header .icon-dark {
         position: absolute;
@@ -120,4 +157,11 @@ header .fa-envelope {
         margin-top: 20px;
         align-items: center;
     }
+    
+    header .content-icon-mail {
+        position: absolute;
+    }
+
+
+
 }
