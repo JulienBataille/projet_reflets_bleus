@@ -4,7 +4,6 @@ header nav {
     height: 70px;
 }
 
-
 header .navbar-nav .nav-link {
     font-size: 4vw;
     color: var(--icon-dark);

@@ -11,6 +11,9 @@
 @import'shared/comment.css';
 @import'shared/overlay.css';
 @import'shared/card.css';
+@import'shared/css_slider/style.css';
+@import'shared/css_slider/swiper-bundle.min.css';
+
 
 :root {
     font-family: "Darker Grotesque", sans-serif;

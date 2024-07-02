@@ -1,0 +1,41 @@
+
+  <section class="d-flex justify-content-center sliderwrapper col-8 mx-auto">
+        <div class="slide-container swiper ">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/images/images/slider/img-1.jpg') }}" alt="img"> 
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img"> 
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/images/images/slider/img-3.jpg') }}" alt="img"> 
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/images/images/slider/img-4.jpg') }}" alt="img"> 
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img"> 
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img" id="fullscreen-image"> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+  </section>
+  <!-- The Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Fullscreen Image">
+        </div>
+      </div>
+    </div>
+  </div>
