@@ -1,50 +1,51 @@
 
 #carousel .sliderwrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#carousel  .slide-container{
-  width: 100%;
-}
-#carousel  .slide-content{
-
+  max-width: 100%;
   overflow: hidden;
-
 }
 
-
-#carousel  .swip-navBtn{
-  color:white;
-  background-color: var(--icon-light);
-  transition: color 0.3s ease;
-}
-#carousel  .swip-navBtn:hover{
-  background-color: var(--icon-dark);
-
-}
-
-#carousel  .swip-button-next{
-  height: 2vw;
-  width: 2vw;
-  color:white;
-  background-color: var(--icon-light);
-  transition: color 0.3s ease;
-}
-#carousel  .swip-button-prev{
-  height: 2vw;
-  width: 2vw;
-  color:white;
-  background-color: var(--icon-light);
-  transition: color 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-  #carousel .slide-content{
-    margin: 0 10px;
+  #carousel .swip-navBtn{
+    display: none ;
   }
-  #carousel .swiper-navBtn{
-    display: none;
+
+
+@media (min-width: 768px) {
+  #carousel .sliderwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #carousel  .slide-container{
+    width: 100%;
+  }
+  #carousel  .slide-content{
+    overflow: hidden;
+  }
+  
+  
+  #carousel  .swip-navBtn{
+    display: flex;
+    color:white;
+    background-color: var(--icon-light);
+    transition: color 0.3s ease;
+  }
+  #carousel  .swip-navBtn:hover{
+    background-color: var(--icon-dark);
+  
+  }
+  
+  #carousel  .swip-button-next{
+    height: 2vw;
+    width: 2vw;
+    color:white;
+    background-color: var(--icon-light);
+    transition: color 0.3s ease;
+  }
+  #carousel  .swip-button-prev{
+    height: 2vw;
+    width: 2vw;
+    color:white;
+    background-color: var(--icon-light);
+    transition: color 0.3s ease;
   }
 }
-

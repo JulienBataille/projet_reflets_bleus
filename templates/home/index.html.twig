@@ -6,17 +6,9 @@
 
 {# PICTURE #}
 {# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER ---  #}
-<section id="img">
-    <div class="row col-12 g-0 image_header">
-        <div class="image_header">
-        <img src="{{ asset('assets/images/images/index/image-header-index-phone.jpg') }}" alt="" id="image_header">
-        </div>
-        <img src="{{ asset('assets/images/logos/logo-oppacity.png') }}" alt="" id="overlay_image">
-    </div>
-</section>
+{% include('_partials/picture_header.html.twig') %}
+
 {# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER END ---  #}
-
-
 {# COMMENT #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
 {% include('_partials/comment.html.twig') %}    
@@ -29,7 +21,7 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-md-10 col-10">
-                <div class="position-relative">
+                <div class="position-relative overflow-hidden">
                     <img src="{{ asset('assets/images/images/index/image-body-index-resume.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
                     <div class="overlay overlay-center d-flex flex-column align-items-center justify-content-center">
                         <div class="title-container my-2">
@@ -66,7 +58,7 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
-                <div class="position-relative">
+                <div class="position-relative overflow-hidden">
                     <img src="{{ asset('assets/images/images/index/image-body-index-1.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
                     <div class="overlay overlay-left d-flex flex-column">
                         <div class="title-container my-2">
@@ -103,7 +95,7 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
-                <div class="position-relative">
+                <div class="position-relative overflow-hidden">
                     <img src="{{ asset('assets/images/images/index/image-body-index-3.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
                     <div class="overlay overlay-right d-flex flex-column">
                         <div class="title-container my-2">
@@ -140,7 +132,7 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
-                <div class="position-relative">
+                <div class="position-relative overflow-hidden">
                     <img src="{{ asset('assets/images/images/index/image-body-index-2.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
                     <div class="overlay overlay-left d-flex flex-column">
                         <div class="title-container my-2">
@@ -177,8 +169,8 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
-                <div class="position-relative">
-                    <img src="{{ asset('assets/images/images/index/image-body-index-4.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
+                <div class="position-relative overflow-hidden">
+                    <img src="{{ asset('assets/images/images/index/image-body-index-4.jpg') }}" class="img-fluid  imgscale" alt="Image de piscine">
                     <div class="overlay overlay-right d-flex flex-column">
                         <div class="title-container my-2">
                             <div class="icon-container red"><i class="fas fa-star"></i></div>
@@ -214,7 +206,7 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
-                <div class="position-relative">
+                <div class="position-relative overflow-hidden">
                     <img src="{{ asset('assets/images/images/index/image-body-index-5.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
                     <div class="overlay overlay-left d-flex flex-column">
                         <div class="title-container my-2">
@@ -251,7 +243,7 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-xxl-10 col-md-10">
-                <div class="position-relative">
+                <div class="position-relative overflow-hidden">
                     <img src="{{ asset('assets/images/images/index/image-body-index-6.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
                     <div class="overlay overlay-right d-flex flex-column">
                         <div class="title-container my-2">

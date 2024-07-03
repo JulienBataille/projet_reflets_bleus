@@ -82,3 +82,23 @@
         font-size: 1vw;
     }
 }
+img{
+    transition: transform 0.5s ease;
+}
+.overflow-hidden:hover img{
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Classe de base pour les sections */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Classe ajoutée lorsque la section est visible */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
