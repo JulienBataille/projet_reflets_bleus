@@ -1,123 +1,50 @@
 
-section.sliderwrapper{
-
+#carousel .sliderwrapper{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section.sliderwrapper .slide-container{
+#carousel  .slide-container{
   width: 100%;
-  padding: 40px 0;
 }
-section.sliderwrapper .slide-content{
-  margin: 0 40px;
+#carousel  .slide-content{
+
   overflow: hidden;
 
 }
 
 
-section.sliderwrapper .swiper-navBtn{
+#carousel  .swip-navBtn{
   color:white;
   background-color: var(--icon-light);
   transition: color 0.3s ease;
 }
-section.sliderwrapper .swiper-navBtn:hover{
+#carousel  .swip-navBtn:hover{
   background-color: var(--icon-dark);
 
 }
-section.sliderwrapper .swiper-navBtn::before,
-section.sliderwrapper .swiper-navBtn::after{
-  font-size: 35px;
-}
-section.sliderwrapper .swiper-button-next{
-  right: 0;
-}
-section.sliderwrapper .swiper-button-prev{
-  left: 0;
-}
-section.sliderwrapper .swiper-pagination-bullet{
+
+#carousel  .swip-button-next{
+  height: 2vw;
+  width: 2vw;
+  color:white;
   background-color: var(--icon-light);
-  opacity: 1;
+  transition: color 0.3s ease;
 }
-section.sliderwrapper .swiper-pagination-bullet-active{
-  background-color: var(--icon-dark);
+#carousel  .swip-button-prev{
+  height: 2vw;
+  width: 2vw;
+  color:white;
+  background-color: var(--icon-light);
+  transition: color 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
-  section.sliderwrapper .slide-content{
+  #carousel .slide-content{
     margin: 0 10px;
   }
-  section.sliderwrapper .swiper-navBtn{
+  #carousel .swiper-navBtn{
     display: none;
   }
 }
 
-.modal {
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from { transform: scale(0) }
-  to { transform: scale(1.2) }
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-.modal-fullscreen {
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  margin: 0;
-}
-.modal-content {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-}

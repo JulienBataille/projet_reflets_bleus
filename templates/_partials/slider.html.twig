@@ -1,41 +1,39 @@
-
-  <section class="d-flex justify-content-center sliderwrapper col-8 mx-auto">
-        <div class="slide-container swiper ">
-            <div class="slide-content">
-                <div class="card-wrapper swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/images/images/slider/img-1.jpg') }}" alt="img"> 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img"> 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/images/images/slider/img-3.jpg') }}" alt="img"> 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/images/images/slider/img-4.jpg') }}" alt="img"> 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img"> 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img" id="fullscreen-image"> 
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-  </section>
-  <!-- The Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <img id="modalImage" src="" alt="Fullscreen Image">
-        </div>
+<section id="carousel">
+  <div class="justify-content-center align-items-center sliderwrapper col-10 mx-auto">
+      <div class="slide-container row align-items-center justify-content-around col-12">
+          <div class="swip-button-prev swip-navBtn col-1 swip-navBtn d-flex justify-content-center align-items-center col-1">
+              <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div class="slide-content col-10">
+            <div class="card-wrapper swiper-wrapper">
+          	  {# {% for carousel in categories %}
+						    <div class="swiper-slide">
+							    <img src="{{carousel.image}}" alt="img">
+						    </div>
+						  {% endfor %} #}
+                  <div class="swiper-slide">
+                      <img src="{{ asset('assets/images/images/slider/img-1.jpg') }}" alt="img">
+                  </div>
+                  <div class="swiper-slide">
+                      <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img">
+                  </div>
+                  <div class="swiper-slide">
+                      <img src="{{ asset('assets/images/images/slider/img-3.jpg') }}" alt="img">
+                  </div>
+                  <div class="swiper-slide">
+                      <img src="{{ asset('assets/images/images/slider/img-4.jpg') }}" alt="img">
+                  </div>
+                  <div class="swiper-slide">
+                      <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img">
+                  </div>
+                  <div class="swiper-slide">
+                      <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img" id="fullscreen-image">
+                  </div>
+              </div>
+          </div>
+          <div class="swip-button-next swip-navBtn d-flex justify-content-center align-items-center col-1">
+              <i class="fa-solid fa-arrow-right"></i>
+          </div>
       </div>
-    </div>
   </div>
+</section>
