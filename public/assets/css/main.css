@@ -56,6 +56,10 @@
     align-items: center;
     justify-content: center;
 }
+.fa-camera {
+    color: white;
+    font-size: 2.5vw;
+}
 .fa-star {
     color: white;
     font-size: 2.5vw;
@@ -77,6 +81,9 @@
     .icon-container {
         width: 2.1vw;
         height: 2.1vw;
+    }
+    .fa-camera {
+        font-size: 1vw;
     }
     .fa-star {
         font-size: 1vw;
