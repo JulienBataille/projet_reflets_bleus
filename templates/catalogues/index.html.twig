@@ -3,11 +3,114 @@
 {% block body_class %}{{title}}{% endblock %}
 {% block body %}
 
+{# PICTURE #}
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER ---  #}
+{% include('_partials/picture_header.html.twig') %}
+
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER END ---  #}
+
 {# COMMENT #}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
 {% include('_partials/comment.html.twig') %}
 {# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
 
+{# CATALOGUES #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CATALOGUE ---  #}
+<section id="catalogue">
+<div class="container-fluid col-10 container_catalogue mx-auto row">
+    <div class="card_catalogue text-center col-md-3 col-12">
+        <img src="{{ asset('assets/images/images/catalogue/PFD-1.png') }}" alt="">
+        <h3 class="title_catalogue">Pièces à sceller & plomberie</h3>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="button button_catalogue">
+                <div class="icon blue mx-2">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-btn">Voir Plus</span>
+            </button>
+        </div>
+    </div>
+    <div class="card_catalogue  text-center col-md-3 col-12 ">
+        <img src="{{ asset('assets/images/images/catalogue/PDF-2.png') }}" alt="">
+        <h3 class="title_catalogue">Pièces à sceller & plomberie</h3>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="button button_catalogue">
+                <div class="icon blue mx-2">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-btn">Voir Plus</span>
+            </button>
+        </div>
+    </div>
+    <div class="card_catalogue  text-center col-md-3 col-12 ">
+        <img src="{{ asset('assets/images/images/catalogue/PDF-3.png') }}" alt="">
+        <h3 class="title_catalogue">Pièces à sceller & plomberie</h3>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="button button_catalogue">
+                <div class="icon blue mx-2">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-btn">Voir Plus</span>
+            </button>
+        </div>
+    </div>
+    <div class="card_catalogue  text-center col-md-3 col-12 ">
+        <img src="{{ asset('assets/images/images/catalogue/PDF-4.png') }}" alt="">
+        <h3 class="title_catalogue">Pièces à sceller & plomberie</h3>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="button button_catalogue">
+                <div class="icon blue mx-2">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-btn">Voir Plus</span>
+            </button>
+        </div>
+    </div>
+        <div class="card_catalogue  text-center col-md-3 col-12 ">
+        <img src="{{ asset('assets/images/images/catalogue/PDF-4.png') }}" alt="">
+        <h3 class="title_catalogue">Pièces à sceller & plomberie</h3>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="button button_catalogue">
+                <div class="icon blue mx-2">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-btn">Voir Plus</span>
+            </button>
+        </div>
+    </div>
+        <div class="card_catalogue  text-center col-md-3 col-12 ">
+        <img src="{{ asset('assets/images/images/catalogue/PDF-4.png') }}" alt="">
+        <h3 class="title_catalogue">Pièces à sceller & plomberie</h3>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="button button_catalogue">
+                <div class="icon blue mx-2">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-btn">Voir Plus</span>
+            </button>
+        </div>
+    </div>
+        <div class="card_catalogue  text-center col-md-3 col-12 ">
+        <img src="{{ asset('assets/images/images/catalogue/PDF-4.png') }}" alt="">
+        <h3 class="title_catalogue">Pièces à sceller & plomberie</h3>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="button button_catalogue">
+                <div class="icon blue mx-2">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-btn">Voir Plus</span>
+            </button>
+        </div>
+    </div>
+</div>
 
+    
+</section>
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CATALOGUE END---  #}
+
+{# COMMENT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
+{% include('_partials/comment.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
 
 {% endblock %}

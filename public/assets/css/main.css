@@ -11,6 +11,7 @@
 @import'shared/comment.css';
 @import'shared/overlay.css';
 @import'shared/card.css';
+@import'shared/catalogue.css';
 @import'shared/css_slider/style.css';
 
 
@@ -28,16 +29,8 @@
     padding: 0;
     margin: 50px;
 }
-.titreh2 {
-    font-size: 5vw;
-    font-family: "Bebas Neue", light;
-    color: #0E3F78;
-    margin-left: 1vw;
-    letter-spacing: 0.1vw;
-}
 .paragraph {
     font-size: 2.8vw;
-    text-align: start;
     color: #0E3F78;
     font-family: "Darker Grotesque";
     padding: 0px;

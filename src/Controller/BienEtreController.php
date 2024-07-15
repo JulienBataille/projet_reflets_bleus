@@ -13,7 +13,8 @@ class BienEtreController extends AbstractController
     {
         return $this->render('bien_etre/index.html.twig', [
             'controller_name' => 'BienEtreController',
-            'title'=> 'bien-etre'
+            'title'=> 'bien-etre',
+            
         ]);
     }
 }
