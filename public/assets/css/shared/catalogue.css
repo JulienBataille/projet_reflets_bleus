@@ -1,7 +1,7 @@
 .card_catalogue{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 10px 10px;
 	border-radius: 6px;
-    width: 240px;
+    width: 18rem !important;
     margin: 50px;
     padding-bottom: 20px;
 }
@@ -9,7 +9,10 @@
     width: 28vw;
     height: 10vw;
 }
-
+.container_catalogue{
+    display: flex;
+    justify-content: center;
+}
 .title_catalogue{
     font-size: 5vw;
     font-family: "Bebas Neue", light;
@@ -20,7 +23,6 @@
 
 @media (min-width: 768px){
     .container_catalogue{
-        display: flex;
         justify-content: space-around;
     }
     .button_catalogue{
