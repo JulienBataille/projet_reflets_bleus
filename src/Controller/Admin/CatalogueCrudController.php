@@ -22,7 +22,6 @@ class CatalogueCrudController extends AbstractCrudController
         return [
             IdField::new('id'),
             TextField::new('title','titre'),
-            FileField::new('PDF','PDF'),
         ];
     }
     
