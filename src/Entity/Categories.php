@@ -27,6 +27,9 @@ class Categories
     #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'Categories')]
     private Collection $comments;
 
+    #[ORM\Column(length: 10)]
+    private ?string $color = null;
+
 
     public function __construct()
     {
@@ -103,6 +106,18 @@ class Categories
                 $comment->setCategories(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): static
+    {
+        $this->color = $color;
 
         return $this;
     }
