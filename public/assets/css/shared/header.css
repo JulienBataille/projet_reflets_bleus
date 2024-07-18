@@ -1,7 +1,9 @@
+
 header nav {
     background-color: rgba(255, 255, 255);
     justify-content: center;
     height: 70px;
+    width: 100%;
 }
 
 header .navbar-nav .nav-link {
@@ -19,7 +21,7 @@ header .fa-square-facebook {
 header .content-icon-facebook-top {
     position: absolute;
     right: 0;
-    margin-right: 80px;
+    margin-right: 100px;
     z-index: 1051;
 }
 header .icon-dark {
@@ -54,9 +56,14 @@ header .fa-envelope {
     margin-top: 15px;
 }
 
+
 header /* Styles pour le menu burger en plein écran */
+.navbar-toggler {
+    border: 0px;
+    margin-right: 40px;
+  }
 .navbar-collapse.show {
-    width: 100vw;
+    width: 100vh;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.700);/* Remplacez cette couleur par celle que vous souhaitez */
     z-index: 1050;
@@ -66,6 +73,7 @@ header /* Styles pour le menu burger en plein écran */
     backdrop-filter: blur(10px);
     text-align: center;
     margin-top:68px;
+
 
     
 }

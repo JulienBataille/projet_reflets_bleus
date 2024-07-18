@@ -34,7 +34,7 @@
     color: #0E3F78;
     font-family: "Darker Grotesque";
     padding: 0px;
-    text-align: start;
+    text-align: center;
 }
 .icon-container {
     width: 5vw;
@@ -71,6 +71,7 @@
     .paragraph {
         font-size: 1.4vw;
         margin-left: 40px;
+        text-align: start;
     }
     .title-container {
         margin-left: 40px;
