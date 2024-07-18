@@ -57,6 +57,11 @@
     color: white;
     font-size: 2.5vw;
 }
+.p-location {
+    font-size: 3vw;
+    color: #0E3F78;
+    font-family: "Darker Grotesque";
+}
 @media (min-width: 768px) {
     .titreh2 {
         font-size: 2vw;
@@ -80,6 +85,13 @@
     }
     .fa-star {
         font-size: 1vw;
+    }
+    .p-location {
+        font-size: 1.2vw;
+        color: #0E3F78;
+        font-family: "Darker Grotesque";
+        margin-top: 10px;
+        margin-left: 10px;
     }
 }
 img{
