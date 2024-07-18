@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MediaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: MediaRepository::class)]
@@ -21,6 +23,12 @@ class Media
 
     #[ORM\Column(length: 255)]
     private ?string $filename = null;
+
+    #[ORM\ManyToOne(inversedBy: 'headerImage')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Categories $categories = null;
+
+
 
     public function getId(): ?int
     {
@@ -62,4 +70,18 @@ class Media
 
         return $this;
     }
+
+    public function getCategories(): ?Categories
+    {
+        return $this->categories;
+    }
+
+    public function setCategories(?Categories $categories): static
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    
 }

@@ -30,10 +30,18 @@ class Categories
     #[ORM\Column(length: 10)]
     private ?string $color = null;
 
+    /**
+     * @var Collection<int, Media>
+     */
+    #[ORM\OneToMany(targetEntity: Media::class, mappedBy: 'categories', orphanRemoval: true)]
+    private Collection $headerImage;
+
+
 
     public function __construct()
     {
         $this->comments = new ArrayCollection();
+        $this->headerImage = new ArrayCollection();
     }
 
     /**
@@ -121,5 +129,36 @@ class Categories
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Media>
+     */
+    public function getHeaderImage(): Collection
+    {
+        return $this->headerImage;
+    }
+
+    public function addHeaderImage(Media $headerImage): static
+    {
+        if (!$this->headerImage->contains($headerImage)) {
+            $this->headerImage->add($headerImage);
+            $headerImage->setCategories($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHeaderImage(Media $headerImage): static
+    {
+        if ($this->headerImage->removeElement($headerImage)) {
+            // set the owning side to null (unless already changed)
+            if ($headerImage->getCategories() === $this) {
+                $headerImage->setCategories(null);
+            }
+        }
+
+        return $this;
+    }
+
 
 }

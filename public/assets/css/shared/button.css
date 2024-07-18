@@ -11,6 +11,9 @@
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
 }
+.button_category{
+    text-decoration: none;
+}
 .button:hover {
     background-color: rgb(255, 255, 255);
 }

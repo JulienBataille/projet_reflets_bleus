@@ -16,8 +16,17 @@ class Catalogue
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $PDF = null;
+
+    #[ORM\Column]
+    private ?bool $isVisible = null;
+
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Media $featuredImage = null;
+
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Media $PDF = null;
 
     public function getId(): ?int
     {
@@ -36,12 +45,37 @@ class Catalogue
         return $this;
     }
 
-    public function getPDF(): ?string
+
+    public function isVisible(): ?bool
+    {
+        return $this->isVisible;
+    }
+
+    public function setVisible(bool $isVisible): static
+    {
+        $this->isVisible = $isVisible;
+
+        return $this;
+    }
+
+    public function getFeaturedImage(): ?Media
+    {
+        return $this->featuredImage;
+    }
+
+    public function setFeaturedImage(Media $featuredImage): static
+    {
+        $this->featuredImage = $featuredImage;
+
+        return $this;
+    }
+
+    public function getPDF(): ?Media
     {
         return $this->PDF;
     }
 
-    public function setPDF(string $PDF): static
+    public function setPDF(Media $PDF): static
     {
         $this->PDF = $PDF;
 
