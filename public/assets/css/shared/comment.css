@@ -39,8 +39,8 @@
         margin-top: 10px;
     }
      .icon-comment {
-        width: 2vw;
-        height: 2vw;
+        width: 2vw !important;
+        height: 2vw !important;
         display: flex;
         align-items: center;
         justify-content: center;

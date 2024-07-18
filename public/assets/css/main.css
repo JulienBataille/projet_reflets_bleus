@@ -58,7 +58,9 @@
     font-size: 2.5vw;
 }
 .p-location {
-    font-size: 3vw;
+    font-size: 3.4vw;
+    margin-top: 10px;
+    margin-left: 10px;
     color: #0E3F78;
     font-family: "Darker Grotesque";
 }
@@ -88,8 +90,7 @@
     }
     .p-location {
         font-size: 1.5vw;
-        margin-top: 10px;
-        margin-left: 10px;
+
     }
 }
 img{
@@ -103,12 +104,10 @@ img{
 /* Classe de base pour les sections */
 section {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 /* Classe ajoutée lorsque la section est visible */
 section.visible {
     opacity: 1;
-    transform: translateY(0);
 }
