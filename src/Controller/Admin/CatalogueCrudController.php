@@ -19,10 +19,11 @@ class CatalogueCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {
-        return [
-            IdField::new('id'),
-            TextField::new('title','titre'),
-        ];
+
+            yield IdField::new('id');
+            yield TextField::new('title','titre');
+
+
     }
     
 }

@@ -1,5 +1,10 @@
 <div id="header">
+
+
+
+
 	<header class="header fixed-top">
+
 		<nav class="navbar navbar-expand-md ">
 			<div class="container-fluid align-items-center g-0">
 				<a class="navbar-brand" href="/">
@@ -20,6 +25,17 @@
 							<a class="nav-link" href="{{category.slug}}">{{category.name}}</a>
 						</li>
 						{% endfor %}
+						{% if is_granted('IS_AUTHENTICATED_FULLY')  %}
+							<div class="dropdown">
+									<a class="nav nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Admin
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="{{path('admin')}}">Dashboard</a></li>
+										<li><a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a></li>
+									</ul>
+							</div>
+						{% endif %}
 					</ul>
 				</div>
 			</div>

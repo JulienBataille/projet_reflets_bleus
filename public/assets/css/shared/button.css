@@ -1,11 +1,11 @@
 .button {
     width: 28vw;
     height: 10vw;
-    border: solid 1px #0E3F78;
+    border: solid 1px var(--icon-dark);
     border-radius: 0;
     font-size: 3vw;
     font-family: "Darker Grotesque";
-    color: #0E3F78;
+    color: var(--icon-dark);
     display: flex;
     align-items: center;
     justify-content: center;

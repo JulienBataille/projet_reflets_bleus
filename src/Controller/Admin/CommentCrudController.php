@@ -20,16 +20,16 @@ class CommentCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {
-        return [
-            IdField::new('id')->onlyOnIndex(),
-            TextField::new('title','Titre')
-                ->setColumns(12),
-            TextareaField::new('content', 'Description')
-                ->setColumns(12),
-            AssociationField::new('Categories', 'Catégorie')
+
+            yield IdField::new('id')->onlyOnIndex();
+            yield TextField::new('title','Titre')
+                ->setColumns(12);
+            yield TextareaField::new('content', 'Description')
+                ->setColumns(12);
+            yield AssociationField::new('Categories', 'Catégorie')
                 ->setCrudController(CategoriesCrudController::class)
-                ->setColumns(12),
-        ];
+                ->setColumns(12);
+
     }
     
 }
