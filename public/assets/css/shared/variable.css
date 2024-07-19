@@ -1,20 +1,4 @@
-.home {
-    --icon-light: #41AED1;
-    --icon-dark: #0E3F78;
-}
-.piscines {
-    --icon-light: #41AED1;
-    --icon-dark: #0E3F78;
-}
-.contact {
-    --icon-light: #41AED1;
-    --icon-dark: #0E3F78;
-}
-.notice {
-    --icon-light: #41AED1;
-    --icon-dark: #0E3F78;
-}
-.catalogues {
+:root {
     --icon-light: #41AED1;
     --icon-dark: #0E3F78;
 }

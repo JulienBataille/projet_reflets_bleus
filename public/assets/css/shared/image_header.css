@@ -36,8 +36,7 @@
 }
 @media (min-width: 768px) {
     .image_header {
-        height: 680px;
-        width: 100%;
+        background-image: url(/assets/images/images/index/image-header-index.jpg);
     }
     #overlay_image {
         width: 440px;
