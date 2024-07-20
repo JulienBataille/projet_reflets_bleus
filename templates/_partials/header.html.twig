@@ -1,9 +1,5 @@
 {% set options = option_service.findAll %}
 
-<div id="header">
-
-
-
 
 	<header class="header fixed-top">
 
@@ -28,6 +24,7 @@
 						</li>
 						{% endfor %}
 						{% if is_granted('IS_AUTHENTICATED_FULLY')  %}
+							{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_AUTHOR')%}
 							<div class="dropdown">
 									<a class="nav nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 										Admin
@@ -37,12 +34,20 @@
 										<li><a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a></li>
 									</ul>
 							</div>
+							{% else %}
+								<li class="nav-item">
+									<a class="nav-link" href="{{path('app_logout')}}">Se déconnecter</a>
+								</li>
+							{% endif %}
 						{% else %}
 							{% if '1' == options['users_can_register'] %}
 								<li class="nav-item">
 									<a class="nav-link" href="{{path('app_register')}}">Inscription</a>
 								</li>
 							{% endif %}
+								<li class="nav-item">
+									<a class="nav-link" href="{{path('app_login')}}">Se Connecter</a>
+								</li>
 						{% endif %}
 					</ul>
 				</div>
@@ -67,5 +72,5 @@
 			</div>
 		</div>
 	</header>
-</div>
+
 

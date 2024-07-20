@@ -14,6 +14,17 @@
 @import'shared/catalogue.css';
 @import'shared/css_slider/style.css';
 
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+
 
 :root {
     font-family: "Darker Grotesque", sans-serif ;
