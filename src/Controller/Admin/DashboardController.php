@@ -14,6 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DashboardController extends AbstractDashboardController
 {
     #[Route('/admin', name: 'admin')]
+
     public function index(): Response
     {
         return $this->render('admin/dashboard.html.twig');
@@ -41,6 +42,10 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Tous les Comptes', 'fas fa-user-friends', User::class),
             MenuItem::linkToCrud('Ajoutez', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW),
         ]);
+
+        
+
+        
     }
 
     }
