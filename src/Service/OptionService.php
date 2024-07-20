@@ -16,4 +16,11 @@ class OptionService
         return $this->optionRepository->findAllForTwig();
     }
 
+    public function getValue(string $name) :mixed
+    {
+        return $this->optionRepository->getValue($name);
+    }
+
+
+
 }

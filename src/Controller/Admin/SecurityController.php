@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
+use App\Service\OptionService;
 use App\Form\RegistrationFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,6 +15,12 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class SecurityController extends AbstractController
 {
+    public function __construct( private OptionService $optionService)
+    {
+
+    }
+
+
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -41,6 +48,19 @@ class SecurityController extends AbstractController
     #[Route('/register', name: 'app_register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
     {
+        $usersCanRegister = $this->optionService->getValue('users_can_register');
+
+        //Verifie que les inscriptions sont ouvertes
+        if (!$usersCanRegister) {
+            return $this->redirectToRoute('home');
+        }
+
+        //Verifie si l'utilisateur est déjà connecté
+        if ($this->getUser()) {
+            return $this->redirectToRoute('home');
+        }
+
+
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);

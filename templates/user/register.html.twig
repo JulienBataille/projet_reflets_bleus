@@ -2,6 +2,7 @@
 
 {% block title %}Inscription{% endblock %}
 {% block body_class %}{{title}}{% endblock %}
+{% set options = option_service.findAll %}
 
 {% block body %}
 
@@ -10,18 +11,21 @@
 {% include('_partials/picture_header.html.twig') %}
 {# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER END ---  #}
 
-<div class ="container w-25 my-5">
-    <h1>Inscription</h1>
+    <div class ="container w-25 my-5">
+        <h1>Inscription</h1>
 
-    {{ form_start(registrationForm) }}
 
-        {{ form_row(registrationForm.email) }}
+                {{ form_start(registrationForm) }}
 
-        {{ form_row(registrationForm.plainPassword) }}
+                    {{ form_row(registrationForm.email) }}
 
-        <button type="submit" class="btn btn-primary">Register</button>
+                    {{ form_row(registrationForm.plainPassword) }}
 
-    {{ form_end(registrationForm) }}
+                    <button type="submit" class="btn btn-primary">Register</button>
 
-</div>
+                {{ form_end(registrationForm) }}
+
+
+    </div>
+
 {% endblock %}

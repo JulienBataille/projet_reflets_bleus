@@ -1,3 +1,5 @@
+{% set options = option_service.findAll %}
+
 <div id="header">
 
 
@@ -35,6 +37,12 @@
 										<li><a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a></li>
 									</ul>
 							</div>
+						{% else %}
+							{% if '1' == options['users_can_register'] %}
+								<li class="nav-item">
+									<a class="nav-link" href="{{path('app_register')}}">Inscription</a>
+								</li>
+							{% endif %}
 						{% endif %}
 					</ul>
 				</div>
