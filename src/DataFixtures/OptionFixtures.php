@@ -15,7 +15,7 @@ class OptionFixtures extends Fixture
     {
         $options[] = new Option('titre du blog', 'blog_about', 'Mon Blog', TextType::class);
         $options[] = new Option('Texte du copyright', 'copyright', 'Tous droits réservés', TextType::class);
-        $options[] = new Option('Tout le monde peut s\'inscrire', 'users_can_register', true, CheckboxType::class);
+        $options[] = new Option('Tout le monde peut s\'inscrire', 'users_can_register', '0', CheckboxType::class);
 
 
         foreach ($options as $option) {
