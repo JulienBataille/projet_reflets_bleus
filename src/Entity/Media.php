@@ -25,7 +25,7 @@ class Media
     private ?string $filename = null;
 
     #[ORM\ManyToOne(inversedBy: 'headerImage')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: true)]
     private ?Categories $categories = null;
 
 
@@ -82,6 +82,12 @@ class Media
 
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return $this->name; 
+    }
+
 
     
 }

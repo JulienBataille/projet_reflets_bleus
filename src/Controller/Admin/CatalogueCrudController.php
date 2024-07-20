@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Catalogue;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -22,6 +23,8 @@ class CatalogueCrudController extends AbstractCrudController
 
             yield IdField::new('id');
             yield TextField::new('title','titre');
+
+
 
 
     }

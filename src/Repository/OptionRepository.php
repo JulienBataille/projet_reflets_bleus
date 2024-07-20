@@ -16,28 +16,14 @@ class OptionRepository extends ServiceEntityRepository
         parent::__construct($registry, Option::class);
     }
 
-    //    /**
-    //     * @return Option[] Returns an array of Option objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('o')
-    //            ->andWhere('o.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('o.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /** 
+     * @return Option[]
+     */
 
-    //    public function findOneBySomeField($value): ?Option
-    //    {
-    //        return $this->createQueryBuilder('o')
-    //            ->andWhere('o.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+    public function findAllForTwig():array
+    {
+        return $this->createQueryBuilder('o','o.name')
+            ->getQuery()
+            ->getResult();
+    }
 }

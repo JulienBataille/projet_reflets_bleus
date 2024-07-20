@@ -21,14 +21,6 @@ class Categories
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $slug = null;
 
-    /**
-     * @var Collection<int, Comment>
-     */
-    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'Categories')]
-    private Collection $comments;
-
-    #[ORM\Column(length: 10)]
-    private ?string $color = null;
 
     /**
      * @var Collection<int, Media>
@@ -40,7 +32,6 @@ class Categories
 
     public function __construct()
     {
-        $this->comments = new ArrayCollection();
         $this->headerImage = new ArrayCollection();
     }
 
@@ -79,56 +70,13 @@ class Categories
         return $this;
     }
 
-
-
-
     
     public function __toString(): string
     {
-        return $this->name; // Retourne le nom de la catégorie lorsque PHP essaie de la convertir en chaîne
+        return $this->name; 
     }
 
-    /**
-     * @return Collection<int, Comment>
-     */
-    public function getComments(): Collection
-    {
-        return $this->comments;
-    }
 
-    public function addComment(Comment $comment): static
-    {
-        if (!$this->comments->contains($comment)) {
-            $this->comments->add($comment);
-            $comment->setCategories($this);
-        }
-
-        return $this;
-    }
-
-    public function removeComment(Comment $comment): static
-    {
-        if ($this->comments->removeElement($comment)) {
-            // set the owning side to null (unless already changed)
-            if ($comment->getCategories() === $this) {
-                $comment->setCategories(null);
-            }
-        }
-
-        return $this;
-    }
-
-    public function getColor(): ?string
-    {
-        return $this->color;
-    }
-
-    public function setColor(string $color): static
-    {
-        $this->color = $color;
-
-        return $this;
-    }
 
     /**
      * @return Collection<int, Media>
