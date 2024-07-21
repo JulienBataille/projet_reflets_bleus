@@ -24,10 +24,6 @@ class Media
     #[ORM\Column(length: 255)]
     private ?string $filename = null;
 
-    #[ORM\ManyToOne(inversedBy: 'headerImage')]
-    #[ORM\JoinColumn(nullable: true)]
-    private ?Categories $categories = null;
-
 
 
     public function getId(): ?int
@@ -67,18 +63,6 @@ class Media
     public function setFilename(string $filename): static
     {
         $this->filename = $filename;
-
-        return $this;
-    }
-
-    public function getCategories(): ?Categories
-    {
-        return $this->categories;
-    }
-
-    public function setCategories(?Categories $categories): static
-    {
-        $this->categories = $categories;
 
         return $this;
     }

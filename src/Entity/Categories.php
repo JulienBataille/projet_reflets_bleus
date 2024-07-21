@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\CategoriesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
@@ -21,23 +19,6 @@ class Categories
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $slug = null;
 
-
-    /**
-     * @var Collection<int, Media>
-     */
-    #[ORM\OneToMany(targetEntity: Media::class, mappedBy: 'categories', orphanRemoval: true)]
-    private Collection $headerImage;
-
-
-
-    public function __construct()
-    {
-        $this->headerImage = new ArrayCollection();
-    }
-
-    /**
-     * @var Collection<int, Comment>
-     */
 
 
 
@@ -76,37 +57,6 @@ class Categories
         return $this->name; 
     }
 
-
-
-    /**
-     * @return Collection<int, Media>
-     */
-    public function getHeaderImage(): Collection
-    {
-        return $this->headerImage;
-    }
-
-    public function addHeaderImage(Media $headerImage): static
-    {
-        if (!$this->headerImage->contains($headerImage)) {
-            $this->headerImage->add($headerImage);
-            $headerImage->setCategories($this);
-        }
-
-        return $this;
-    }
-
-    public function removeHeaderImage(Media $headerImage): static
-    {
-        if ($this->headerImage->removeElement($headerImage)) {
-            // set the owning side to null (unless already changed)
-            if ($headerImage->getCategories() === $this) {
-                $headerImage->setCategories(null);
-            }
-        }
-
-        return $this;
-    }
 
 
 }
