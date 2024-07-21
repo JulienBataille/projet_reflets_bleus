@@ -12,13 +12,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PiscinesController extends AbstractController
 {
     #[Route('/piscines', name: 'app_piscines')]
-    public function index(CommentRepository $comment, Request $request,CategoriesRepository $categories): Response
+    public function index(Request $request,CategoriesRepository $categories): Response
     {
         $categories = $categories->findBy(['name' => 'piscines']);
         return $this->render('piscines/index.html.twig', [
             'controller_name' => 'PiscinesController',
             'title' => 'piscines',
-            'comments' => $comment->findAll()
+            
 
         ]);
     }
