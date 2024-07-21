@@ -57,10 +57,12 @@ class UserCrudController extends AbstractCrudController
                 ->renderAsBadges([
                     'ROLE_ADMIN' => 'success',
                     'ROLE_AUTHOR' => 'warning',
+
                 ])
                 ->setChoices([
                     'ADMINISTRATEUR' => 'ROLE_ADMIN',
                     'AUTEUR' => 'ROLE_AUTHOR',
+                    'UTILISATEUR' => 'ROLE_USER',
                 ]);
 
     }
