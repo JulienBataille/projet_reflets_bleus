@@ -20,7 +20,9 @@
 
 
 </head>
+
     <body class="{% block body_class %}{% endblock %}">
+
 		{{ render(controller('App\\Controller\\Menu\\MenuController::index')) }}
         <main>
             {% block body %}

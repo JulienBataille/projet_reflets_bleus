@@ -9,6 +9,11 @@
 
 
     <div class ="container w-25 my-5 pt-5">
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
         <h1>Inscription à la Newsletter</h1>
 
 

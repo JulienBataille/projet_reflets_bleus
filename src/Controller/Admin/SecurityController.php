@@ -80,7 +80,7 @@ class SecurityController extends AbstractController
 
             // do anything else you need here, like send an email
 
-            return $security->login($user, 'form_login', 'main');;
+            return $security->login($user, 'form_login', 'main');
         }
 
         return $this->render('user/register.html.twig', [

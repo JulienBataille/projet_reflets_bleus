@@ -16,9 +16,23 @@ class Newsletter
     #[ORM\Column(length: 255)]
     private ?string $email;
 
-    #[ORM\Column]
-    private ?bool $is_valid = null;
+    #[ORM\Column(type: 'boolean')]
+    private bool $is_valid = false;
 
+    // Renommage du getter
+    public function getIsValid(): bool
+    {
+        return $this->is_valid;
+    }
+
+    // Renommage du setter
+    public function setIsValid(bool $is_valid): self
+    {
+        $this->is_valid = $is_valid;
+        return $this;
+    }
+
+    // Autres méthodes
     public function getId(): ?int
     {
         return $this->id;
@@ -32,19 +46,11 @@ class Newsletter
     public function setEmail(string $email): static
     {
         $this->email = $email;
-
         return $this;
     }
 
-    public function isValid(): ?bool
+    public function __construct(?string $email = null)
     {
-        return $this->is_valid;
-    }
-
-    public function setValid(bool $is_valid): static
-    {
-        $this->is_valid = $is_valid;
-
-        return $this;
+        $this->email = $email;
     }
 }
