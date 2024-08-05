@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 
 use App\Form\NewsletterFormType;
@@ -14,7 +14,7 @@ use Symfony\Component\Mime\Email;
 
 class NewsletterController extends AbstractController
 {
-    #[Route('/newsletter', name: 'app_newsletter')]
+    #[Route('/admin/newsletter', name: 'app_newsletter')]
     public function index(Request $request, SubscriberRepository $subscriberRepository, MailerInterface $mailer): Response
     {
         $form = $this->createForm(NewsletterFormType::class);
@@ -35,6 +35,7 @@ class NewsletterController extends AbstractController
                     ->text($body);
 
                 $mailer->send($email);
+
             }
 
             $this->addFlash('success', 'La newsletter a été envoyée avec succès.');

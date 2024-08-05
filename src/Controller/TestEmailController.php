@@ -19,6 +19,7 @@ class TestEmailController extends AbstractController
             ->text('This is a test email sent using Gmail SMTP.');
 
         $mailer->send($email);
+        dd($email);
 
         return new Response('Test email sent!');
     }
