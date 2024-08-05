@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\NewsletterRepository;
+use App\Repository\SubscriberRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: NewsletterRepository::class)]
-class Newsletter
+#[ORM\Entity(repositoryClass: SubscriberRepository::class)]
+class Subscriber
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

@@ -2,7 +2,7 @@
 
 namespace App\Form\Type;
 
-use App\Entity\Newsletter;
+use App\Entity\Subscriber;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -11,7 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 
-class NewsletterType extends AbstractType
+class SubscriberType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -28,7 +28,7 @@ class NewsletterType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Newsletter::class
+            'data_class' => Subscriber::class
         ]);
     }
 }

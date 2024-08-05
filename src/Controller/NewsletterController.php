@@ -2,55 +2,48 @@
 
 namespace App\Controller;
 
-use App\Entity\Newsletter;
-use App\Form\Type\NewsletterType;
-use App\Repository\NewsletterRepository;
-use Doctrine\ORM\EntityManagerInterface;
+
+use App\Form\NewsletterFormType;
+use App\Repository\SubscriberRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 
 class NewsletterController extends AbstractController
 {
     #[Route('/newsletter', name: 'app_newsletter')]
-    public function index(Request $request, EntityManagerInterface $em, NewsletterRepository $newsletterRepository): Response
+    public function index(Request $request, SubscriberRepository $subscriberRepository, MailerInterface $mailer): Response
     {
+        $form = $this->createForm(NewsletterFormType::class);
+        $form->handleRequest($request);
 
-        $newsForm = $this->createForm(NewsletterType::class, new Newsletter());
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            $title = $data['title'];
+            $body = $data['body'];
 
-        $newsForm->handleRequest($request);
+            $subscribers = $subscriberRepository->findBy(['is_valid' => true]);
 
-        if ($newsForm->isSubmitted() && $newsForm->isValid()) {
-            /** @var Newsletter $data */
-            $data = $newsForm->getData();
-                        // Vérifiez si l'email existe déjà dans la base de données
-                        $existingNewsletter = $newsletterRepository->findOneByEmail($data->getEmail());
+            foreach ($subscribers as $subscriber) {
+                $email = (new Email())
+                    ->from('test@gmail.com')
+                    ->to($subscriber->getEmail())
+                    ->subject($title)
+                    ->text($body);
 
-                        if ($existingNewsletter) {
-                            // Si l'email existe déjà, ajoutez un message d'erreur
-                            $this->addFlash('error', 'Cet email est déjà inscrit à la newsletter.');
-            
-                            return $this->redirectToRoute('app_newsletter');
-                        }
+                $mailer->send($email);
+            }
 
-            $news = new Newsletter($data->getEmail());
+            $this->addFlash('success', 'La newsletter a été envoyée avec succès.');
 
-            $news->setIsValid(true);
-            $em->persist($news);
-
-            $em->flush();
-
-            $this->addFlash('success', 'Vous êtes maintenant inscrit à la newsletter de Reflets Bleus.');
-            return $this->redirectToRoute('home');
-
+            return $this->redirectToRoute('app_newsletter');
         }
 
-
-
-        return $this->render('newsletter/index.html.twig',[
-            'form_news'=>$newsForm->createView(),
-            'title'=>'Newsletter',
+        return $this->render('newsletter/index.html.twig', [
+            'form_news' => $form->createView(),
         ]);
     }
 }

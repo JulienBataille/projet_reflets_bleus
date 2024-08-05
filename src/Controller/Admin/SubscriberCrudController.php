@@ -2,22 +2,21 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Newsletter;
+use App\Entity\Subscriber;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
-class NewsletterCrudController extends AbstractCrudController
+class SubscriberCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Newsletter::class;
+        return Subscriber::class;
     }
 
     
