@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Catalogues;
 use App\Entity\User;
 use App\Entity\Media;
 use App\Entity\Option;
@@ -48,6 +49,12 @@ class DashboardController extends AbstractDashboardController
         }
 
         if($this->isGranted('ROLE_AUTHOR')){
+            
+         yield MenuItem::subMenu('Catalogues', 'fas fa-book')->setSubItems([
+            MenuItem::linkToCrud('Tous les catalogues', 'fas fa-download', Catalogues::class),
+            MenuItem::linkToCrud('Ajoutez', 'fas fa-plus', Catalogues::class)->setAction(Crud::PAGE_NEW),
+    
+        ]);
 
         yield MenuItem::subMenu('Media', 'fas fa-photo-video')->setSubItems([
             MenuItem::linkToCrud('Médiathèque', 'fas fa-photo-video', Media::class),
@@ -58,6 +65,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Carnet Email', 'fas fa-envelope', Subscriber::class),
             MenuItem::linkToRoute('Envoyer une Newsletter', 'fas fa-plus', 'app_newsletter'),
         ]);
+
         }
 
         if($this->isGranted('ROLE_ADMIN')){

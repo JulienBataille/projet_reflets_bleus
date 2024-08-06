@@ -1,7 +1,23 @@
 vich_uploader:
     db_driver: orm
     mappings:
-        documents:
-            uri_prefix: /uploads/documents
-            upload_destination: '%kernel.project_dir%/public/uploads/documents'
-            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        catalogue_pdfs:
+            uri_prefix: /uploads/catalogues/pdf
+            upload_destination: '%kernel.project_dir%/public/uploads/catalogues/pdf'
+            namer: vich_uploader.namer_origname
+            delete_on_update: true
+            delete_on_remove: true
+            
+        catalogue_thumbnails:
+            uri_prefix: /uploads/catalogues/thumbnails
+            upload_destination: '%kernel.project_dir%/public/uploads/catalogues/thumbnails'
+            namer: vich_uploader.namer_origname
+            delete_on_update: true
+            delete_on_remove: true
+
+
+
+
+
+
+        
