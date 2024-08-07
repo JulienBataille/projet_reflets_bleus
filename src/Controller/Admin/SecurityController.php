@@ -46,46 +46,5 @@ class SecurityController extends AbstractController
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 
-    #[Route('/register', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, Security $security, EntityManagerInterface $entityManager): Response
-    {
-        $usersCanRegister = $this->optionService->getValue('users_can_register');
-
-        //Verifie que les inscriptions sont ouvertes
-        if (!$usersCanRegister) {
-            return $this->redirectToRoute('home');
-        }
-
-        //Verifie si l'utilisateur est déjà connecté
-        if ($this->getUser()) {
-            return $this->redirectToRoute('home');
-        }
-
-
-        $user = new User();
-        $form = $this->createForm(RegistrationFormType::class, $user);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            // encode the plain password
-            $user->setPassword(
-                $userPasswordHasher->hashPassword(
-                    $user,
-                    $form->get('plainPassword')->getData()
-                )
-            );
-
-            $entityManager->persist($user);
-            $entityManager->flush();
-
-            // do anything else you need here, like send an email
-
-            return $security->login($user, 'form_login', 'main');
-        }
-
-        return $this->render('user/register.html.twig', [
-            'registrationForm' => $form,
-            'title' => 'Inscription'
-        ]);
-    }
+   
 }

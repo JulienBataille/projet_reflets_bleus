@@ -2,12 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\MediaRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\MediaRepository;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 #[ORM\Entity(repositoryClass: MediaRepository::class)]
+#[Vich\Uploadable]
 class Media
 {
     #[ORM\Id]
@@ -15,20 +18,42 @@ class Media
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $name = null;
+    #[Vich\UploadableField(mapping: 'slider_images', fileNameProperty: 'name', size: 'size')]
+    private ?File $file = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $altText = null;
+    private ?string $name = null;
+    
 
-    #[ORM\Column(length: 255)]
-    private ?string $filename = null;
+    #[ORM\Column]
+    private ?int $size = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $updatedAt = null;
 
+    #[ORM\ManyToOne(inversedBy: 'media')]
+    #[ORM\JoinColumn(nullable: true)]
+    private ?Slider $Slider = null;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getFile(): ?File
+    {
+        return $this->file;
+    }
+
+    public function setFile(?File $file = null): self
+    {
+        $this->file = $file;
+
+        if (null !== $file) {
+            $this->updatedAt = new \DateTimeImmutable();
+        }
+
+        return $this;
     }
 
     public function getName(): ?string
@@ -43,33 +68,40 @@ class Media
         return $this;
     }
 
-    public function getAltText(): ?string
+    public function getSize(): ?int
     {
-        return $this->altText;
+        return $this->size;
     }
 
-    public function setAltText(?string $altText): static
+    public function setSize(int $size): static
     {
-        $this->altText = $altText;
+        $this->size = $size;
 
         return $this;
     }
 
-    public function getFilename(): ?string
+    public function getUpdatedAt(): ?\DateTimeImmutable
     {
-        return $this->filename;
+        return $this->updatedAt;
     }
 
-    public function setFilename(string $filename): static
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): static
     {
-        $this->filename = $filename;
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }
 
-    public function __toString(): string
+    public function getSlider(): ?Slider
     {
-        return $this->name; 
+        return $this->Slider;
+    }
+
+    public function setSlider(?Slider $Slider): static
+    {
+        $this->Slider = $Slider;
+
+        return $this;
     }
 
 

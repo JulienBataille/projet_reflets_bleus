@@ -1,39 +1,25 @@
-<section id="carousel">
-  <div class="justify-content-center align-items-center sliderwrapper col-10 mx-auto">
-      <div class="slide-container row align-items-center justify-content-around col-12 my-md-5 my-2">
-          <div class="swip-button-prev swip-navBtn col-1 swip-navBtn d-flex justify-content-center align-items-center col-1">
-              <i class="fa-solid fa-arrow-left"></i>
-          </div>
-          <div class="slide-content col-10">
-            <div class="card-wrapper swiper-wrapper">
-          	  {# {% for images in categories %}
-						    <div class="swiper-slide">
-							    <img src="{{categories.image}}" alt="img">
-						    </div>
-						  {% endfor %} #}
-                  <div class="swiper-slide">
-                      <img src="{{ asset('assets/images/images/slider/img-1.jpg') }}" alt="img">
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img">
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="{{ asset('assets/images/images/slider/img-3.jpg') }}" alt="img">
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="{{ asset('assets/images/images/slider/img-4.jpg') }}" alt="img">
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img">
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="{{ asset('assets/images/images/slider/img-2.jpg') }}" alt="img" id="fullscreen-image">
-                  </div>
-              </div>
-          </div>
-          <div class="swip-button-next swip-navBtn justify-content-center align-items-center col-1">
-              <i class="fa-solid fa-arrow-right"></i>
-          </div>
-      </div>
-  </div>
-</section>
+{% for slider in slider %}
+    <section id="carousel">
+    <div class="justify-content-center align-items-center sliderwrapper col-10 mx-auto">
+        <div class="slide-container row align-items-center justify-content-around col-12 my-md-5 my-2">
+            <div class="swip-button-prev swip-navBtn col-1 swip-navBtn d-flex justify-content-center align-items-center col-1">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="slide-content col-10">
+                <div class="card-wrapper swiper-wrapper">
+
+                        {% for medium in slider.media %}
+                            <div class="swiper-slide">
+                                <img src="{{ asset('uploads/slider/' ~ medium.name) }}" alt="{{ slider.name }}">
+                            </div>
+                        {% endfor %}
+                    
+                </div>
+            </div>
+            <div class="swip-button-next swip-navBtn justify-content-center align-items-center col-1">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    </section>
+{% endfor %}

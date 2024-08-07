@@ -7,6 +7,7 @@ use App\Entity\User;
 use App\Entity\Media;
 use App\Entity\Option;
 use App\Entity\Categories;
+use App\Entity\Slider;
 use App\Entity\Subscriber;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -56,9 +57,10 @@ class DashboardController extends AbstractDashboardController
     
         ]);
 
-        yield MenuItem::subMenu('Media', 'fas fa-photo-video')->setSubItems([
-            MenuItem::linkToCrud('Médiathèque', 'fas fa-photo-video', Media::class),
-            MenuItem::linkToCrud('Ajoutez', 'fas fa-plus', Media::class)->setAction(Crud::PAGE_NEW),
+        yield MenuItem::subMenu('Slider', 'fas fa-photo-video')->setSubItems([
+            MenuItem::linkToCrud('Tous les sliders', 'fas fa-photo-video', Slider::class),
+            MenuItem::linkToCrud('Ajoutez', 'fas fa-plus', Slider::class)->setAction(Crud::PAGE_NEW),
+
         ]);
 
         yield MenuItem::subMenu('Newsletter', 'fas fa-envelope')->setSubItems([

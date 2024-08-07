@@ -36,6 +36,10 @@ class CategoriesFixtures extends Fixture
                 'name' => 'Catalogues',
                 'slug'=>'catalogues'
             ],
+            6 => [
+                'name' => 'Magasins',
+                'slug'=>'magasins'
+            ],
         ];
         foreach ($category as $key => $value) {
             $category = new Categories();

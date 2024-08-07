@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CategoriesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
@@ -18,6 +20,17 @@ class Categories
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $slug = null;
+
+    /**
+     * @var Collection<int, Slider>
+     */
+    #[ORM\OneToMany(targetEntity: Slider::class, mappedBy: 'Category')]
+    private Collection $sliders;
+
+    public function __construct()
+    {
+        $this->sliders = new ArrayCollection();
+    }
 
 
 
@@ -55,6 +68,36 @@ class Categories
     public function __toString(): string
     {
         return $this->name; 
+    }
+
+    /**
+     * @return Collection<int, Slider>
+     */
+    public function getSliders(): Collection
+    {
+        return $this->sliders;
+    }
+
+    public function addSlider(Slider $slider): static
+    {
+        if (!$this->sliders->contains($slider)) {
+            $this->sliders->add($slider);
+            $slider->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSlider(Slider $slider): static
+    {
+        if ($this->sliders->removeElement($slider)) {
+            // set the owning side to null (unless already changed)
+            if ($slider->getCategory() === $this) {
+                $slider->setCategory(null);
+            }
+        }
+
+        return $this;
     }
 
 

@@ -14,6 +14,13 @@ vich_uploader:
             namer: vich_uploader.namer_origname
             delete_on_update: true
             delete_on_remove: true
+            
+        slider_images:
+            uri_prefix: /uploads/slider
+            upload_destination: '%kernel.project_dir%/public/uploads/slider'
+            namer: vich_uploader.namer_origname
+            delete_on_update: true
+            delete_on_remove: true
 
 
 

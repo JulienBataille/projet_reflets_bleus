@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Slider;
+use App\Repository\SliderRepository;
 use App\Repository\CommentRepository;
 use App\Repository\CategoriesRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,14 +14,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PiscinesController extends AbstractController
 {
     #[Route('/piscines', name: 'app_piscines')]
-    public function index(Request $request,CategoriesRepository $categories): Response
+    public function index(SliderRepository $sliderRepository, CategoriesRepository $categoriesRepository): Response
     {
-        $categories = $categories->findBy(['name' => 'piscines']);
+        $category = $categoriesRepository->findOneBy(['name' => 'Piscines']);
+        $slider = $sliderRepository->findBy(['Category' => $category]);
+
         return $this->render('piscines/index.html.twig', [
             'controller_name' => 'PiscinesController',
             'title' => 'piscines',
-            
+            'slider' => $slider
 
         ]);
+        
     }
+
 }
