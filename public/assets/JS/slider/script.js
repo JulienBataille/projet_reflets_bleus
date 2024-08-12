@@ -2,7 +2,7 @@ var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 70,
     loop: true,
-    centerSlide: 'true',
+    centeredSlides: 'true',
     fade: 'true',
     grabCursor: 'true',
     autoplay: {
@@ -21,13 +21,17 @@ var swiper = new Swiper(".slide-content", {
     breakpoints:{
         0: {
             slidesPerView: 1,
+            spaceBetween: 20,
+
         },
-        400: {
-            slidesPerView: 2,
-        },
-        900: {
+        // Paramètres pour les écrans moyens
+        768: {
             slidesPerView: 3,
+            spaceBetween: 40,
+
         },
+        // Paramètres pour les grands écrans
+
     },
   });
 
@@ -40,7 +44,7 @@ var swiper = new Swiper(".slide-content", {
         const options = {
             root: null, // Use the viewport as the container
             rootMargin: '0px',
-            threshold: 0.1 // Trigger when 10% of the section is visible
+            threshold: 0.1// Trigger when 10% of the section is visible
         };
 
         const callback = (entries, observer) => {
@@ -56,9 +60,7 @@ var swiper = new Swiper(".slide-content", {
         sections.forEach(section => {
             observer.observe(section);
         });
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
+        
         const hash = window.location.hash;
         if (hash) {
             const targetElement = document.querySelector(hash);
@@ -66,4 +68,5 @@ var swiper = new Swiper(".slide-content", {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
+
     });

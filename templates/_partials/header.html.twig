@@ -1,9 +1,8 @@
-{% set options = option_service.findAll %}
 
 
 	<header class="header fixed-top">
 		<nav class="navbar navbar-expand-md ">
-			<div class="container-fluid align-items-center g-0">
+			<div class="container-fluid align-items-center">
 				<a class="navbar-brand" href="/">
 					<img src="{{ asset('assets/images/logos/logo-header.png') }}" class="logo-header" alt="Logo RefletsBleus">
 				</a>
@@ -16,39 +15,40 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse " id="navbarSupportedContent" >
-					<ul class="navbar-nav">
+					<ul class="navbar-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						{% for category in categories %}
-						<li class="nav-item">
-							<a class="nav-link" href="{{category.slug}}">{{category.name}}</a>
+						<li class="nav-item" itemprop="name">
+							<a class="nav-link" href="{{category.slug}}" itemprop="url">{{category.name}}</a>
 						</li>
 						{% endfor %}
 						{% if is_granted('IS_AUTHENTICATED_FULLY')  %}
 							{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_AUTHOR')%}
 							<div class="dropdown">
-									<a class="nav nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Tableau de bord
-									</a>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="{{path('admin')}}">Dashboard</a></li>
-										<li><a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a></li>
-									</ul>
+								<a class="nav nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<span itemprop="name">Tableau de bord</span>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="{{path('admin')}}" itemprop="url">Dashboard</a></li>
+									<li><a class="dropdown-item" href="{{path('app_logout')}}" itemprop="url">Déconnexion</a></li>
+								</ul>
 							</div>
 							{% else %}
-								<li class="nav-item">
-									<a class="nav-link" href="{{path('app_logout')}}">Se déconnecter</a>
-								</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('app_logout')}}" itemprop="url">Se déconnecter</a>
+							</li>
 							{% endif %}
 						{% else %}
-								<li class="nav-item">
-									<a class="nav-link" href="{{path('app_login')}}">Se Connecter</a>
-								</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('app_login')}}" itemprop="url">Se Connecter</a>
+							</li>
 						{% endif %}
 					</ul>
+
 				</div>
 			</div>
 		</nav>
-		<div class="row d-flex g-0">
-			<div class="row d-flex col-12 col-md-auto g-0">
+		<div class="container-fluid g-0 row">
+
 					<a href="{{ path('app_magasins') }}" class="d-flex icon-light col-4 col-md-auto text-decoration-none">
 					<i class="fa-solid fa-phone"></i>
 					</a>
@@ -58,12 +58,10 @@
 					<i class="fa-solid fa-location-dot"></i>
 					</a>
 
-				<div class="col-4 col-md-auto content-icon-mail">
-					<div class="icon-mail">
-							<i class="fa-solid fa-envelope"></i>
-					</div>
-				</div>			
-			</div>
+					<a href="{{ path('app_magasins') }}"class="d-flex col-4 col-md-auto text-decoration-none icon-mail">
+					<i class="fa-solid fa-envelope"></i>
+					</a>
+			
 		</div>
     {% for message in app.flashes('success') %}
         <div class="alert alert-success text-center">

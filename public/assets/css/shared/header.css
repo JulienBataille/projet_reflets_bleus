@@ -28,11 +28,15 @@ header .icon-dark {
     background-color: var(--icon-dark);
     height: 50px;
     justify-content: center;
+    text-align: center;
+
 }
 header .icon-light {
     background-color: var(--icon-light);
     height: 50px;
     justify-content: center;
+    text-align: center;
+
 }
 header .fa-location-dot {
     color: white;
@@ -48,6 +52,7 @@ header .fa-phone {
 header .icon-mail {
     background-color: var(--icon-light);
     height: 50px;
+    justify-content: center;
     text-align: center;
 }
 header .fa-envelope {
@@ -157,17 +162,15 @@ header /* Styles pour le menu burger en plein écran */
         height: 70px;
         min-width: 70px;
         margin-top: 540px;
+        left: 0;
     }
     header .fa-envelope {
         color: white;
         font-size: 30px;
         margin-top: 20px;
-        align-items: center;
+
     }
     
-    header .content-icon-mail {
-        position: absolute;
-    }
 
 
 

@@ -1,19 +1,17 @@
 {% for slider in slider %}
-    <section id="carousel">
-    <div class="justify-content-center align-items-center sliderwrapper col-10 mx-auto">
+<section id="carousel">
+    <div class="justify-content-center align-items-center sliderwrapper col-12 mx-auto">
         <div class="slide-container row align-items-center justify-content-around col-12 my-md-5 my-2">
-            <div class="swip-button-prev swip-navBtn col-1 swip-navBtn d-flex justify-content-center align-items-center col-1">
+            <div class="swip-button-prev swip-navBtn col-1 justify-content-center align-items-center">
                 <i class="fa-solid fa-arrow-left"></i>
             </div>
             <div class="slide-content col-10">
-                <div class="card-wrapper swiper-wrapper">
-
-                        {% for medium in slider.media %}
-                            <div class="swiper-slide">
-                                <img src="{{ asset('uploads/slider/' ~ medium.name) }}" alt="{{ slider.name }}">
-                            </div>
-                        {% endfor %}
-                    
+                <div class="card-wrapper swiper-wrapper align-items-center">
+                    {% for medium in slider.media %}
+                    <div class="swiper-slide">
+                        <img src="{{ asset('uploads/slider/' ~ medium.name)   }}" alt="{{ slider.name }}">
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="swip-button-next swip-navBtn justify-content-center align-items-center col-1">
@@ -21,5 +19,7 @@
             </div>
         </div>
     </div>
-    </section>
+</section>
 {% endfor %}
+
+

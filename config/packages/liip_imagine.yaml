@@ -1,0 +1,22 @@
+# app/config/config.yml
+
+liip_imagine:
+    resolvers:
+        default:
+            web_path: ~
+
+    filter_sets:
+        cache: ~
+
+        # the name of the "filter set"
+        my_fixed_filter:
+
+            # adjust the image quality to 75%
+            quality: 100
+
+            # list of transformations to apply (the "filters")
+            filters:
+
+               fixed:
+                    width: 1920
+                    height: 1080

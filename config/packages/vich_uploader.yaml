@@ -4,21 +4,24 @@ vich_uploader:
         catalogue_pdfs:
             uri_prefix: /uploads/catalogues/pdf
             upload_destination: '%kernel.project_dir%/public/uploads/catalogues/pdf'
-            namer: vich_uploader.namer_origname
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: false
             delete_on_update: true
             delete_on_remove: true
             
         catalogue_thumbnails:
             uri_prefix: /uploads/catalogues/thumbnails
             upload_destination: '%kernel.project_dir%/public/uploads/catalogues/thumbnails'
-            namer: vich_uploader.namer_origname
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: false
             delete_on_update: true
             delete_on_remove: true
             
         slider_images:
             uri_prefix: /uploads/slider
             upload_destination: '%kernel.project_dir%/public/uploads/slider'
-            namer: vich_uploader.namer_origname
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: false
             delete_on_update: true
             delete_on_remove: true
 

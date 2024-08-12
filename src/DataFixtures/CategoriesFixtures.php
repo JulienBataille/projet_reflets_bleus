@@ -36,7 +36,7 @@ class CategoriesFixtures extends Fixture
                 'name' => 'Catalogues',
                 'slug'=>'catalogues'
             ],
-            6 => [
+            7 => [
                 'name' => 'Magasins',
                 'slug'=>'magasins'
             ],

@@ -1,51 +1,73 @@
-
-#carousel .sliderwrapper{
+#carousel .sliderwrapper {
   max-width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-  #carousel .swip-navBtn{
-    display: none ;
-  }
+#carousel .slide-content {
+  position: relative;
+
+}
+
+#carousel .swip-navBtn {
+  display: none;
+}
+/* Styles pour les slides */
+#carousel .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: auto; Permet à chaque slide d'occuper automatiquement l'espace disponible */
+}
+
+#carousel .slide-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Assure que l'image couvre toute la zone du slide sans déformation */
+}
 
 
 @media (min-width: 768px) {
-  #carousel .sliderwrapper{
+  #carousel .sliderwrapper {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  #carousel  .slide-container{
+
+  #carousel .slide-container {
     width: 100%;
+
   }
-  #carousel  .slide-content{
+
+  #carousel .slide-content {
     overflow: hidden;
+    position: relative;
+    
+    height: 40vh;
+
   }
-  
-  
-  #carousel  .swip-navBtn{
+
+  #carousel .swip-navBtn {
     display: flex;
-    color:white;
+    color: white;
     background-color: var(--icon-light);
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
-  #carousel  .swip-navBtn:hover{
+
+  #carousel .swip-navBtn:hover {
     background-color: var(--icon-dark);
-  
   }
-  
-  #carousel  .swip-button-next{
+
+  #carousel .swip-button-next,
+  #carousel .swip-button-prev {
     height: 2vw;
     width: 2vw;
-    color:white;
+    color: white;
     background-color: var(--icon-light);
-    transition: color 0.3s ease;
-  }
-  #carousel  .swip-button-prev{
-    height: 2vw;
-    width: 2vw;
-    color:white;
-    background-color: var(--icon-light);
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
 }
+
