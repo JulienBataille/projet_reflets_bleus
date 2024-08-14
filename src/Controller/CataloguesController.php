@@ -13,7 +13,6 @@ class CataloguesController extends AbstractController
     public function index(CataloguesRepository $cataloguesRepository): Response
     {
         $catalogues = $cataloguesRepository->findBy(['is_visible' => true]);
-
         return $this->render('catalogues/index.html.twig', [
             'controller_name' => 'CataloguesController',
             'title'=>'catalogues',

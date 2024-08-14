@@ -71,7 +71,6 @@ class Slider
     public function removeMedium(Media $medium): static
     {
         if ($this->media->removeElement($medium)) {
-            // set the owning side to null (unless already changed)
             if ($medium->getSlider() === $this) {
                 $medium->setSlider(null);
             }

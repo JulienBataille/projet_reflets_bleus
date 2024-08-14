@@ -19,20 +19,17 @@ class Subscriber
     #[ORM\Column(type: 'boolean')]
     private bool $is_valid = false;
 
-    // Renommage du getter
     public function getIsValid(): bool
     {
         return $this->is_valid;
     }
 
-    // Renommage du setter
     public function setIsValid(bool $is_valid): self
     {
         $this->is_valid = $is_valid;
         return $this;
     }
 
-    // Autres méthodes
     public function getId(): ?int
     {
         return $this->id;

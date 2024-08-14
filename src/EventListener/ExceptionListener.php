@@ -17,20 +17,13 @@ class ExceptionListener
     {
         
     }
-
     public function onKernelException(ExceptionEvent $event):void
     {
         $exception = $event->getThrowable();
-
         if ($exception instanceof ConnectionException || $exception instanceof TableNotFoundException) 
         {
             $this->databaseService->createDatabase();
-
-
             $event->setResponse(new RedirectResponse($this->router->generate('welcome')));
-
         }
-
     }
-
 }

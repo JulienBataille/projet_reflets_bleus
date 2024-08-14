@@ -14,7 +14,6 @@ class MagasinsController extends AbstractController
     public function index(SliderRepository $sliderRepository, CategoriesRepository $categoriesRepository): Response
     {
         $category = $categoriesRepository->findOneBy(['name' => 'Magasins']);
-
         $slider = $sliderRepository->findBy(['Category' => $category]);
         
         return $this->render('magasins/index.html.twig', [

@@ -32,7 +32,6 @@ class Catalogues
     #[ORM\Column(type: 'datetime', nullable: true)]
     private ?\DateTimeInterface $updatedAt = null;
 
-    // New fields for image thumbnail
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $thumbnailImage = null;
 

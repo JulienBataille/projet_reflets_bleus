@@ -20,25 +20,21 @@ class CataloguesCrudController extends AbstractCrudController
     {
         yield TextField::new('title', 'Titre');
 
-        // Champ pour afficher l'image miniature
         yield ImageField::new('thumbnailImage', 'Image miniature')
-            ->setBasePath('uploads/catalogues/thumbnails')  // Chemin où les images sont accessibles
-            ->setUploadDir('public/uploads/catalogues/thumbnails')  // Chemin d'upload
-            ->setRequired(false); // Optionnel
+            ->setBasePath('uploads/catalogues/thumbnails')
+            ->setUploadDir('public/uploads/catalogues/thumbnails')
+            ->setRequired(false);
 
-        // Champ pour télécharger le fichier PDF
         yield TextField::new('PDFFile', 'Choisissez le PDF')
             ->setFormType(VichFileType::class)
             ->onlyOnForms();
 
-        // Champ pour afficher le nom du fichier PDF dans la liste
         yield TextField::new('PDF', 'Nom du PDF')
             ->onlyOnIndex()
             ->formatValue(function ($value) {
                 return $value ? sprintf('<a href="/uploads/catalogues/pdf/%s" target="_blank">%s</a>', $value, $value) : 'Aucun PDF';
             });
 
-        // Champ pour afficher et modifier la visibilité
         yield BooleanField::new('is_visible', 'Visible');
     }
 }

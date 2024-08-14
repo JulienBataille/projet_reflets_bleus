@@ -16,16 +16,12 @@ class CategoriesCrudController extends AbstractCrudController
         return Categories::class;
     }
 
-    
     public function configureFields(string $pageName): iterable
     {
-         yield TextField::new('name','Nom de la catégorie');
-         yield SlugField::new('slug')
+        yield TextField::new('name', 'Nom de la catégorie');
+        
+        yield SlugField::new('slug')
             ->setTargetFieldName('name')
             ->onlyOnForms();
-
-            
-        
     }
-    
 }

@@ -6,7 +6,6 @@ use App\Entity\User;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
-
 use EasyCorp\Bundle\EasyAdminBundle\Dto\SearchDto;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
@@ -25,7 +24,6 @@ class UserCrudController extends AbstractCrudController
 {
     public function __construct(private UserPasswordHasherInterface $passwordHasher, private EntityRepository $entityRepo)
     {
-        
     }
 
     public static function getEntityFqcn(): string
@@ -42,29 +40,27 @@ class UserCrudController extends AbstractCrudController
             ->setParameter('userId', $userId);
 
         return $qb;
-        
     }
-    
+
     public function configureFields(string $pageName): iterable
     {
+        yield TextField::new('email', 'Email');
 
-            yield TextField::new('email');
-            yield TextField::new('password')
-                ->setFormType(PasswordType::class)
-                ->onlyWhenCreating();
-            yield ChoiceField::new('roles')
-                ->allowMultipleChoices()
-                ->renderAsBadges([
-                    'ROLE_ADMIN' => 'success',
-                    'ROLE_AUTHOR' => 'warning',
+        yield TextField::new('password', 'Mot de passe')
+            ->setFormType(PasswordType::class)
+            ->onlyWhenCreating();
 
-                ])
-                ->setChoices([
-                    'ADMINISTRATEUR' => 'ROLE_ADMIN',
-                    'AUTEUR' => 'ROLE_AUTHOR',
-                    'UTILISATEUR' => 'ROLE_USER',
-                ]);
-
+        yield ChoiceField::new('roles', 'Rôles')
+            ->allowMultipleChoices()
+            ->renderAsBadges([
+                'ROLE_ADMIN' => 'success',
+                'ROLE_AUTHOR' => 'warning',
+            ])
+            ->setChoices([
+                'ADMINISTRATEUR' => 'ROLE_ADMIN',
+                'AUTEUR' => 'ROLE_AUTHOR',
+                'UTILISATEUR' => 'ROLE_USER',
+            ]);
     }
 
     public function persistEntity(EntityManagerInterface $entityManager, $entityInstance): void
@@ -79,5 +75,4 @@ class UserCrudController extends AbstractCrudController
 
         parent::persistEntity($entityManager, $entityInstance);
     }
-    
 }

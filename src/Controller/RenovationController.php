@@ -15,7 +15,6 @@ class RenovationController extends AbstractController
     {
         $category = $categoriesRepository->findOneBy(['name' => 'Renovation']);
         $slider = $sliderRepository->findBy(['Category' => $category]);
-
         return $this->render('renovation/index.html.twig', [
             'controller_name' => 'RenovationController',
             'title' => 'renovation',

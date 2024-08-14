@@ -34,6 +34,7 @@
     height: 220px;
     backdrop-filter: blur(1px);
 }
+
 @media (min-width: 768px) {
     .image_header {
         background-image: url(/assets/images/images/index/image-header-index.jpg);

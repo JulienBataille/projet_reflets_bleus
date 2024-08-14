@@ -15,7 +15,6 @@ class ServicesController extends AbstractController
     {
         $category = $categoriesRepository->findOneBy(['name' => 'Services']);
         $slider = $sliderRepository->findBy(['Category' => $category]);
-
         return $this->render('services/index.html.twig', [
             'controller_name' => 'ServicesController',
             'title' => 'services',

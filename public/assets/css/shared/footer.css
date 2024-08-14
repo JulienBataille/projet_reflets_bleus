@@ -24,6 +24,7 @@ footer .link-pages a{
 footer .link-pages {
     margin: 5px;
 }
+
 @media (min-width: 768px) {
     footer {
         height: 100px;

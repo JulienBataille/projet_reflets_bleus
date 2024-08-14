@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: row;
     padding: 10px;
-    
 }
 .overlay:hover .fa-star {
     animation: rotate3d 4s;

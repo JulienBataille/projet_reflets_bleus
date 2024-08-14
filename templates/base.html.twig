@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,15 +19,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Bebas+Neue&family=Darker+Grotesque:wght@300..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
 
-
 </head>
-
     <body class="{% block body_class %}{% endblock %}">
-
 		{{ render(controller('App\\Controller\\Menu\\MenuController::index')) }}
         <main>
             {% block body %}
-		    {% endblock %}
+		{% endblock %}
             </main>
 		{% include('_partials/footer.html.twig') %}
         <script src="{{ asset('assets/JS/slider/swiper-bundle.min.js') }}"></script>

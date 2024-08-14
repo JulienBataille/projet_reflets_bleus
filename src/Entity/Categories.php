@@ -91,7 +91,6 @@ class Categories
     public function removeSlider(Slider $slider): static
     {
         if ($this->sliders->removeElement($slider)) {
-            // set the owning side to null (unless already changed)
             if ($slider->getCategory() === $this) {
                 $slider->setCategory(null);
             }

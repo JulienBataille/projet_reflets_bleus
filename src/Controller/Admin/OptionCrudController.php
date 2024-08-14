@@ -37,34 +37,33 @@ class OptionCrudController extends AbstractCrudController
     {
         return $this->optionRepository->getIndexQueryBuilder();
     }
-    
-    public function index(AdminContext $context) //cache la colonne type
+
+    public function index(AdminContext $context)
     {
         $response = parent::index($context);
 
         if ($response instanceof Response){
             return $response;
         }
+        
         /** @var EntityCollection */
         $entities = $response->get('entities');
 
         foreach ($entities as $entity) {
-            $fields= $entity->getFields();
+            $fields = $entity->getFields();
             $fields->unset($fields->getByProperty('type'));
         }
 
         return $response;
     }
 
-    public function createEditForm(EntityDto $entityDto, KeyValueStore $formOptions, AdminContext $context): FormInterface // les Checkbox sont bien affichées
+    public function createEditForm(EntityDto $entityDto, KeyValueStore $formOptions, AdminContext $context): FormInterface
     {
-        $formBuilder =  parent::createEditForm($entityDto, $formOptions, $context);
+        $formBuilder = parent::createEditForm($entityDto, $formOptions, $context);
 
         /** @var Option */
-        
         $viewData = $formBuilder->getViewData();
         $value = $viewData->getValue();
-
 
         $formBuilder->add('value', $viewData->getType(), [
             'data' => $viewData->getType() === CheckboxType::class ? boolval($value) : $value,
@@ -75,12 +74,12 @@ class OptionCrudController extends AbstractCrudController
         return $formBuilder;
     }
 
-    public function updateEntity(EntityManagerInterface $entityManager, $entityInstance): void // renvoie 0 ou 1 si c'est une checkbox dans la BDD
+    public function updateEntity(EntityManagerInterface $entityManager, $entityInstance): void
     {
         /** @var Option */
         $option = $entityInstance;
 
-        if($option->getType() === CheckboxType::class){
+        if ($option->getType() === CheckboxType::class) {
             $value = $option->getValue() ? '1' : '0';
             $option->setValue($value);
         }
@@ -94,7 +93,6 @@ class OptionCrudController extends AbstractCrudController
             ->remove(Crud::PAGE_INDEX, Action::BATCH_DELETE)
             ->remove(Crud::PAGE_INDEX, Action::DELETE)
             ->remove(Crud::PAGE_INDEX, Action::NEW);
-
     }
 
     public function configureCrud(Crud $crud): Crud
@@ -103,11 +101,9 @@ class OptionCrudController extends AbstractCrudController
             ->setEntityPermission('ROLE_ADMIN')
             ->setSearchFields(null)
             ->setEntityLabelInPlural('Réglages généraux')
-            ->showEntityActionsInlined()
-;
+            ->showEntityActionsInlined();
     }
 
-    
     public function configureFields(string $pageName): iterable
     {
         yield TextField::new('label', 'Option')
@@ -116,7 +112,5 @@ class OptionCrudController extends AbstractCrudController
             ]);
         yield TextField::new('value', 'Valeur');
         yield HiddenField::new('type');
-
     }
-    
 }

@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-
 use App\Form\NewsletterFormType;
 use App\Repository\SubscriberRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -35,7 +34,6 @@ class NewsletterController extends AbstractController
                     ->text($body);
 
                 $mailer->send($email);
-
             }
 
             $this->addFlash('success', 'La newsletter a été envoyée avec succès.');

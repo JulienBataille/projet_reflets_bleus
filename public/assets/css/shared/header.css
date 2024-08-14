@@ -5,7 +5,6 @@ header nav {
     height: 70px;
     width: 100%;
 }
-
 header .navbar-nav .nav-link {
     font-size: 4vw;
     color: var(--icon-dark);
@@ -48,7 +47,6 @@ header .fa-phone {
     font-size: 20px;
     margin-top: 15px;
 }
-
 header .icon-mail {
     background-color: var(--icon-light);
     height: 50px;
@@ -60,17 +58,15 @@ header .fa-envelope {
     font-size: 20px;
     margin-top: 15px;
 }
-
-
-header /* Styles pour le menu burger en plein écran */
-.navbar-toggler {
+/* Styles pour le menu burger en plein écran */
+header .navbar-toggler {
     border: 0px;
     margin-right: 40px;
-  }
-.navbar-collapse.show {
+}
+header .navbar-collapse.show {
     width: 100vh;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.700);/* Remplacez cette couleur par celle que vous souhaitez */
+    background-color: rgba(255, 255, 255, 0.700);
     z-index: 1050;
     display: flex;
     align-items: start;
@@ -78,21 +74,16 @@ header /* Styles pour le menu burger en plein écran */
     backdrop-filter: blur(10px);
     text-align: center;
     margin-top:68px;
-
-
-    
 }
-header /* Styles pour le menu burger en plein écran */
-.navbar-collapse {
+/* Styles pour le menu burger en plein écran */
+header .navbar-collapse {
     transition: none !important;
 }
-
-.navbar-collapse.show .nav-link {
-    color: var(--icon-dark); /* Couleur du texte des liens du menu */
-    font-size: 1.5rem; /* Taille du texte des liens du menu */
-    margin: 10px 0; /* Espacement entre les liens du menu */
+header .navbar-collapse.show .nav-link {
+    color: var(--icon-dark); 
+    font-size: 1.5rem; 
+    margin: 10px 0; 
 }
-
 
 @media (min-width: 768px) {
     header .navbar:hover {
@@ -111,11 +102,9 @@ header /* Styles pour le menu burger en plein écran */
         color: var(--icon-dark);
         font-weight: lighter;
     }
-
     header .navbar-nav .nav-link:hover {
         text-decoration: underline;
     }
-
     header .navbar-nav .nav-link.active {
         font-weight: bold;
     }
@@ -168,10 +157,5 @@ header /* Styles pour le menu burger en plein écran */
         color: white;
         font-size: 30px;
         margin-top: 20px;
-
     }
-    
-
-
-
 }

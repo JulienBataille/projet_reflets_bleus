@@ -15,7 +15,6 @@ class BatimentController extends AbstractController
     public function index(SliderRepository $sliderRepository, CategoriesRepository $categoriesRepository): Response
     {
         $category = $categoriesRepository->findOneBy(['name' => 'Batiment']);
-
         $slider = $sliderRepository->findBy(['Category' => $category]);
         
         return $this->render('batiment/index.html.twig', [

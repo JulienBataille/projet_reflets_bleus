@@ -20,15 +20,11 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
-
 main {
 	flex: 1;
 }
-
-
 :root {
     font-family: "Darker Grotesque", sans-serif ;
-
 }
 .titreh2 {
     font-size: 5vw;
@@ -37,7 +33,6 @@ main {
     margin-left: 1vw;
     letter-spacing: 0.1vw;
 }
-
 .paragraph {
     font-size: 2.8vw;
     color: #0E3F78;
@@ -73,6 +68,21 @@ main {
     color: #0E3F78;
     font-family: "Darker Grotesque";
 }
+img{
+    transition: transform 0.5s ease;
+}
+.overflow-hidden:hover img{
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
+section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+section.visible {
+    opacity: 1;
+}
+
 @media (min-width: 768px) {
     .titreh2 {
         font-size: 2vw;
@@ -100,24 +110,6 @@ main {
     }
     .p-location {
         font-size: 1.5vw;
-
     }
 }
-img{
-    transition: transform 0.5s ease;
-}
-.overflow-hidden:hover img{
-    transform: scale(1.05);
-    transition: all 0.5s ease-in-out;
-}
 
-/* Classe de base pour les sections */
-section {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-/* Classe ajoutée lorsque la section est visible */
-section.visible {
-    opacity: 1;
-}

@@ -26,19 +26,20 @@
     color: #0E3F78;
     font-size: 2.8vw; 
 }
+
 @media (min-width: 768px) {
     .p-comment {
         font-size: 1vw; 
     }
-     .icon-title {
+    .icon-title {
         width: 30px;
         height: 30px;
     }
-     .title-comment {
+    .title-comment {
         font-size: 2vw;
         margin-top: 10px;
     }
-     .icon-comment {
+    .icon-comment {
         width: 2vw !important;
         height: 2vw !important;
         display: flex;
@@ -46,7 +47,7 @@
         justify-content: center;
         background: var(--icon-light);
     }
-     #comment i {
+    #comment i {
         color: white;
         font-size: 1.2vw;
     }
