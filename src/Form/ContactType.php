@@ -17,56 +17,78 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-        ->add('Nom', TextType::class, [
+        ->add('nom', TextType::class, [
             'label' => 'Nom',
             'constraints' => [
                     new NotBlank([
                         'message' => 'Entrez votre nom',
                     ])
                 ],
+            'attr' => [
+                'placeholder' => 'Entrez votre nom',
+                'class' => 'common-input'
+            ]
         ])
-        ->add('Prenom', TextType::class, [
+        ->add('prenom', TextType::class, [
             'label' => 'Prénom',
             'constraints' => [
                     new NotBlank([
                         'message' => 'Entrez votre prénom',
                     ])
                 ],
-                    
+            'attr' => [
+                    'placeholder' => 'Entrez votre prénom',
+                    'class' => 'common-input'
+                ]        
 
         ])
-        ->add('Tel', TelType::class,[
+        ->add('tel', TelType::class,[
             'label' =>'Numéro de téléphone',
             'constraints' => [
                     new NotBlank([
                         'message' => 'Entrez votre téléphone',
                     ])
                 ],
+            'attr' => [
+                    'placeholder' => 'Entrez votre numéro de téléphone',
+                    'class' => 'common-input'
+                ]
         ])
-        ->add('Email', EmailType::class,[
+        ->add('email', EmailType::class,[
             'label' =>'adresse mail',
             'constraints' => [
                     new NotBlank([
                         'message' => 'Entrez votre email',
                     ])
                 ],
+            'attr' => [
+                    'placeholder' => 'Entrez votre email',
+                    'class' => 'common-input'
+                ]
         ])
-        ->add('Object', TextType::class, [
+        ->add('subject', TextType::class, [
             'label' => 'Objet de votre demande',
             'constraints' => [
                     new NotBlank([
-                        'message' => 'Entrez votre objet de votre demande',
+                        'message' => 'Entrez le sujet de votre demande',
                     ])
                 ],
-
+            'attr' => [
+                    'placeholder' => 'Entrez le sujet de votre demande',
+                    'class' => 'common-input'
+                ]
         ])
-        ->add('Body', TextareaType::class, [
+        ->add('body', TextareaType::class, [
             'label' => 'Message',
             'constraints' => [
                     new NotBlank([
                         'message' => 'Entrez votre message',
                     ])
                 ],
+            'attr' => [
+                    'placeholder' => 'Entrez votre message',
+                    'class' => 'common-input'
+                ]
 
         ])
         ->add('submit', SubmitType::class, [
