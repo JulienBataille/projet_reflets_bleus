@@ -58,7 +58,6 @@ header .fa-envelope {
     font-size: 20px;
     margin-top: 15px;
 }
-/* Styles pour le menu burger en plein écran */
 header .navbar-toggler {
     border: 0px;
     margin-right: 40px;
@@ -75,7 +74,6 @@ header .navbar-collapse.show {
     text-align: center;
     margin-top:68px;
 }
-/* Styles pour le menu burger en plein écran */
 header .navbar-collapse {
     transition: none !important;
 }
@@ -94,6 +92,7 @@ header .navbar-collapse.show .nav-link {
         background-color: rgba(255, 255, 255, 0.700);
         backdrop-filter: blur(10px);
     }
+
     header .icon-size {
         height: 50px;
     }

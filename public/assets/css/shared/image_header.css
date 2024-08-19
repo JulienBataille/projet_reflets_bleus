@@ -31,7 +31,7 @@
 }
 #overlay_image {
 
-    height: 220px;
+    max-width: 375px;
     backdrop-filter: blur(1px);
 }
 
@@ -40,8 +40,6 @@
         background-image: url(/assets/images/images/index/image-header-index.jpg);
     }
     #overlay_image {
-        width: 440px;
-        height: 220px;
         transform: scale(1);
         transition: transform 2s ease-in-out;
     }

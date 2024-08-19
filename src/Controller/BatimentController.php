@@ -14,13 +14,13 @@ class BatimentController extends AbstractController
     #[Route('/batiment', name: 'app_batiment')]
     public function index(SliderRepository $sliderRepository, CategoriesRepository $categoriesRepository): Response
     {
-        $category = $categoriesRepository->findOneBy(['name' => 'Batiment']);
+        $category = $categoriesRepository->findOneBy(['name' => 'Batiment'])->getSliders();
+        // dd($category);
         $slider = $sliderRepository->findBy(['Category' => $category]);
         
         return $this->render('batiment/index.html.twig', [
-            'controller_name' => 'BatimentController',
             'title'=>'batiment',
-            'slider'=>$slider
+            'sliders'=>$category
         ]);
     }
 }
