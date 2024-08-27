@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ContactType extends AbstractType
@@ -89,6 +90,14 @@ class ContactType extends AbstractType
                     'placeholder' => 'Entrez votre message',
                     'class' => 'common-input'
                 ]
+
+        ])
+        ->add('agreeTerms', CheckboxType::class, [
+            'mapped' => false,
+            'label' => 'J\'accepte que mes données personnelles soient utilisées pour traiter ma demande selon la politique de confidentialité.',
+            'attr' => [
+                'class' => 'form-check-input'
+            ],
 
         ])
         ->add('submit', SubmitType::class, [

@@ -7,6 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class NewsletterFormType extends AbstractType
@@ -23,6 +24,7 @@ class NewsletterFormType extends AbstractType
             ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer',
             ]);
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void

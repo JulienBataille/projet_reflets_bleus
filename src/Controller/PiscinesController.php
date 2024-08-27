@@ -15,16 +15,14 @@ class PiscinesController extends AbstractController
     #[Route('/piscines', name: 'app_piscines')]
     public function index(SliderRepository $sliderRepository, CategoriesRepository $categoriesRepository): Response
     {
-        // Retrieves the category entity with the name 'Piscines'. // Récupère l'entité de catégorie avec le nom 'Piscines'.
-        $category = $categoriesRepository->findOneBy(['name' => 'Piscines']);
-        
-        // Finds all sliders associated with the 'Piscines' category. // Trouve tous les sliders associés à la catégorie 'Piscines'.
+        $category = $categoriesRepository->findOneBy(['name' => 'Piscines']);   
         $slider = $sliderRepository->findBy(['Category' => $category]);
-        // Renders the 'piscines/index.html.twig' template with the retrieved sliders. // Rend le template 'piscines/index.html.twig' avec les sliders récupérés.
+        
         return $this->render('piscines/index.html.twig', [
-            'controller_name' => 'PiscinesController', // Name of the controller. // Nom du contrôleur.
-            'title' => 'piscines', // Title of the page. // Titre de la page.
-            'slider' => $slider // Slider data to be passed to the template. // Données des sliders à passer au template.
+            'controller_name' => 'PiscinesController', 
+            'title' => 'piscines', 
+            'slider' => $slider 
+            
         ]);
     }
 }

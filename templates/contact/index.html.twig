@@ -1,5 +1,7 @@
-{# templates/newsletter/index.html.twig #}
 {% extends 'base.html.twig' %}
+{% block title %}Nous contacter{% endblock %}
+
+{% block body_class %}{{title}}{% endblock %}
 
 {% block body %}
 
@@ -29,8 +31,10 @@
 
 					</div>
 					<div class="col-12">
+						{{ form_widget(form_contact.agreeTerms)}}
+					</div>
+					<div class="col-12">
 						{{ form_widget(form_contact.submit)}}
-
 					</div>
 				</div>
 				{{ form_end(form_contact)}} 

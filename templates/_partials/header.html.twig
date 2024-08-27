@@ -22,7 +22,7 @@
 						</li>
 						{% endfor %}
 						{% if is_granted('IS_AUTHENTICATED_FULLY')  %}
-							{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_AUTHOR')%}
+							{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')%}
 							<div class="dropdown">
 								<a class="nav nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 									<span itemprop="name">Tableau de bord</span>

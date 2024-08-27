@@ -46,7 +46,7 @@ class DashboardController extends AbstractDashboardController
             ]);
         }
 
-        if ($this->isGranted('ROLE_AUTHOR')) {
+   
             yield MenuItem::subMenu('Catalogues', 'fas fa-book')->setSubItems([
                 MenuItem::linkToCrud('Tous les catalogues', 'fas fa-download', Catalogues::class),
                 MenuItem::linkToCrud('Ajoutez', 'fas fa-plus', Catalogues::class)->setAction(Crud::PAGE_NEW),
@@ -61,7 +61,7 @@ class DashboardController extends AbstractDashboardController
                 MenuItem::linkToCrud('Carnet Email', 'fas fa-envelope', Subscriber::class),
                 MenuItem::linkToRoute('Envoyer une Newsletter', 'fas fa-plus', 'app_newsletter'),
             ]);
-        }
+        
 
         if ($this->isGranted('ROLE_ADMIN')) {
             yield MenuItem::subMenu('Réglages', 'fas fa-cog')->setSubItems([
