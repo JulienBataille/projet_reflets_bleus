@@ -4,8 +4,8 @@
 
 {% block body %}
 
-<div class="container w-25 my-5 pt-5">
-    <form method="post">
+<div class="container  my-5 pt-5">
+    <form method="post" class="my-5">
         {% if error %}
             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
