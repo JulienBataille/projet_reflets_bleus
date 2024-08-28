@@ -15,15 +15,19 @@ use EasyCorp\Bundle\EasyAdminBundle\Collection\FieldCollection;
 use EasyCorp\Bundle\EasyAdminBundle\Collection\FilterCollection;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
 
 /**
  * @method User getUser()
  */
-
 class UserCrudController extends AbstractCrudController
 {
-    public function __construct(private UserPasswordHasherInterface $passwordHasher, private EntityRepository $entityRepo)
-    {
+    public function __construct(
+        private UserPasswordHasherInterface $passwordHasher,
+        private EntityRepository $entityRepo
+    ) {
     }
 
     public static function getEntityFqcn(): string
@@ -48,6 +52,21 @@ class UserCrudController extends AbstractCrudController
 
         yield TextField::new('password', 'Mot de passe')
             ->setFormType(PasswordType::class)
+            ->setFormTypeOptions([
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Le mot de passe ne peut pas être vide.',
+                    ]),
+                    new Length([
+                        'min' => 8,
+                        'minMessage' => 'Votre mot de passe doit contenir au moins {{ limit }} caractères.',
+                    ]),
+                    new Regex([
+                        'pattern' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$/',
+                        'message' => 'Votre mot de passe doit contenir au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.',
+                    ]),
+                ],
+            ])
             ->onlyWhenCreating();
 
         yield ChoiceField::new('roles', 'Rôles')
@@ -68,9 +87,10 @@ class UserCrudController extends AbstractCrudController
         $user = $entityInstance;
 
         $plainPassword = $user->getPassword();
-        $hashedPassword = $this->passwordHasher->hashPassword($user, $plainPassword);
-
-        $user->setPassword($hashedPassword);
+        if (!empty($plainPassword)) {
+            $hashedPassword = $this->passwordHasher->hashPassword($user, $plainPassword);
+            $user->setPassword($hashedPassword);
+        }
 
         parent::persistEntity($entityManager, $entityInstance);
     }

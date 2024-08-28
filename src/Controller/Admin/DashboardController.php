@@ -46,8 +46,8 @@ class DashboardController extends AbstractDashboardController
             yield MenuItem::subMenu('Categories', 'fas fa-tags')->setSubItems([
                 MenuItem::linkToCrud('Toutes les catégories', 'fas fa-list', Categories::class),
             ]);
-            yield MenuItem::subMenu('Magasins', 'fas fa-home')->setSubItems([
-                MenuItem::linkToCrud('Tous les magasins', 'fas fa-download', Magasins::class),
+            yield MenuItem::subMenu('Magasins', 'fas fa-shop')->setSubItems([
+                MenuItem::linkToCrud('Tous les magasins', 'fas fa-shop', Magasins::class),
                 MenuItem::linkToCrud('Nouveau', 'fas fa-plus', Magasins::class)->setAction(Crud::PAGE_NEW),
             ]);  
             yield MenuItem::subMenu('Catalogues', 'fas fa-book')->setSubItems([
