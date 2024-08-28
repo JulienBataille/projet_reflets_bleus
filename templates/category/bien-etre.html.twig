@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{title}}{% endblock %}
+{% block body_class %}{{title}}{% endblock %}
+{% block body %}
+
+{# PICTURE #}
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER ---  #}
+{% include('_partials/picture_header.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER END ---  #}
+
+{# COMMENT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
+{% include('_partials/comment.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
+
+{# RESUME #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION RESUME ---  #}
+<section id="resume">
+    <div class="container-fluid col-12 col-md-10 my-5">
+                <div class="position-relative overflow-hidden">
+                    <img src="{{ asset('assets/images/images/spas/image-spas-1.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
+                    <div class="overlay overlay-center d-flex flex-column align-items-center justify-content-center">
+                        <div class="title-container my-2">
+                        <div class="icon-container "><i class="fas fa-star"></i></div>
+                        <span class="titreh2">TITLE SECTION PISCINE BLUE</span>
+                        </div>
+                        <p class="col-md-10 paragraph text-center">Faites confiance à l'expertise de Reflets Bleus, cumulant 33 ans de savoir-faire dans la construction de piscines, spas et saunas. Notre équipe expérimentée vous guide à chaque étape pour concrétiser vos projets avec professionnalisme. Faites confiance à l'expertise de Reflets Bleus, cumulant 33 ans de savoir-faire dans la construction de piscines, spas et saunas. Notre équipe expérimentée vous guide à chaque étape pour concrétiser vos projets avec professionnalisme.</p>
+                    </div>
+                </div>
+    </div>
+</section>
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION RESUME END ---  #}
+
+{# RIGHT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION RIGHT ---  #}
+<section id="right">
+    <div class="container-fluid col-12 col-md-10 my-5">
+                <div class="position-relative overflow-hidden">
+                    <img src="{{ asset('assets/images/images/spas/image-spas-2.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
+                    <div class="overlay overlay-right d-flex flex-column">
+                        <div class="title-container my-2">
+                            <div class="icon-container "><i class="fas fa-star"></i></div>
+                            <span class="titreh2">TITLE SECTION SERVICE PISCINE</span>
+                        </div>
+                        <p class="col-md-10 paragraph">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des solutions personnalisées adaptées à vos besoins spécifiques pour maintenir votre espace aquatique dans un état optimal.</p>
+                    </div>
+                </div>
+    </div>
+</section>
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION RIGHT END ---  #}
+
+{# SLIDER #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION SLIDER ---  #}
+{% include('_partials/slider.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION SLIDER END ---  #}
+
+{# COMMENT DUO #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT DUO ---  #}
+<section id="comment">
+    <div class="row my-2 my-md-4 col-10 mx-auto">
+        <div class="col-md-6">
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="icon-comment">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <div>
+                    <h1 class="title-comment mx-2">UN SAVOIR FAIRE</h1>
+                </div>
+            </div>
+            <div class=" text-center justify-content-center mx-auto col-10">
+                <p class="p-comment">Faites confiance à l'expertise de Reflets Bleus, cumulant 33 ans de savoir-faire dans la construction de piscines, spas et saunas. Notre équipe expérimentée vous guide à chaque étape pour concrétiser vos projets avec professionnalisme. Faites confiance à l'expertise de Reflets Bleus, cumulant 33 ans de savoir-faire dans la construction de piscines, spas et saunas. Notre équipe expérimentée vous guide à chaque étape pour concrétiser vos projets avec professionnalisme.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="icon-comment">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <div>
+                    <h1 class="title-comment mx-2">UN SAVOIR FAIRE</h1>
+                </div>
+            </div>
+            <div class=" text-center justify-content-center mx-auto col-10">
+                <p class="p-comment">Faites confiance à l'expertise de Reflets Bleus, cumulant 33 ans de savoir-faire dans la construction de piscines, spas et saunas. Notre équipe expérimentée vous guide à chaque étape pour concrétiser vos projets avec professionnalisme. Faites confiance à l'expertise de Reflets Bleus, cumulant 33 ans de savoir-faire dans la construction de piscines, spas et saunas. Notre équipe expérimentée vous guide à chaque étape pour concrétiser vos projets avec professionnalisme.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT DUO END ---  #}
+
+{# LEFT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION LEFT ---  #}
+<section id="left">
+    <div class="container-fluid col-12 col-md-10 my-5">
+                <div class="position-relative overflow-hidden">
+                    <img src="{{ asset('assets/images/images/spas/image-spas-4.jpg') }}" class="img-fluid w-100" alt="Image de piscine">
+                    <div class="overlay overlay-left d-flex flex-column">
+                        <div class="title-container my-2">
+                            <div class="icon-container "><i class="fas fa-star"></i></div>
+                            <span class="titreh2">TITLE SECTION SERVICE PISCINE</span>
+                        </div>
+                        <p class="col-md-10 paragraph">Reflets Bleus se distingue par son expertise dans les services d'entretien complets pour piscines, spas et saunas. Allant au-delà de la simple construction, nous vous accompagnons de manière exhaustive, assurant un suivi attentif du nettoyage régulier à l'hivernage soigneux. Forte de 33 ans d'expérience, notre équipe assure un suivi attentif, offrant des solutions personnalisées adaptées à vos besoins spécifiques pour maintenir votre espace aquatique dans un état optimal.</p>
+                    </div>
+                </div>
+    </div>
+</section>
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION LEFT END ---  #}
+
+{# COMMENT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
+{% include('_partials/comment.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
+
+{# CARDS #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CARDS ---  #}
+{% include('_partials/card.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CARDS END ---  #}
+
+{% endblock %}

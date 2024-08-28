@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{title}}{% endblock %}
+{% block body_class %}{{title}}{% endblock %}
+{% block body %}
+
+{# PICTURE #}
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER ---  #}
+{% include('_partials/picture_header.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- PICTURE HEADER END ---  #}
+
+{# COMMENT #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT ---  #}
+{% include('_partials/comment.html.twig') %}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION COMMENT END ---  #}
+
+{# CATALOGUES #}
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CATALOGUE ---  #}
+<section id="catalogue">
+    <div class="container-fluid col-10 container_catalogue mx-auto row">
+        {% for catalogue in catalogues %}
+            {% if catalogue.PDF is not null and catalogue.PDF != '' %}
+            <div class="card card_catalogue">
+                <img src="{{ asset('/uploads//catalogues/thumbnails/' ~ catalogue.thumbnailImage) }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h3 class="title_catalogue">{{ catalogue.title }}</h3>
+                            <div class="d-flex justify-content-center">
+                                <a href="{{ asset('/uploads/catalogues/pdf/' ~ catalogue.PDF) }}" target="_blank" type="button" class="button button_catalogue">
+                                    <div class="icon blue mx-2">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                    voir le PDF
+                                </a>
+                            </div>
+                    </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div> 
+</section>
+{# ----------------------------------------------------------------------------------------------------------------------- SECTION CATALOGUE END---  #}
+
+{% endblock %}

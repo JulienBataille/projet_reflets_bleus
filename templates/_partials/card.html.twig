@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-10 my-3 my-md-0 col-md-3">
-                    <a href="{{ path('app_piscines') }}">
+                    <a href="{{ path('category_show', { 'slug': 'piscines' }) }}">
                         <div class="position-relative overflow-hidden">
                             <img src="{{ asset('assets/images/images/cards/image-card-piscine.jpg') }}"
                                 class="img-fluid w-100" alt="Image de piscine">
@@ -21,10 +21,10 @@
                     </a>
                 </div>
                 <div class="col-10 my-3 my-md-0 col-md-3">
-                    <a href="{{ path('app_services') }}">
+                    <a href="{{ path('category_show', { 'slug': 'services' }) }}">
                         <div class="position-relative overflow-hidden">
                             <img src="{{ asset('assets/images/images/cards/image-card-service.jpg') }}"
-                                class="img-fluid w-100" alt="Image de piscine">
+                                class="img-fluid w-100" alt="Image de services">
                             <div class="overlay-cards d-flex flex-column">
                                 <div class="container-btn d-flex my-2">
                                     <button type="button" class="btn-cards d-flex align-items-center mx-2">
@@ -39,10 +39,10 @@
                     </a>
                 </div>
                 <div class="col-10 my-3 my-md-0 col-md-3">
-                    <a href="{{ path('app_renovation') }}">
+                    <a href="{{ path('category_show', { 'slug': 'renovations' }) }}">
                         <div class="position-relative overflow-hidden">
                             <img src="{{ asset('assets/images/images/cards/image-card-renovation.jpg') }}"
-                                class="img-fluid w-100" alt="Image de piscine">
+                                class="img-fluid w-100" alt="Image de rénovations">
                             <div class="overlay-cards d-flex flex-column">
                                 <div class="container-btn d-flex my-2">
                                     <button type="button" class="btn-cards d-flex align-items-center mx-2">
@@ -57,10 +57,10 @@
                     </a>
                 </div>
                 <div class="col-10 my-3 my-md-0 col-md-3">
-                    <a href="{{ path('app_bien_etre') }}">
+                    <a href="{{ path('category_show', { 'slug': 'bien_etre' }) }}">
                         <div class="position-relative overflow-hidden">
                             <img src="{{ asset('assets/images/images/cards/image-card-spas.jpg') }}"
-                                class="img-fluid w-100" alt="Image de piscine">
+                                class="img-fluid w-100" alt="Image de bien-être">
                             <div class="overlay-cards d-flex flex-column">
                                 <div class="container-btn d-flex mx-2 my-2">
                                     <button type="button" class="btn-cards d-flex align-items-center mx-2">

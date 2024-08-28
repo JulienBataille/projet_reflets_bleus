@@ -24,6 +24,7 @@ class CategoriesCrudController extends AbstractCrudController
         if ($this->isGranted('ROLE_ADMIN')) {
             // Fields specific to admin role
             yield TextField::new('name', 'Nom de la catégorie');
+            yield SlugField::new('slug', 'Slug')->setTargetFieldName('name');
         } else {
             // Disable fields for non-admins
             yield TextField::new('name', 'Nom de la catégorie')
