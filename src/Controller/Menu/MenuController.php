@@ -17,9 +17,12 @@ class MenuController extends AbstractController
     public function index (CategoriesRepository $categories, Request $request, OptionRepository $options, EntityManagerInterface $em) : Response
     {
         $tel = $em->getRepository(Option::class)->findOneBy(['name'=>'tel']);
+        $mail = $em->getRepository(Option::class)->findOneBy(['name'=>'mail']);
+
         return $this->render('_partials/header.html.twig',[
                 'categories' => $categories->findAll(),
-                'tel' => $tel
+                'tel' => $tel,
+                'mail' => $mail,
 
         ]);
     }

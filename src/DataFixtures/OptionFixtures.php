@@ -7,17 +7,15 @@ use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class OptionFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     { 
         $options = [    // Creation of an array of options to be added to the database. // Création d'un tableau d'options à ajouter à la base de données.
-            new Option('titre du blog', 'blog_about', 'Mon Blog', TextType::class),  // Option pour le titre du blog
-            new Option('Texte du copyright', 'copyright', 'Tous droits réservés', TextType::class), // Option pour le texte de copyright
-            new Option('Numéro Magasin', 'tel', '06.73.05.12.92', TelType::class), // Option pour le texte de copyright
-            new Option('Tout le monde peut s\'inscrire', 'users_can_register', '0', CheckboxType::class) // Option pour autoriser l'inscription
+            new Option('Adresse Mail', 'mail', 'contact@refletsbleus.fr', TextType::class), // Option pour le texte de copyright
+            new Option('Numéro Magasin', 'tel', '05 58 98 73 96', TelType::class), // Option pour le texte de copyright
+
         ];
         
         foreach ($options as $option) { // Loop to persist each option into the database. // Boucle pour persister chaque option dans la base de données.

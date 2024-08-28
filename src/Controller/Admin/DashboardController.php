@@ -2,12 +2,13 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Catalogues;
 use App\Entity\User;
 use App\Entity\Media;
 use App\Entity\Option;
-use App\Entity\Categories;
 use App\Entity\Slider;
+use App\Entity\Magasins;
+use App\Entity\Catalogues;
+use App\Entity\Categories;
 use App\Entity\Subscriber;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -46,7 +47,10 @@ class DashboardController extends AbstractDashboardController
             ]);
         }
 
-   
+            yield MenuItem::subMenu('Magasins', 'fas fa-home')->setSubItems([
+                MenuItem::linkToCrud('Tous les magasins', 'fas fa-download', Magasins::class),
+                MenuItem::linkToCrud('Nouveau', 'fas fa-plus', Magasins::class)->setAction(Crud::PAGE_NEW),
+            ]);  
             yield MenuItem::subMenu('Catalogues', 'fas fa-book')->setSubItems([
                 MenuItem::linkToCrud('Tous les catalogues', 'fas fa-download', Catalogues::class),
                 MenuItem::linkToCrud('Ajoutez', 'fas fa-plus', Catalogues::class)->setAction(Crud::PAGE_NEW),
@@ -62,11 +66,9 @@ class DashboardController extends AbstractDashboardController
                 MenuItem::linkToRoute('Envoyer une Newsletter', 'fas fa-plus', 'app_newsletter'),
             ]);
         
-
-        if ($this->isGranted('ROLE_ADMIN')) {
             yield MenuItem::subMenu('Réglages', 'fas fa-cog')->setSubItems([
                 MenuItem::linkToCrud('Général', 'fas fa-cog', Option::class),
             ]);
-        }
+        
     }
 }

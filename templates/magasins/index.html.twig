@@ -56,19 +56,26 @@
                 <div class="icon-comment ">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <p class="p-location ">140 Route du Lycée Agricole</p>
+                <a href="https://www.google.com/maps/search/?api=1&query={{magasinStPandelon.adresse|url_encode}},+{{magasinStPandelon.codepostal}}+{{magasinStPandelon.city|url_encode}}"class="text-decoration-none" target="_blank">
+                    <p class="p-location ">{{magasinStPandelon.adresse}} {{magasinStPandelon.codepostal}} {{magasinStPandelon.city}}</p>
+                </a>
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <div class="icon-comment">
                     <i class="fa-solid fa-phone"></i>
                 </div>
-                <p class="p-location">05 58 58 58 58</p>
+                <a href="tel:{{tel.value}}" class="text-decoration-none">
+                    <p class="p-location">{{tel.value}}</p>
+			    </a>
+
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <div class="icon-comment ">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
-                <p class="p-location">Refletsbleus@admin.fr</p>
+                 <a href="mailto:{{mail.value}}" class="text-decoration-none">
+                    <p class="p-location">{{mail.value}}</p>
+			    </a>
             </div>
         </div>
     </div>
@@ -105,19 +112,26 @@
                 <div class="icon-comment ">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <p class="p-location ">140 Route du Lycée Agricole</p>
+                <a href="https://www.google.com/maps/search/?api=1&query={{magasinHagetmau.adresse|url_encode}},+{{magasinHagetmau.codepostal}}+{{magasinHagetmau.city|url_encode}}"class="text-decoration-none" target="_blank">
+                    <p class="p-location ">{{magasinHagetmau.adresse}} {{magasinHagetmau.codepostal}} {{magasinHagetmau.city}}</p>
+                </a>
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <div class="icon-comment">
                     <i class="fa-solid fa-phone"></i>
                 </div>
-                <p class="p-location">05 58 58 58 58</p>
+                <a href="tel:{{tel.value}}" class="text-decoration-none">
+                    <p class="p-location">{{tel.value}}</p>
+			    </a>
+
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <div class="icon-comment ">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
-                <p class="p-location">Refletsbleus@admin.fr</p>
+                 <a href="mailto:{{mail.value}}" class="text-decoration-none">
+                    <p class="p-location">{{mail.value}}</p>
+			    </a>
             </div>
         </div>
     </div>
