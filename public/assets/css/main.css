@@ -1,6 +1,6 @@
 @import'shared/header.css';
 @import'shared/image_header.css';
-@import'shared/variable.css';
+@import'shared/color.css';
 @import'shared/button.css';
 @import'shared/animation.css';
 @import'shared/footer.css';
@@ -9,6 +9,7 @@
 @import'shared/card.css';
 @import'shared/catalogue.css';
 @import'shared/css_slider/style.css';
+
 
 body {
 	margin: 0;
@@ -108,4 +109,3 @@ section.visible {
         font-size: 1.5vw;
     }
 }
-

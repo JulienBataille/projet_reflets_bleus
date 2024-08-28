@@ -21,6 +21,12 @@ class Categories
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $slug = null;
 
+    #[ORM\Column(length: 7, nullable: true)]
+    private ?string $iconLight = null;
+
+    #[ORM\Column(length: 7, nullable: true)]
+    private ?string $iconDark = null;
+
     /**
      * @var Collection<int, Slider>
      */
@@ -31,9 +37,6 @@ class Categories
     {
         $this->sliders = new ArrayCollection();
     }
-
-
-
 
     public function getId(): ?int
     {
@@ -64,7 +67,30 @@ class Categories
         return $this;
     }
 
-    
+    public function getIconLight(): ?string
+    {
+        return $this->iconLight;
+    }
+
+    public function setIconLight(?string $iconLight): static
+    {
+        $this->iconLight = $iconLight;
+
+        return $this;
+    }
+
+    public function getIconDark(): ?string
+    {
+        return $this->iconDark;
+    }
+
+    public function setIconDark(?string $iconDark): static
+    {
+        $this->iconDark = $iconDark;
+
+        return $this;
+    }
+
     public function __toString(): string
     {
         return $this->name; 
@@ -98,7 +124,4 @@ class Categories
 
         return $this;
     }
-
-
-
 }

@@ -19,11 +19,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Bebas+Neue&family=Darker+Grotesque:wght@300..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --icon-light: {{ iconLight|default('#41AED1') }};
+            --icon-dark: {{ iconDark|default('#0E3F78') }};
+        }
+    </style>
+    
 </head>
     <body class="{% block body_class %}{% endblock %}">
 		{{ render(controller('App\\Controller\\Menu\\MenuController::index')) }}
         <main>
-            {% block body %}
+        {% block body %}
 		{% endblock %}
             </main>
 		{% include('_partials/footer.html.twig') %}

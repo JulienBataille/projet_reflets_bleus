@@ -20,10 +20,26 @@ class MainController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(CategoriesRepository $categories): Response
     {
+        // Récupération de toutes les catégories
+        $categoriesList = $categories->findAll();
+        
+        // Initialisation des couleurs par défaut
+        $iconLight = '#41AED1'; // Couleur par défaut
+        $iconDark = '#0E3F78';  // Couleur par défaut
+
+        // Si des catégories existent, utilisez les couleurs de la première catégorie comme exemple
+        if (!empty($categoriesList)) {
+            $firstCategory = $categoriesList[0];
+            $iconLight = $firstCategory->getIconLight() ?? $iconLight;
+            $iconDark = $firstCategory->getIconDark() ?? $iconDark;
+        }
+
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'MainController', // Name of the controller. // Nom du contrôleur.
-            'categories' => $categories->findAll(), // Fetches all categories from the repository. // Récupère toutes les catégories depuis le repository.
-            'title' => 'home', // Title for the page. // Titre de la page.
+            'controller_name' => 'MainController', // Nom du contrôleur.
+            'categories' => $categoriesList, // Récupère toutes les catégories depuis le repository.
+            'title' => 'home', // Titre de la page.
+            'iconLight' => $iconLight, // Couleur claire des icônes.
+            'iconDark' => $iconDark,  // Couleur sombre des icônes.
         ]);
     }
 

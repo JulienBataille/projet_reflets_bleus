@@ -98,7 +98,6 @@ class OptionCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityPermission('ROLE_ADMIN')
             ->setSearchFields(null)
             ->setEntityLabelInPlural('Réglages généraux')
             ->showEntityActionsInlined();
