@@ -41,7 +41,6 @@ class CategoryController extends AbstractController
     #[Route('/{slug}', name: 'category_show', requirements: ['slug' => '[a-zA-Z0-9\-]+'])]
     public function show(string $slug): Response
     {
-        // Récupération de la catégorie par son slug
         $category = $this->categoriesRepository->findOneBy(['slug' => $slug]);
 
         $catalogues = $this->cataloguesRepository->findBy(['is_visible' => true]);
@@ -49,21 +48,17 @@ class CategoryController extends AbstractController
         $magasinStPandelon = $this->magasinsRepository->findOneBy(['city' => 'St Pandelon']);
         $magasinHagetmau = $this->magasinsRepository->findOneBy(['city' => 'Hagetmau']);
 
-        // Récupération des sliders associés à la catégorie
         $sliders = $this->sliderRepository->findBy(['Category' => $category]);
 
-        // Récupération des couleurs associées à la catégorie
         $colors = $this->colorService->getColorsForCategory($category->getName());
 
         $tel = $this->em->getRepository(Option::class)->findOneBy(['name' => 'tel']);
         $mail = $this->em->getRepository(Option::class)->findOneBy(['name' => 'mail']);
 
-        // Détermination du chemin du template
         $templatePath = 'category/'.$slug . '.html.twig';
 
-        // Vérification si le template existe
         if (!file_exists($this->getParameter('kernel.project_dir') . '/templates/' . $templatePath)) {
-            $templatePath = 'home/index.html.twig'; // Template par défaut si le template spécifique n'existe pas
+            $templatePath = 'bundles\TwigBundle\Exception/error404.html.twig'; // Template par défaut si le template spécifique n'existe pas
         }
 
         return $this->render($templatePath, [
