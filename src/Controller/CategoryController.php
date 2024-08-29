@@ -63,7 +63,7 @@ class CategoryController extends AbstractController
 
         // Vérification si le template existe
         if (!file_exists($this->getParameter('kernel.project_dir') . '/templates/' . $templatePath)) {
-            $templatePath = 'category/default.html.twig'; // Template par défaut si le template spécifique n'existe pas
+            $templatePath = 'home/index.html.twig'; // Template par défaut si le template spécifique n'existe pas
         }
 
         return $this->render($templatePath, [
