@@ -19,6 +19,22 @@ class Subscriber
     #[ORM\Column(type: 'boolean')]
     private bool $is_valid = false;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $unsubscribeToken;
+
+    public function getUnsubscribeToken(): ?string
+    {
+        return $this->unsubscribeToken;
+    }
+
+    public function setUnsubscribeToken(?string $unsubscribeToken): self
+    {
+        $this->unsubscribeToken = $unsubscribeToken;
+
+        return $this;
+    }
+
+
     public function getIsValid(): bool
     {
         return $this->is_valid;

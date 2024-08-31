@@ -3,18 +3,38 @@
 namespace App\Repository;
 
 use App\Entity\Subscriber;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @extends ServiceEntityRepository<Newsletter>
  */
 class SubscriberRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+
+    private EntityManagerInterface $entityManager;
+
+    public function __construct(ManagerRegistry $registry,EntityManagerInterface $entityManager)
     {
         parent::__construct($registry, Subscriber::class);
+        $this->entityManager = $entityManager;
     }
+
+    public function remove(Subscriber $subscriber, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($subscriber);
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    public function save(Subscriber $subscriber): void
+    {
+        $this->entityManager->persist($subscriber);
+        $this->entityManager->flush();
+    }
+
 
     //    /**
     //     * @return Newsletter[] Returns an array of Newsletter objects
