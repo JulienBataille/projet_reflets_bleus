@@ -20,7 +20,7 @@
         {% for catalogue in catalogues %}
             {% if catalogue.PDF is not null and catalogue.PDF != '' %}
             <div class="card card_catalogue">
-                <img src="{{ asset('/uploads//catalogues/thumbnails/' ~ catalogue.thumbnailImage) }}" class="card-img-top" alt="...">
+                <img src="{{ asset('/uploads//catalogues/thumbnails/' ~ catalogue.thumbnailImage) }}" class="card-img-top" alt="{{ catalogue.title }}">
                     <div class="card-body text-center">
                         <h3 class="title_catalogue">{{ catalogue.title }}</h3>
                             <div class="d-flex justify-content-center">
