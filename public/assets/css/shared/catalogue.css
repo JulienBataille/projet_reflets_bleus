@@ -19,7 +19,7 @@ a.button{
 .title_catalogue{
     font-size: 5vw;
     font-family: "Bebas Neue", light;
-    color: #0E3F78;
+    color: var(--icon-dark);
     margin: 1vw;
     letter-spacing: 0.1vw;
 }

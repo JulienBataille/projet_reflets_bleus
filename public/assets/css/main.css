@@ -99,13 +99,5 @@ section.visible {
         width: 2.1vw;
         height: 2.1vw;
     }
-    .fa-camera {
-        font-size: 1vw;
-    }
-    .fa-star {
-        font-size: 1vw;
-    }
-    .p-location {
-        font-size: 1.5vw;
-    }
+
 }
