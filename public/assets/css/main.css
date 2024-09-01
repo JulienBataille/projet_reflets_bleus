@@ -17,6 +17,13 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
+
+.icon-light{
+    background-color: var(--icon-light);
+}
+.icon-dark{
+    background-color: var(--icon-dark);
+}
 main {
 	flex: 1;
 }
@@ -99,5 +106,10 @@ section.visible {
         width: 2.1vw;
         height: 2.1vw;
     }
+    .icon-container i {
+        color: white;
+        font-size: 1.5vw;
+    }
 
 }
+
