@@ -70,3 +70,38 @@ var swiper = new Swiper(".slide-content", {
         }
 
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById('loader');
+        const elements = document.querySelectorAll('.fade-in');
+    
+        window.addEventListener('load', () => {
+            loader.style.display = 'none';// Le loader disparaît
+            document.body.style.overflow = 'auto'; // Le scroll de la page est réactivé
+            elements.forEach(el => {
+                el.style.display = 'block';// Les éléments avec la classe fade-in sont visibles
+            });
+            initiateObserver();  // On lance l'observer pour surveiller le scroll
+        });
+    
+        function initiateObserver() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+    
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+    });

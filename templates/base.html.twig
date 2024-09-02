@@ -28,10 +28,11 @@
     
 </head>
     <body class="{% block body_class %}{% endblock %}">
-		{{ render(controller('App\\Controller\\Menu\\MenuController::index')) }}
-        <main>
-        {% block body %}
-		{% endblock %}
+        <div id="loader"></div>
+		{{ render(controller('App\\Controller\\Menu\\MenuController::index')) }} 
+            <main>
+                {% block body %}
+                {% endblock %}
             </main>
 		{% include('_partials/footer.html.twig') %}
         <script src="{{ asset('assets/JS/slider/swiper-bundle.min.js') }}"></script>
