@@ -26,14 +26,14 @@ class Catalogues
     #[ORM\Column(type: 'boolean')]
     private bool $is_visible = true;
 
-    #[Vich\UploadableField(mapping: 'catalogue_pdfs', fileNameProperty: 'PDF')]
-    private ?File $PDFFile = null;
-
     #[ORM\Column(type: 'datetime', nullable: true)]
     private ?\DateTimeInterface $updatedAt = null;
-
+    
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $thumbnailImage = null;
+    
+    #[Vich\UploadableField(mapping: 'catalogue_pdfs', fileNameProperty: 'PDF')]
+    private ?File $PDFFile = null;
 
     #[Vich\UploadableField(mapping: 'catalogue_thumbnails', fileNameProperty: 'thumbnailImage')]
     private ?File $thumbnailImageFile = null;
