@@ -42,25 +42,30 @@ class CategoryController extends AbstractController
     public function show(string $slug): Response
     {
         $category = $this->categoriesRepository->findOneBy(['slug' => $slug]);
-
+    
+        // Vérifier si la catégorie existe
+        if (!$category) {
+            throw $this->createNotFoundException('La catégorie demandée n\'existe pas.');
+        }
+    
         $catalogues = $this->cataloguesRepository->findBy(['is_visible' => true]);
-
+    
         $magasinStPandelon = $this->magasinsRepository->findOneBy(['city' => 'St Pandelon']);
         $magasinHagetmau = $this->magasinsRepository->findOneBy(['city' => 'Hagetmau']);
-
+    
         $sliders = $this->sliderRepository->findBy(['Category' => $category]);
-
+    
         $colors = $this->colorService->getColorsForCategory($category->getName());
-
+    
         $tel = $this->em->getRepository(Option::class)->findOneBy(['name' => 'tel']);
         $mail = $this->em->getRepository(Option::class)->findOneBy(['name' => 'mail']);
-
+    
         $templatePath = 'category/'.$slug . '.html.twig';
-
+    
         if (!file_exists($this->getParameter('kernel.project_dir') . '/templates/' . $templatePath)) {
             $templatePath = 'bundles\TwigBundle\Exception/error404.html.twig'; // Template par défaut si le template spécifique n'existe pas
         }
-
+    
         return $this->render($templatePath, [
             'title' => $category->getName(),
             'catalogues' => $catalogues,
@@ -73,4 +78,5 @@ class CategoryController extends AbstractController
             'mail' => $mail,
         ]);
     }
+    
 }
