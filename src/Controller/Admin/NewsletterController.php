@@ -3,7 +3,7 @@
 namespace App\Controller\Admin;
 
 use Symfony\Component\Uid\Uuid;
-use App\Form\NewsletterFormType;
+use App\Form\Type\NewsletterFormType;
 use Symfony\Component\Mime\Email;
 use App\Repository\SubscriberRepository;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
@@ -40,8 +40,7 @@ class NewsletterController extends AbstractController
             // Créer le lien de désinscription
             $unsubscribeUrl = $this->generateUrl('app_unsubscribe', ['token' => $unsubscribeToken], UrlGeneratorInterface::ABSOLUTE_URL);
 
-            // Ajouter le lien de désinscription au corps de l'email
-            $emailBody = $body . "\n\nSi vous souhaitez vous désinscrire, cliquez sur le lien suivant : " . $unsubscribeUrl;
+
 
             $email = (new TemplatedEmail())
             ->from('test@gmail.com')
