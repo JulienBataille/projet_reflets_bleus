@@ -34,6 +34,21 @@ class CategoriesCrudController extends AbstractCrudController
         yield ColorField::new('iconLight', 'Couleur principale');
         yield ColorField::new('iconDark', 'Couleur secondaire');
 
+                // Définir la couleur par défaut uniquement lors de la création (PAGE_NEW)
+        $defaultColorLight = '#41AED1';
+        $defaultColorDark = '#0E3F78';
+
+
+        yield ColorField::new('iconLight', 'Couleur principale')
+                    ->setFormTypeOption('data', $pageName === Crud::PAGE_NEW ? $defaultColorLight : null)
+                    ->onlyWhenCreating();
+        yield ColorField::new('iconDark', 'Couleur secondaire')
+                    ->setFormTypeOption('data', $pageName === Crud::PAGE_NEW ? $defaultColorDark : null)
+                    ->onlyWhenCreating();
+
+
+        
+
     }
 
     public function configureActions(Actions $actions): Actions
