@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use Symfony\Component\Uid\Uuid;
 use App\Form\Type\NewsletterFormType;
+use App\Repository\OptionRepository;
 use Symfony\Component\Mime\Email;
 use App\Repository\SubscriberRepository;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
@@ -17,9 +18,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class NewsletterController extends AbstractController
 {
     #[Route('/admin/newsletter', name: 'app_newsletter')]
-    public function index(Request $request, SubscriberRepository $subscriberRepository, MailerInterface $mailer): Response
+    public function index(Request $request, SubscriberRepository $subscriberRepository, MailerInterface $mailer, OptionRepository $optionRepository): Response
 {
     $form = $this->createForm(NewsletterFormType::class);
+    $contactmail = $optionRepository->findOneBy(['name' => 'mail'])->getValue();
     $form->handleRequest($request);
 
     if ($form->isSubmitted() && $form->isValid()) {
@@ -43,7 +45,7 @@ class NewsletterController extends AbstractController
 
 
             $email = (new TemplatedEmail())
-            ->from('test@gmail.com')
+            ->from($contactmail)
             ->to($subscriber->getEmail())
             ->subject($title)
             ->htmlTemplate('email/newsletter.html.twig') // Chemin vers le template Twig
