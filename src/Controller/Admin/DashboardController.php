@@ -37,7 +37,6 @@ class DashboardController extends AbstractDashboardController
 
         if ($this->isGranted('ROLE_ADMIN')) {
 
-
             yield MenuItem::subMenu('Compte', 'fas fa-user')->setSubItems([
                 MenuItem::linkToCrud('Tous les Comptes', 'fas fa-user-friends', User::class),
                 MenuItem::linkToCrud('Ajoutez', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW),
