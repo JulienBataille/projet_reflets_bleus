@@ -4,9 +4,6 @@ namespace App\Model;
 
 class WelcomeModel
 {
-    const SITE_INSTALLED_LABEL = 'Site installé';
-    const SITE_INSTALLED_NAME = 'site_installed';
-    
 
     private ?string $email;
     private ?string $password;

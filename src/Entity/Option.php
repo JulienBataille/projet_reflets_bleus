@@ -23,16 +23,15 @@ class Option
     #[ORM\Column(nullable: true, type: 'text')]
     private $value = null;
 
-    #[ORM\Column(type:'string', length: 255, nullable: true)]
-    private $type ;
 
 
-    public function __construct(string $label,string $name,string $value,?string $type = null)
+
+    public function __construct(string $label,string $name,string $value)
     {
         $this->label = $label;
         $this->name = $name;
         $this->value = $value;
-        $this->type = $type;
+
     }
 
     public function getId(): ?int
@@ -72,18 +71,6 @@ class Option
     public function setValue(?string $value): static
     {
         $this->value = $value;
-
-        return $this;
-    }
-
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
-
-    public function setType(string $type): static
-    {
-        $this->type = $type;
 
         return $this;
     }
