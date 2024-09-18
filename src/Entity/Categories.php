@@ -36,7 +36,6 @@ class Categories
     public function __construct()
     {
         $this->sliders = new ArrayCollection();
-
         $this->iconLight = null;
         $this->iconDark = null;
     }

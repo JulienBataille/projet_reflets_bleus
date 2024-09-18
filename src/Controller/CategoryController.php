@@ -21,7 +21,6 @@ class CategoryController extends AbstractController
     private CategoryColorService $colorService;
     private EntityManagerInterface $em;
 
-
     public function __construct(
         CategoriesRepository $categoriesRepository,
         SliderRepository $sliderRepository,
